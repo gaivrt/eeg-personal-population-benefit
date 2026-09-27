@@ -1,0 +1,27 @@
+{
+  "models": [
+    {
+      "model": "CBraMod",
+      "card_hours": 17.80638888888889,
+      "wall_hours": 2.003888888888889,
+      "peak_segment_GiB": 4.247799873352051
+    },
+    {
+      "model": "REVE",
+      "card_hours": 51.590555555555554,
+      "wall_hours": 4.9430555555555555,
+      "peak_segment_GiB": 3.9777073860168457
+    },
+    {
+      "model": "LaBraM",
+      "card_hours": 18.698611111111113,
+      "wall_hours": 2.4980555555555557,
+      "peak_segment_GiB": 2.346327304840088
+    }
+  ],
+  "total_card_hours": 88.09555555555555,
+  "batch_wall_hours": 5.888055555555556,
+  "peak_concurrent_GPUs": 16,
+  "successful_new_group_updates": 754449,
+  "platform_count": 0
+}

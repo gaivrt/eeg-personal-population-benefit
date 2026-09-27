@@ -1,0 +1,187 @@
+{
+  "source_tables": [
+    {
+      "stage": "A",
+      "source": "reports/stage_a/baselines/wilcoxon.csv",
+      "rows": 6,
+      "sha256": "e94f729eb1c6c6f3e3ead717809944f075e8f240e2ae34834e50c5ab7e9d428d"
+    },
+    {
+      "stage": "B",
+      "source": "reports/stage_b/report/summary.csv",
+      "rows": 25,
+      "sha256": "0330c6cdbe74761927e7769c7896f6cd683df5f96200a5a62b01e716cd3bfd24"
+    },
+    {
+      "stage": "B",
+      "source": "reports/stage_b/report/film_vs_head.csv",
+      "rows": 5,
+      "sha256": "787d4d37e34aa69f91db42aeb596aeb15fcb99dedda81d0af7340aec8021e435"
+    },
+    {
+      "stage": "B",
+      "source": "reports/stage_b/report/fixed_film_vs_head.csv",
+      "rows": 15,
+      "sha256": "58f77edccd0da4c9f540cb79d21822c662b091954ba9bcfccdd51c629139c901"
+    },
+    {
+      "stage": "B",
+      "source": "reports/stage_b/report/ea_tests.csv",
+      "rows": 12,
+      "sha256": "9c037619e801f8ece1310d6d3fddcc01c2f96853eda2362da5532b9a373f7be4"
+    },
+    {
+      "stage": "B2",
+      "source": "reports/stage_b2/report/summary.csv",
+      "rows": 25,
+      "sha256": "c21262d282f9399b8ddf30d0efb0ce7736e6d485369144d844b44f0f1f1f4b66"
+    },
+    {
+      "stage": "B2",
+      "source": "reports/stage_b2/report/vs_finetuned_head.csv",
+      "rows": 25,
+      "sha256": "0d91635c910e082fcd632df37e4e887d32c15bdc60a17c8b89e7294c1c005f68"
+    },
+    {
+      "stage": "C",
+      "source": "reports/stage_c/report/criteria_tests.csv",
+      "rows": 4,
+      "sha256": "281b698283f3864bf261fa9406a296e80218f070a8b7a714aa6d1ec8d8dd0821"
+    },
+    {
+      "stage": "C",
+      "source": "reports/stage_c/report/diagnostic_tests.csv",
+      "rows": 60,
+      "sha256": "84c9c21fc8b71b588d0ffcf8da93d3decc6e7d0b91c5e3b1ee913d392454e623"
+    },
+    {
+      "stage": "C",
+      "source": "reports/stage_c/report/summary.csv",
+      "rows": 98,
+      "sha256": "f5aa0e31f2c78f318637cfebdad8dde056c827992c6502db80e7de61c5b640e7"
+    },
+    {
+      "stage": "C2",
+      "source": "reports/stage_c2/report/summary.csv",
+      "rows": 15,
+      "sha256": "de87d44bc5a91ff9e4a2621c5f07bea873fc099b20f61b6192e64799de94bb52"
+    },
+    {
+      "stage": "C2",
+      "source": "reports/stage_c2/report/diagnostic2_tests.csv",
+      "rows": 15,
+      "sha256": "369efbad04e551f2934a20bfd5e5a666bb43c556994c95c828c96201070104c4"
+    },
+    {
+      "stage": "C3",
+      "source": "reports/stage_c3/report/rest_vs_task.csv",
+      "rows": 40,
+      "sha256": "9156c95139ce3b7b4009e4ec1f9c997e40664a90a99cf7449ead353a48a336bb"
+    },
+    {
+      "stage": "C3-few",
+      "source": "reports/stage_c3/report/few_shot_curve.csv",
+      "rows": 38,
+      "sha256": "55acb34f8acd12a4c97ba38e710e47a5021506ae49ff3b9f6958f74f9cb3bcf6"
+    },
+    {
+      "stage": "C4",
+      "source": "reports/stage_c4/report/comparisons.csv",
+      "rows": 90,
+      "sha256": "29573362225e45a01db2f44627682e7b5506b310085b6a49270ee8e572250d5d"
+    },
+    {
+      "stage": "M",
+      "source": "reports/stage_m/report/comparisons.csv",
+      "rows": 206,
+      "sha256": "408665087a514855a043ffc466485d194b23b6ba5e7e86a52401d96a3b969f79"
+    },
+    {
+      "stage": "W",
+      "source": "reports/stage_w/report/population_comparisons.csv",
+      "rows": 15,
+      "sha256": "c7b4572c96704e5dd51632652d740a868debe07d310439c307ba8bb9a36b3f68"
+    },
+    {
+      "stage": "W",
+      "source": "reports/stage_w/report/diagnostic1_side_by_side.csv",
+      "rows": 14,
+      "sha256": "cc1c229d7fec068b92523801d112d70befb03b701ebc48d6cdb2950ac22fb216"
+    },
+    {
+      "stage": "W",
+      "source": "reports/stage_w/report/neighbours_side_by_side.csv",
+      "rows": 50,
+      "sha256": "8864b14f5b6b64e9ff6472fbe0751088ddffef02c60762310fd50443c74bac69"
+    },
+    {
+      "stage": "W",
+      "source": "reports/stage_w/report/few_shot_side_by_side.csv",
+      "rows": 25,
+      "sha256": "f68a2e21c3507b8094aaa043e4695cee747f329a013e4bb7b081d7ddbf944157"
+    },
+    {
+      "stage": "W-pooled",
+      "source": "reports/stage_w/neighbour_audit/pooled_descriptive.csv",
+      "rows": 16,
+      "sha256": "aa4cfb94f64674bda02543df2f11ccd005c5bbcdc87c086b0279b0f21bb23317"
+    },
+    {
+      "stage": "WF-BNCI",
+      "source": "reports\\stage_w_followup\\report\\bnci_population_comparisons.csv",
+      "rows": 4,
+      "sha256": "60c8377003911b1ab15a586aebdd678d52a2ecb383519ecc3ed63dc8af2b5b2c"
+    },
+    {
+      "stage": "WF-R2-own_minus_population",
+      "source": "reports/stage_w_followup/report/population_strength_by_dataset.csv",
+      "rows": 18,
+      "sha256": "c50a2e0ac18eceb3e8cf588f65d2860593817ff68b602eb82372861b547923ca"
+    },
+    {
+      "stage": "WF-few",
+      "source": "reports/stage_w_followup/report/bnci_few_shot_subjects.csv",
+      "rows": 27,
+      "sha256": "78208dfbc92a5c08cf226b999612abf1e77422633aedaf41733c6d5038568fd9"
+    },
+    {
+      "stage": "WF-own",
+      "source": "reports/stage_w_followup/report/bnci_diagnostic1_subjects.csv",
+      "rows": 18,
+      "sha256": "c87ace2deb31d3026488aef9811ee45c22e3496994a12f565bc50e212ce8ce85"
+    }
+  ],
+  "comparison_rows": 904,
+  "gate_rows": 40,
+  "historical_plateau_rows": 100,
+  "BNCI_plateau_rows": 50,
+  "new_inference_tests_performed": false,
+  "historical_statistical_csvs_discovered": [
+    "reports/stage_a/baselines/wilcoxon.csv",
+    "reports/stage_b/report/ea_tests.csv",
+    "reports/stage_b/report/film_vs_head.csv",
+    "reports/stage_b/report/fixed_film_vs_head.csv",
+    "reports/stage_b/report/summary.csv",
+    "reports/stage_b2/report/ea_tests.csv",
+    "reports/stage_b2/report/gate_tests.csv",
+    "reports/stage_b2/report/summary.csv",
+    "reports/stage_b2/report/vs_finetuned_head.csv",
+    "reports/stage_c/report/criteria_tests.csv",
+    "reports/stage_c/report/diagnostic_tests.csv",
+    "reports/stage_c/report/summary.csv",
+    "reports/stage_c2/report/diagnostic2_tests.csv",
+    "reports/stage_c2/report/summary.csv",
+    "reports/stage_c3/report/rest_vs_task.csv",
+    "reports/stage_c4/report/comparisons.csv",
+    "reports/stage_m/report/comparisons.csv",
+    "reports/stage_w/report/diagnostic1_side_by_side.csv",
+    "reports/stage_w/report/few_shot_side_by_side.csv",
+    "reports/stage_w/report/neighbours_side_by_side.csv",
+    "reports/stage_w/report/population_comparisons.csv"
+  ],
+  "represented_elsewhere": {
+    "reports/stage_b2/report/ea_tests.csv": "Exact historical reuse of Stage B EA, already enumerated.",
+    "reports/stage_b2/report/gate_tests.csv": "All four gates enumerated from original gate.json in section 2."
+  },
+  "unrepresented_statistical_csvs": []
+}

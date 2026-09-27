@@ -1,0 +1,20 @@
+\begin{longtable}{p{.8in}p{1.05in}p{1.05in}p{1.15in}p{2.15in}}
+\caption{Related evaluation questions, target settings and controls. The comparison concerns study designs and inspected controls, not an accuracy ranking.}\label{tab:related}\\
+\toprule
+Work & Reference & Question & Subject / target setting & Verified control scope \\
+\midrule
+\endfirsthead
+\toprule
+Work & Reference & Question & Subject / target setting & Verified control scope \\
+\midrule
+\endhead
+Identity Trap & \citep{lin2026identity} & Representation / identity audit & Task- and dataset-dependent & Identity diagnostics; attribution package not established here \\
+EEG-FM-Compass & \citep{liu2026compass} & Benchmark and adaptation comparison & LOSO and within-subject few-shot separately & Separate protocols; no joint own/population/swapped gain decomposition \\
+Stacked LoRA & \citep{sarhane2026stacked} & Shared and personal low-rank adapters & Subjects seen in pooled trial split & Global adapter comparison; different capacity; mismatch not reported in read text \\
+Lopes et al. (Scientific Reports) & \citep{lopes2026published} & Personal encoders and alignment & LOSO; target calibration & Low-rank, shared-adaptation, mismatch, capacity and normalization controls \\
+Nguyen et al. & \citep{nguyen2026stroke} & Frozen-model population LoRA & Held-out subjects & Head versus LoRA; no target personal adapter in evaluated pipeline \\
+ResTL & \citep{an2024restl} & Rest-based generative transfer & LOSO; target rest & Noise/rest control; updates decoder; donor-rest swap not reported in read text \\
+Sharma et al. & \citep{sharma2024fast} & Transfer learning versus MAML & Held-out subjects; few-shot labels & Ordinary transfer baseline; optimizers differ; total training budget not matched \\
+This study &  & Gain attribution on frozen backbone & Held-out subjects; same-session split & Default/shuffled; own/swapped; outer-update continuation; separate Delta and U \\
+\bottomrule
+\end{longtable}

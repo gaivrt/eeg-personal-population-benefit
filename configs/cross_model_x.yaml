@@ -1,0 +1,214 @@
+stage: X1
+version: 5
+status: formal_core_authorized_2026_09_27
+new_methods: false
+run_experiments: true
+stop_after_stage: X1_core
+hard_deadline: '2026-12-10T23:59:59+08:00'
+protocol: docs/cross_model_protocol.md
+seeds: [11, 23, 37, 53, 71]
+split_file: configs/splits/stage_a_v1.json
+halves_file: configs/splits/stage_b_halves_v1.json
+starter_training_scope: joint_three_datasets_as_original
+models:
+  REVE:
+    variant: base_pretrained_PT_not_XFT
+    repository: https://github.com/elouayas/reve_eeg
+    code_revision: 06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7
+    weights_repository: brain-bzh/reve-base
+    weights_revision: dc2a075c287bb2f6c04ee5875bd79535a0f7dba6
+    weights_filename: model.safetensors
+    published_sha256: 8ecc650619598748286c2457f81f5c6bd12e8bb59db44f7b02af1955c44de8fe
+    bytes: 276773456
+    locally_verified_weights: true
+    positions_revision: befa5b57a455b77cf302daf610c2e9ed8140bace
+    depth: 22
+    width: 512
+    heads: 8
+    patch_samples: 200
+    patch_stride: 180
+    lora_targets: [transformer.layers.i.0.to_qkv_q_slice, transformer.layers.i.0.to_qkv_k_slice, transformer.layers.i.0.to_qkv_v_slice, transformer.layers.i.0.to_out]
+    lora8_parameters: 720896
+    film_parameters: 22528
+  LaBraM:
+    variant: labram_base_patch200_200
+    repository: https://github.com/935963004/LaBraM
+    code_revision: c431221e6cfd23dbfa9950e0180682fb322b0548
+    weights_path: checkpoints/labram-base.pth
+    git_blob_sha1: 221148b5af403e9178629bb61e94b2e7d89ef172
+    bytes: 96612769
+    published_sha256: null
+    locally_verified_sha256: 7c50583826afac76c4ab18f43d958df40496c8229accc09ed6a227c9bb57c37c
+    locally_verified_weights: true
+    use_mean_pooling: false  # Keep the pretrained norm; use return_patch_tokens, never CLS readout.
+    qkv_bias: false
+    layer_scale_init_value: 0.1
+    use_abs_pos_emb: true
+    use_rel_pos_bias: false
+    depth: 12
+    width: 200
+    heads: 10
+    patch_samples: 200
+    patch_stride: 200
+    lora_targets: [blocks.i.attn.qkv_q_slice, blocks.i.attn.qkv_k_slice, blocks.i.attn.qkv_v_slice, blocks.i.attn.proj]
+    lora8_parameters: 153600
+    film_parameters: 4800
+pretraining_overlap:
+  REVE:
+    PhysionetMI: source_unlisted_downstream_benchmark
+    Dreyer2023: seen_source_Inria_Large
+    Cho2017: seen_source
+    Lee2019_MI: seen_source_OpenBMI
+    BNCI2014_001: source_unlisted_downstream_benchmark
+  LaBraM:
+    PhysionetMI: seen_source_EEGMMIDB
+    Dreyer2023: source_unlisted
+    Cho2017: source_unlisted
+    Lee2019_MI: source_unlisted
+    BNCI2014_001: source_unlisted_not_BCI_IV_1
+overlap_policy: retain_all_requested_combinations_report_seen_sources_separately
+strict_three_model_unlisted_starter_intersection: []
+preprocessing:
+  sfreq: 200
+  signal_unit: uV_div_100
+  storage_dtype: float16
+  filter_dtype: float64
+  zscore_signal: false
+  ea: false
+  reference: common_average_native_EEG
+  quality: existing_finite_only_trial_roster
+  task_seconds: {PhysionetMI: 4, Dreyer2023: 4, Cho2017: 3, Lee2019_MI: 4, BNCI2014_001: 4}
+  REVE:
+    route: pinned_public_MI_downstream_code
+    starter_and_Lee_highpass_hz: 0.3
+    starter_and_Lee_lowpass_hz: null
+    notch_hz: {PhysionetMI: 60, Dreyer2023: 50, Cho2017: 60, Lee2019_MI: 60}
+    BNCI_bandpass_hz: [0.3, 50]
+    BNCI_filter: butterworth_order5_lfilter_at_250Hz
+    BNCI_notch_hz: null
+    BNCI_time_window: cue_to_cue_plus_4_seconds
+    patch_tail: official_unfold_no_padding
+  LaBraM:
+    highpass_hz: 0.1
+    lowpass_hz: 75
+    notch_hz_all_datasets: 50
+    filter: MNE_FIR_zero_phase_version_1.10.2
+    reprocess_from_raw: true
+readout:
+  kind: last_layer_per_channel_time_mean_then_flatten
+  starter_channels: configs/stage_a_channels.json#readout_common
+  Lee_channels: common_without_FCz_26
+  BNCI_channels: common_intersection_19
+  normalization: B0_training_subject_features_only_frozen_for_G_and_personal
+  heads: [linear, mlp_128_GELU]
+  retain_spatial_channels: true
+adaptation:
+  rank: 8
+  alpha_over_rank: 1
+  dropout: 0
+  independent_q_k_v_factors: true
+  A_init: kaiming_uniform
+  B_init: zero
+  film: 'gamma=1+0.1*tanh(dg); beta=0.1*tanh(db)'
+  film_position: after_full_block_residual_on_EEG_tokens
+  personal_start: zero_increment_on_frozen_corresponding_population_adapter
+  backbone_trainable: false
+  personal_head_trainable: false
+population:
+  B0:
+    learning_rates: [0.001, 0.0003]
+    batch_size: 128
+    max_epochs: 50
+    optimizer: AdamW
+    weight_decay: 0.01
+    validation_trials: all_trials_as_original_A
+    selection: validation_subject_mean_BA_then_linear_first_lr_in_original_order_earlier_epoch
+    epoch: full_training_trial_pass
+  G:
+    learning_rates: [0.0003, 0.001]
+    batch_size: 32
+    optimizer: AdamW
+    weight_decay: 0.01
+    gradient_clip: 1.0
+    loss: ordinary_cross_entropy_no_context_generator
+    epoch: N_training_subjects_iid_uniform_subject_draws_each_32_random_trials
+    initial_max_steps_per_lr: 3000
+    initial_checkpoint_candidates: [1000, 3000]
+    initial_selection: validation_subject_gain_median_then_mean_then_fewer_updates_then_smaller_lr
+    continuation_scope: selected_lr_and_selected_checkpoint_only_restore_optimizer_and_rng
+    continuation_additional_steps_multiplier: 3
+    max_steps_in_selected_trajectory: 12000
+    max_total_steps_all_lr_per_fold_seed: 15000
+    continuation_checkpoint_selection: minimum_validation_subject_mean_CE_earliest_tie_including_continuation_step0
+    start: selected_B0_with_zero_population_adapter
+convergence:
+  record_epoch0_and_every_epoch: true
+  required_epoch_metrics: [validation_CE, validation_accuracy, validation_BA]
+  required_G_check_metrics: [train_all_trials_CE, train_all_trials_accuracy, train_all_trials_BA, validation_CE, validation_accuracy, validation_BA]
+  validation: B0_all_validation_trials_G_and_personal_fixed_second_half_as_original
+  G_check_every_steps: 250
+  window_checks: 8
+  loss_relative_range: 0.01
+  loss_absolute_range_floor: 0.0001
+  accuracy_and_BA_absolute_range: 0.005
+  CE_early_stop_patience_checks: 8
+  CE_min_delta: 0.0001
+  plateau_no_running_best_accuracy_or_BA_improvement_checks: 8
+  accuracy_and_BA_min_delta: 0.001
+  G_stop: continuation_CE_patience_or_three_times_selected_initial_steps_or_numerical_failure
+  continuation_patience_starts_at: selected_initial_checkpoint
+  epoch_logs_expand_selection_candidates: false
+  plateau_is_stop_requirement: false
+  selected_checkpoint_relative_to_plateau_window: report_separately
+  fail_to_converge: report_finite_budget_diagnostics_no_test_based_retraining
+personal_and_few_shot:
+  optimizer: AdamW
+  learning_rates: {lora8: [0.0001, 0.001], film_offset: [0.01, 0.1]}
+  steps: [20, 60]
+  weight_decays: [0.0, 0.01]
+  batch_size: 32
+  selection: original_C2_C3_validation_only_median_then_mean_then_steps_lr_wd
+  shots: [5, 10, 20]
+  additional_40: [Dreyer2023, Cho2017]
+  shot_unit: earliest_n_total_trials_not_per_class
+  swap: same_fold_same_dataset_other_test_subjects_10_draws_with_replacement
+statistics:
+  unit: subject_after_mean_over_five_seeds
+  diagnostic1: median_own_minus_swap_at_least_0.02_and_Holm_p_below_0.05
+  core_primary_family: per_model_pooled_subjects_original_three_variant_Holm
+  unrun_original_variant_p_value_for_correction: 1
+  per_dataset_comparisons: descriptive_do_not_replace_original_pooled_gate
+  rest_neighbour_gate: per_model_original_passing_diagnostic1_variants
+  task_neighbour_gate: none_original_C3_two_variant_Holm
+  population_and_own_minus_G: descriptive_raw_p_no_new_success_gate
+  few_shot: descriptive_no_new_significance_gate
+  incomplete_families: conservative_p1_report_unrun_slots_update_if_prespecified_FiLM_completed
+  missing_or_dropped_hypotheses: reserved_p1_for_family_size_actual_result_NA
+extension_priority: [full_layer_FiLM, rest_and_task_neighbours, Lee_and_BNCI, M1_and_update_count_matched_R2]
+resource_plan:
+  device: RTX_3090_24GB
+  gpus_per_job: 1
+  planned_global_concurrency: 16
+  concurrent_processes_per_gpu: 1
+  approved_concurrency: 16  # User confirmed the stated X1-core plan with "gogogo".
+  core_card_hours_estimate: null  # Withdrawn; needs model-specific timing, not invented throughput.
+  extension_card_hours_estimate: null
+  completion_dates_status: tentative_2026_09_28_to_29_pending_formal_throughput
+  planning_wall_hours_range: [24, 48]  # Low-confidence scheduling allowance, not measured throughput.
+  historical_receipt_gpu_hours: 167.43805555555556
+  historical_accounting: docs/cross_model_audit_2026-09-27/historical_gpu_accounting.json
+  extra_free_disk_GB_core: 80
+  extra_free_disk_GB_all: 150
+  no_submission_in_X0: true
+  separate_profile_required: false
+  proposed_profile_status: cancelled_before_submission_at_user_request
+  formal_cache_jobs: 2
+  formal_fold_seed_jobs: 50
+  formal_microbatch: 8
+  formal_effective_batch: 32
+  formal_total_GPU_concurrency: 16
+  formal_walltime_limit: '24:00:00'  # Per core job hard limit, not expected duration.
+  cache_walltime_limit: '02:00:00'
+  preprocessing_walltime_limit: '01:00:00'
+  submission_plan: docs/cross_model_engineering_2026-09-27/submission_plan.md
+  timing_source: retained_formal_cache_and_training_logs_no_discarded_pilot

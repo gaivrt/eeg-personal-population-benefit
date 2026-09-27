@@ -1,0 +1,19 @@
+stage: B
+version: 1
+split_file: configs/splits/stage_a_v1.json
+seeds: [11, 23, 37, 53, 71]
+variants: [film2, film4, beta4, head]
+base_head_selection: stage_a_validation_subject_ba
+variant_selection: fold_validation_median_gain_then_mean_gain
+learning_rates: [0.01, 0.1]
+head_learning_rates: [0.0001, 0.001]
+steps: [20, 60]
+weight_decays: [0.0, 0.01]
+batch_size: 32
+optimizer: AdamW
+film_bound: 0.1
+rough_balance_minority_fraction: 0.4
+gate_median_gain: 0.02
+gate_seed_aggregation: subject_mean_over_five_seeds
+gate_variant: selected_on_each_fold_validation_only
+stop_after_stage: B

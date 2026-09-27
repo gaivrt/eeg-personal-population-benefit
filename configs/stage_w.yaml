@@ -1,0 +1,59 @@
+stage: W
+version: 1
+split_file: configs/splits/stage_a_v1.json
+halves_file: configs/splits/stage_b_halves_v1.json
+seeds: [11, 23, 37, 53, 71]
+population:
+  methods: [m_film, m_lora]
+  source: stage_c_selected_main_checkpoint
+  training: unchanged_stage_c_selected_configuration
+  evaluation: default_z
+  additional_steps_multiplier: 3
+  optimizer_resume: false  # original C checkpoints contain parameters only
+  check_every_steps: 250
+  early_stop_patience_checks: 8
+  early_stop_min_delta: 0.0001
+  selection: minimum_validation_subject_mean_cross_entropy
+  validation_trials: second_half
+  include_initial_checkpoint: true
+  plateau_window_checks: 8
+  plateau_relative_range: 0.01
+diagnostic1:
+  source_config: configs/stage_c2.yaml
+  variants: [film_offset, lora8]
+  selection: unchanged_validation_grid_and_rule
+  swap_draws: 10
+diagnostic2:
+  source: unchanged_stage_c2_rest_features_and_neighbours
+diagnostic3:
+  source_config: configs/stage_c3.yaml
+  k: [1, 3]
+few_shot:
+  source_config: configs/stage_c3.yaml
+  variants: [lora8]
+  shots: [5, 10, 20]
+  additional_40_datasets: [Dreyer2023, Cho2017]
+external:
+  dataset: Lee2019_MI
+  session: 1
+  subjects: 54
+  split_seed: 20260925
+  folds: 5
+  validation_fraction: 0.10
+  runs: [train, test]
+  rest_field: EEG_MI_train.pre_rest
+  sfreq: 1000
+  channels: 62
+  readout_channels: starter_common_without_FCz
+  channel_exception: user_approved_26_channel_intersection_2026_09_26
+  notch_hz: 60
+  task_seconds: 4
+  minimum_free_bytes: 100000000000
+  hyperparameters: corresponding_starter_fold_and_seed_selected_values
+  tune: false
+  shots: [5, 10, 20]
+  diagnostic3: false
+  run_independent_of_starter_result_direction: true
+report_by_dataset: true
+new_methods: false
+stop_after_stage: W

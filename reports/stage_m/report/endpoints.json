@@ -1,0 +1,228 @@
+{
+  "rule": "spec Stage M v1.15: n=10, M vs strongest control; Holm over M1/M2 p<.05, median >= 1 pp, drop>2pp <= 10%",
+  "strongest_control": "R1",
+  "validation_ranking_n10": [
+    {
+      "method": "R1",
+      "median": 0.8300000000000001,
+      "mean": 0.7887114521281188
+    },
+    {
+      "method": "R2",
+      "median": 0.8218181818181818,
+      "mean": 0.7927227833894501
+    },
+    {
+      "method": "R0",
+      "median": 0.8158333333333333,
+      "mean": 0.7869765820599155
+    }
+  ],
+  "validation_m_n10": [
+    {
+      "method": "M1",
+      "median": 0.8167307692307693,
+      "mean": 0.7903220668220668
+    },
+    {
+      "method": "M2",
+      "median": 0.8255769230769231,
+      "mean": 0.7923114154364154
+    }
+  ],
+  "primary": {
+    "M1": {
+      "shots": 10,
+      "comparison": "M1-R1",
+      "measure": "ba",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.5166666666999999,
+      "mean_pp": 0.5593517060144682,
+      "improved_fraction": 0.6170212765957447,
+      "drop_gt_2pp_fraction": 0.12340425531914893,
+      "p_greater": 3.3522108299178905e-05,
+      "p_holm": 6.704421659835781e-05,
+      "passed": false
+    },
+    "M2": {
+      "shots": 10,
+      "comparison": "M2-R1",
+      "measure": "ba",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.5757575758,
+      "mean_pp": 0.5295933572429787,
+      "improved_fraction": 0.6,
+      "drop_gt_2pp_fraction": 0.13191489361702127,
+      "p_greater": 6.527454689554186e-05,
+      "p_holm": 6.704421659835781e-05,
+      "passed": false
+    }
+  },
+  "passed_variants": [],
+  "primary_passed": false,
+  "final_variant": null,
+  "secondary": {
+    "5": {
+      "M1": {
+        "shots": 5,
+        "comparison": "M1-R1",
+        "measure": "ba",
+        "dataset": "pooled",
+        "n": 235,
+        "median_pp": 0.48333333330000006,
+        "mean_pp": 0.48742925844042545,
+        "improved_fraction": 0.574468085106383,
+        "drop_gt_2pp_fraction": 0.15319148936170213,
+        "p_greater": 0.003688541378343135,
+        "p_holm": 0.003688541378343135
+      },
+      "M2": {
+        "shots": 5,
+        "comparison": "M2-R1",
+        "measure": "ba",
+        "dataset": "pooled",
+        "n": 235,
+        "median_pp": 0.5,
+        "mean_pp": 0.5703404973608511,
+        "improved_fraction": 0.6085106382978723,
+        "drop_gt_2pp_fraction": 0.1276595744680851,
+        "p_greater": 0.0001671936300335476,
+        "p_holm": 0.0003343872600670952
+      }
+    },
+    "20": {
+      "M1": {
+        "shots": 20,
+        "comparison": "M1-R1",
+        "measure": "ba",
+        "dataset": "pooled",
+        "n": 235,
+        "median_pp": 0.4666666667,
+        "mean_pp": 0.5043630822595744,
+        "improved_fraction": 0.5829787234042553,
+        "drop_gt_2pp_fraction": 0.14042553191489363,
+        "p_greater": 0.0005432244398634192,
+        "p_holm": 0.0010864488797268383
+      },
+      "M2": {
+        "shots": 20,
+        "comparison": "M2-R1",
+        "measure": "ba",
+        "dataset": "pooled",
+        "n": 235,
+        "median_pp": 0.3333333333,
+        "mean_pp": 0.47514654189106387,
+        "improved_fraction": 0.5787234042553191,
+        "drop_gt_2pp_fraction": 0.09361702127659574,
+        "p_greater": 0.0006809986170392153,
+        "p_holm": 0.0010864488797268383
+      }
+    }
+  },
+  "secondary_adapt_gain_n10": {
+    "M1": {
+      "shots": 10,
+      "comparison": "M1-R1",
+      "measure": "adapt_gain",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.1666666667,
+      "mean_pp": 0.31555572600382975,
+      "improved_fraction": 0.548936170212766,
+      "drop_gt_2pp_fraction": 0.13617021276595745,
+      "p_greater": 0.02052379759501321,
+      "p_holm": 0.04104759519002642
+    },
+    "M2": {
+      "shots": 10,
+      "comparison": "M2-R1",
+      "measure": "adapt_gain",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.1666666667,
+      "mean_pp": 0.2348593668493617,
+      "improved_fraction": 0.5531914893617021,
+      "drop_gt_2pp_fraction": 0.13191489361702127,
+      "p_greater": 0.060450273256247314,
+      "p_holm": 0.060450273256247314
+    }
+  },
+  "label_saving": {
+    "PhysionetMI": {
+      "strongest_curve": {
+        "0": 0.8136901124765203,
+        "5": 0.81551967773327,
+        "10": 0.8173213388553194,
+        "20": 0.8231665987733948
+      },
+      "M1": {
+        "ba_at_n10": 0.8163448525584448,
+        "equivalent_labels": 7.290038939831575,
+        "note": "interpolated"
+      },
+      "M2": {
+        "ba_at_n10": 0.8149080046167426,
+        "equivalent_labels": 3.3283648553370178,
+        "note": "interpolated"
+      }
+    },
+    "Dreyer2023": {
+      "strongest_curve": {
+        "0": 0.8096846264367816,
+        "5": 0.8023729885057472,
+        "10": 0.8066940732758621,
+        "20": 0.8114105603448276,
+        "40": 0.8196658764367817
+      },
+      "M1": {
+        "ba_at_n10": 0.8190093390804597,
+        "equivalent_labels": null,
+        "note": "curve not monotone"
+      },
+      "M2": {
+        "ba_at_n10": 0.8192517959770115,
+        "equivalent_labels": null,
+        "note": "curve not monotone"
+      }
+    },
+    "Cho2017": {
+      "strongest_curve": {
+        "0": 0.6454307692307691,
+        "5": 0.6474217948717949,
+        "10": 0.6534647435897436,
+        "20": 0.6574820512820513,
+        "40": 0.6584051282051282
+      },
+      "M1": {
+        "ba_at_n10": 0.6617307692307693,
+        "equivalent_labels": null,
+        "note": "above the strongest control at the largest observed n"
+      },
+      "M2": {
+        "ba_at_n10": 0.6628589743589745,
+        "equivalent_labels": null,
+        "note": "above the strongest control at the largest observed n"
+      }
+    },
+    "pooled": {
+      "strongest_curve": {
+        "0": 0.7750946880852091,
+        "5": 0.7738480817885954,
+        "10": 0.7774459167269512,
+        "20": 0.7825024305017556
+      },
+      "M1": {
+        "ba_at_n10": 0.7830394337870493,
+        "equivalent_labels": null,
+        "note": "above the strongest control at the largest observed n"
+      },
+      "M2": {
+        "ba_at_n10": 0.7827418502993705,
+        "equivalent_labels": null,
+        "note": "above the strongest control at the largest observed n"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "model": "REVE",
+    "point": "1x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  },
+  {
+    "model": "REVE",
+    "point": "2x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  },
+  {
+    "model": "REVE",
+    "point": "4x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  },
+  {
+    "model": "LaBraM",
+    "point": "1x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  },
+  {
+    "model": "LaBraM",
+    "point": "2x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  },
+  {
+    "model": "LaBraM",
+    "point": "4x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  },
+  {
+    "model": "CBraMod",
+    "point": "1x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  },
+  {
+    "model": "CBraMod",
+    "point": "2x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  },
+  {
+    "model": "CBraMod",
+    "point": "4x",
+    "rows": 1175,
+    "complete_235_times_5": true
+  }
+]

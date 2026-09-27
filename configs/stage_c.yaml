@@ -1,0 +1,59 @@
+stage: C
+version: 1
+split_file: configs/splits/stage_a_v1.json
+halves_file: configs/splits/stage_b_halves_v1.json
+seeds: [11, 23, 37, 53, 71]
+base_head_selection: reuse_stage_b_selection
+activation_cache: false
+layer8_roundtrip_float16: true
+context:
+  eye_state: open
+  segment_seconds: 4
+  min_seconds: 30
+  test_length: all_usable
+  bands_hz: [[8, 13], [13, 30]]
+  filter_order: 4
+  tangent_reference: riemann_mean_training_subject_rest_segments
+encoder:
+  projection: 64
+  hidden: 128
+  z_dim: 16
+generator_hidden: 128
+film_bound: 0.1
+lora:
+  bases: 8
+  rank: 8
+  b_init_std: 0.01
+  projections: [q, k, v, out]
+  branches: [spatial, temporal]
+methods: [m_film, m_lora]
+training:
+  optimizer: AdamW
+  weight_decay: 0.01
+  grad_clip_norm: 1.0
+  query_batch: 32
+  context_dropout: 0.2
+  episodes: [1000, 3000]
+  learning_rates: [0.0003, 0.001]
+  lambdas: [0.1, 1.0]
+  margins: [0.1, 0.5]
+  ablation_lambda: 0.0
+t3a_filter_sizes: [1, 5, 20, all]
+b5:
+  shots: [10, 20, 40, 80]
+  learning_rates: [0.01, 0.1]
+  steps: [20, 60]
+  weight_decays: [0.0, 0.01]
+  batch_size: 32
+b6_reference:
+  m_film: film_all
+  m_lora: lora8
+criteria:
+  alpha: 0.05
+  test: paired_wilcoxon_greater_approx_zero_dropped
+  controls: [B4, B0]
+  multiplicity: holm_across_two_methods_two_controls
+  recovery_fraction: 0.30
+  max_drop_gt_2pp_fraction: 0.10
+  seed_aggregation: subject_mean_over_five_seeds
+stop_after_stage: C

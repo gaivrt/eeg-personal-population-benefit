@@ -1,0 +1,38 @@
+stage: W_followup
+version: 1
+new_methods: false
+primary_population_reference: G
+sensitivity_population_reference: R2
+seeds: [11, 23, 37, 53, 71]
+r2:
+  source: stage_m/runs
+  checkpoint: start-R2.pt
+  population_family: m_lora
+  variants: [film_offset, lora8]
+  diagnostic_config: configs/stage_c2.yaml
+  retrain_population: false
+bnci:
+  dataset: BNCI2014_001
+  session: 2
+  file_suffix: E
+  subjects: 9
+  sfreq: 250
+  channels: 22
+  notch_hz: 50
+  readout_channels: starter_common_intersection_19
+  compatibility_approved: user_2026_09_27
+  split_seed: 20260925
+  folds: 5
+  validation_fraction: 0.10
+  no_donor: unavailable_not_imputed
+  classes: [left_hand, right_hand]
+  trial_seconds_after_trial_start: [2, 6]
+  hyperparameters: corresponding_starter_fold_and_seed_selected_values
+  source_personal: stage_w/diagnostic1
+  source_few_shot: stage_w/diagnostic3
+  tune: false
+  shots: [5, 10, 20]
+  explicit_linear_probe: true
+  linear_probe_hyperparameters: corresponding_starter_B0_linear_selection
+  minimum_free_bytes: 20000000000
+stop_after_followup: true

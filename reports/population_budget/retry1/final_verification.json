@@ -1,0 +1,247 @@
+{
+  "verified_at_UTC": "2026-09-27T11:26:04.708497+00:00",
+  "complete_trajectories": 75,
+  "replacement_array_indices": [
+    57
+  ],
+  "subject_seed_rows": 10575,
+  "model_dataset_point_statistics_checked": [
+    [
+      "REVE",
+      "1x",
+      "Cho2017",
+      52
+    ],
+    [
+      "REVE",
+      "1x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "REVE",
+      "1x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "REVE",
+      "1x",
+      "pooled",
+      235
+    ],
+    [
+      "REVE",
+      "2x",
+      "Cho2017",
+      52
+    ],
+    [
+      "REVE",
+      "2x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "REVE",
+      "2x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "REVE",
+      "2x",
+      "pooled",
+      235
+    ],
+    [
+      "REVE",
+      "4x",
+      "Cho2017",
+      52
+    ],
+    [
+      "REVE",
+      "4x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "REVE",
+      "4x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "REVE",
+      "4x",
+      "pooled",
+      235
+    ],
+    [
+      "LaBraM",
+      "1x",
+      "Cho2017",
+      52
+    ],
+    [
+      "LaBraM",
+      "1x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "LaBraM",
+      "1x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "LaBraM",
+      "1x",
+      "pooled",
+      235
+    ],
+    [
+      "LaBraM",
+      "2x",
+      "Cho2017",
+      52
+    ],
+    [
+      "LaBraM",
+      "2x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "LaBraM",
+      "2x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "LaBraM",
+      "2x",
+      "pooled",
+      235
+    ],
+    [
+      "LaBraM",
+      "4x",
+      "Cho2017",
+      52
+    ],
+    [
+      "LaBraM",
+      "4x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "LaBraM",
+      "4x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "LaBraM",
+      "4x",
+      "pooled",
+      235
+    ],
+    [
+      "CBraMod",
+      "1x",
+      "Cho2017",
+      52
+    ],
+    [
+      "CBraMod",
+      "1x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "CBraMod",
+      "1x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "CBraMod",
+      "1x",
+      "pooled",
+      235
+    ],
+    [
+      "CBraMod",
+      "2x",
+      "Cho2017",
+      52
+    ],
+    [
+      "CBraMod",
+      "2x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "CBraMod",
+      "2x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "CBraMod",
+      "2x",
+      "pooled",
+      235
+    ],
+    [
+      "CBraMod",
+      "4x",
+      "Cho2017",
+      52
+    ],
+    [
+      "CBraMod",
+      "4x",
+      "Dreyer2023",
+      80
+    ],
+    [
+      "CBraMod",
+      "4x",
+      "PhysionetMI",
+      103
+    ],
+    [
+      "CBraMod",
+      "4x",
+      "pooled",
+      235
+    ]
+  ],
+  "six_slot_Holm": {
+    "('REVE', '2x')": 3.0209054261613294e-21,
+    "('LaBraM', '4x')": 1.6196080775123253e-20,
+    "('LaBraM', '2x')": 5.619709227107989e-20,
+    "('CBraMod', '4x')": 6.573842232760003e-13,
+    "('REVE', '4x')": 6.573842232760003e-13,
+    "('CBraMod', '2x')": 5.69079534567087e-12
+  },
+  "validation_groups_with_25_runs": 36,
+  "REVE_LaBraM_original_summary_unchanged": true,
+  "all_tests_historical_prefix_sha256": "e77174c675fc03c70b358d54661d641d744aed499b26ea2c9e6c84be8219c184",
+  "all_checks_passed": true,
+  "protocol_hashes": {
+    "docs/population_budget_protocol.md": "4889ed196be263c654c25e4a0179b37fea9f5e6da267e6ba7149414ec1ad60d7",
+    "configs/population_budget.yaml": "0f9c56dd2dd10f891bb59813ccbc9ffab26f5793684478411f41c62af9adb923",
+    "docs/population_budget_engineering_2026-09-27/source_inventory.json": "17be85fbbc449b8f4b44b54750da4c65ef931fdd9ca77772814cacf118403071",
+    "docs/population_budget_retry_protocol.md": "ede0a31a44683dc287d54876c765b7d0de9bcbee9331ac6fbc7cb719a6fb1176",
+    "docs/population_budget_retry_2026-09-27/authorization.json": "2b00e804f763a947a83e35e576651e20f20e4b56094c565954794d2efbac709c"
+  },
+  "local_report_links_verified": 60,
+  "final_job_status_verified_at_UTC": "2026-09-27T11:27:23.873832+00:00"
+}

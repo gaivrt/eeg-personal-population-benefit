@@ -1,0 +1,17 @@
+{
+  "frozen_at_UTC": "2026-09-27T11:18:00.790583+00:00",
+  "reason": "User requested all experiments frozen after this one retry",
+  "GPU_retry_job": "1912202_57",
+  "retry_status": "complete",
+  "maximum_attempts": 1,
+  "no_further_GPU_runs": true,
+  "original_batch_card_hours": 88.09555555555555,
+  "retry_card_hours": 0.6933333333333334,
+  "combined_card_hours": 88.78888888888888,
+  "source_manifest": "reports\\population_budget\\retry1\\retained\\merge_manifest.json",
+  "classifications": {
+    "REVE": "descriptive_only",
+    "LaBraM": "descriptive_only",
+    "CBraMod": "stable_positive_after_continuation"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "checked_date": "2026-09-25",
+  "repositories": {
+    "cbramod": {
+      "repository": "https://github.com/wjq-learning/CBraMod",
+      "commit": "b9e961003214326972c567eff390e75b0287e32a"
+    },
+    "labram": {
+      "repository": "https://github.com/935963004/LaBraM",
+      "commit": "c431221e6cfd23dbfa9950e0180682fb322b0548"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/wjq-learning/CBraMod/commits/main",
+      "path": ".cache/pretraining_audit/cbramod_commit.json",
+      "bytes": 2483,
+      "sha256": "a15eccc46b6da6caccea174783feb366665fd449f3f08a3e067f16bd613959ff"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wjq-learning/CBraMod/b9e961003214326972c567eff390e75b0287e32a/README.md",
+      "path": "docs/pretraining_audit_2026-09-25/sources/cbramod_README.md",
+      "bytes": 4037,
+      "sha256": "2b2d9472395550ddd20cefbacd0371294936c6555ba2fc1a8bd1b1992cee2709"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wjq-learning/CBraMod/b9e961003214326972c567eff390e75b0287e32a/pretrain_main.py",
+      "path": "docs/pretraining_audit_2026-09-25/sources/cbramod_pretrain_main.py",
+      "bytes": 3149,
+      "sha256": "0041cfbbc154ae8b1ba4d7b8d084b54149c4821e4ff97f75830e4bfdf0b29a94"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wjq-learning/CBraMod/b9e961003214326972c567eff390e75b0287e32a/datasets/pretraining_dataset.py",
+      "path": "docs/pretraining_audit_2026-09-25/sources/cbramod_datasets_pretraining_dataset.py",
+      "bytes": 816,
+      "sha256": "f9f140b02014676e40614e139691ec9a97b8b163ffb77686af5b7c1c680076b0"
+    },
+    {
+      "url": "https://api.github.com/repos/935963004/LaBraM/commits/main",
+      "path": ".cache/pretraining_audit/labram_commit.json",
+      "bytes": 6082,
+      "sha256": "2aae66708fae512d464a5dc034ad3730edc52306e3b7288506218186fc840eca"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/README.md",
+      "path": "docs/pretraining_audit_2026-09-25/sources/labram_README.md",
+      "bytes": 6024,
+      "sha256": "e5f410f36a9f97601dfef910958ed7a605f35b4ad1cae3d1d93793e61a17ba40"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/run_labram_pretraining.py",
+      "path": "docs/pretraining_audit_2026-09-25/sources/labram_run_labram_pretraining.py",
+      "bytes": 13066,
+      "sha256": "4d7fa838789b17877512cd7f7dad0ac3a321539917c5d5f790820cab0652adf9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/run_vqnsp_training.py",
+      "path": "docs/pretraining_audit_2026-09-25/sources/labram_run_vqnsp_training.py",
+      "bytes": 15259,
+      "sha256": "11ac014eaaf3e05ae0cc7204bb335f26ddad22a566a3b08d85c11e824315f611"
+    },
+    {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf",
+      "path": ".cache/pretraining_audit/labram_iclr2024.pdf",
+      "bytes": 963261,
+      "sha256": "5ac7a9b3ee783d1a70340c7248b91e4f661204e0415393f8b30b10795d82e01d"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2412.07236",
+      "path": ".cache/pretraining_audit/cbramod_arxiv.pdf",
+      "bytes": 2255209,
+      "sha256": "c60721effe84a0c8da2bd0906352993b572b7e2bda77c6db0eb4d9c82754d192"
+    },
+    {
+      "url": "https://www.bbci.de/competition/iv/desc_2a.pdf",
+      "path": ".cache/pretraining_audit/bnci_iv2a_description.pdf",
+      "bytes": 216135,
+      "sha256": "7914fdf5c8e04468c97d70486372405da4ed66fb1469160bec7cc27bd1676110"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wjq-learning/CBraMod/b9e961003214326972c567eff390e75b0287e32a/LICENSE",
+      "path": "docs/pretraining_audit_2026-09-25/sources/cbramod_LICENSE",
+      "bytes": 1068,
+      "sha256": "eb839b706e4d7219842e96d7dc33285844abc794292602deb3498be7b699537c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/LICENSE",
+      "path": "docs/pretraining_audit_2026-09-25/sources/labram_LICENSE",
+      "bytes": 1070,
+      "sha256": "bc3f03e2c9071fb40507f5c575d95eeaa98d07c54c54fb2855942b2a729adc71"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NeuroTechX/moabb/v1.7.2/LICENSE",
+      "path": "docs/data_access_audit_2026-09-25/sources/moabb_LICENSE",
+      "bytes": 1524,
+      "sha256": "64c3cde9a791b726bea169ed5816a233cabfa93c92c033ff44c125b996659eea"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NeuroTechX/moabb/v1.7.2/moabb/datasets/bnci/base.py",
+      "path": "docs/data_access_audit_2026-09-25/sources/bnci_base.py",
+      "bytes": 26935,
+      "sha256": "920e327b8131bd6f63a6991863b4b69eff67a18075ea13da916aa09712cf5f5d"
+    }
+  ]
+}

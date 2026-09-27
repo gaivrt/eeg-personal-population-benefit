@@ -1,0 +1,38 @@
+stage: 0a
+device: cpu
+threads: 2
+data_seed: 20260925
+seeds: [11, 22, 33, 44, 55]
+folds: 5
+validation_fraction: 0.1
+synthetic:
+  datasets: [synthetic_A, synthetic_B]
+  subjects_per_dataset: 10
+  sessions: 2
+  channels: [C3, Cz, C4]
+  sfreq: 200
+  segment_seconds: 2
+  context_seconds: 300
+  query_trials: 8
+  query_seconds: 4
+model:
+  name: CBraMod
+  source_commit: b9e961003214326972c567eff390e75b0287e32a
+  weights: weights/cbramod.pth
+  film_layers: 2
+  z_dim: 16
+  hidden: 32
+  context_dropout: 0.2
+training:
+  steps: 20
+  learning_rate: 0.003
+  lambda: 0.1
+  margin: 0.1
+  context_min_seconds: 30
+  context_max_seconds: 300
+  # Fixed smoke parameters, not a search on any test subject.
+evaluation:
+  context_seconds: 60
+  conditions: [B0, B3, B4, M]
+  settings: [same_session, cross_session]
+output: artifacts/stage0a/synthetic

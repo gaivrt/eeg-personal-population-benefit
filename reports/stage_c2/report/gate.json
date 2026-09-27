@@ -1,0 +1,65 @@
+{
+  "rule": "spec Stage C2 v1.6: any variant with pooled median U>=2pp and Holm one-sided p<.05",
+  "variants": [
+    {
+      "variant": "film_offset",
+      "median_pp": 4.6166666667,
+      "statistic": 26002.0,
+      "p_raw": 1.3893647659607506e-31,
+      "p_holm": 4.1680942978822515e-31,
+      "passed": true
+    },
+    {
+      "variant": "mix_offset",
+      "median_pp": 2.58,
+      "statistic": 24064.0,
+      "p_raw": 7.133453393349035e-23,
+      "p_holm": 7.133453393349035e-23,
+      "passed": true
+    },
+    {
+      "variant": "lora8",
+      "median_pp": 3.4696969697,
+      "statistic": 25125.0,
+      "p_raw": 2.506160568012241e-28,
+      "p_holm": 5.012321136024482e-28,
+      "passed": true
+    }
+  ],
+  "diagnostic1_passed": true,
+  "diagnostic2": [
+    {
+      "variant": "film_offset",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.5606060606060503,
+      "mean_pp": 0.328571911336402,
+      "statistic": 15772.5,
+      "p_raw": 0.03374500997822361,
+      "p_holm": 0.10123502993467084,
+      "rest_informative": false
+    },
+    {
+      "variant": "mix_offset",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.3666666666666596,
+      "mean_pp": 0.35539115860905973,
+      "statistic": 15630.0,
+      "p_raw": 0.04534137083072631,
+      "p_holm": 0.10123502993467084,
+      "rest_informative": false
+    },
+    {
+      "variant": "lora8",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.01666666666666483,
+      "mean_pp": -0.501504442243988,
+      "statistic": 13108.5,
+      "p_raw": 0.7311922614963442,
+      "p_holm": 0.7311922614963442,
+      "rest_informative": false
+    }
+  ]
+}

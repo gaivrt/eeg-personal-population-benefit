@@ -1,0 +1,10 @@
+Dataset,Model,Source,G-B0 mean,Own-G mean,Own-swap mean,Own-swap median
+PhysioNet,CBraMod,unlisted,+9.14,+1.64,+2.55,+1.87
+PhysioNet,REVE,unlisted,+13.92,+1.55,+2.59,+2.39
+PhysioNet,LaBraM,listed,+20.21,+1.52,+2.35,+2.09
+Dreyer,CBraMod,unlisted,+9.18,+3.58,+5.28,+4.89
+Dreyer,REVE,listed,+8.98,+5.38,+7.25,+6.78
+Dreyer,LaBraM,unlisted,+9.31,+3.91,+5.41,+4.32
+Cho,CBraMod,unlisted,-0.06,+5.13,+6.43,+4.30
+Cho,REVE,listed,+2.48,+3.35,+4.38,+3.48
+Cho,LaBraM,unlisted,+1.74,+5.38,+4.78,+2.95

@@ -1,0 +1,5 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0860,method=G_film_offset; control=B0,BNCI2014_001,9,2.500,2.531,0.05456,--
+T0861,method=G_film_offset; control=B0_linear,BNCI2014_001,9,1.389,1.821,0.1867,--
+T0862,method=G_lora8; control=B0,BNCI2014_001,9,1.944,2.932,0.06128,--
+T0863,method=G_lora8; control=B0_linear,BNCI2014_001,9,2.222,2.222,0.1714,--

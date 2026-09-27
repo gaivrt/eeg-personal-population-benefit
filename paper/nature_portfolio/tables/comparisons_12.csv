@@ -1,0 +1,13 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0351,variant=film_offset,PhysionetMI,103,0.705,-0.047,0.2547,--
+T0352,variant=film_offset,Dreyer2023,80,0.058,0.324,0.2389,--
+T0353,variant=film_offset,Cho2017,52,0.600,1.080,0.03325,--
+T0354,variant=film_offset,Dreyer+Cho,132,0.420,0.622,0.03611,--
+T0356,variant=mix_offset,PhysionetMI,103,-0.333,0.164,0.3581,--
+T0357,variant=mix_offset,Dreyer2023,80,0.367,0.345,0.03087,--
+T0358,variant=mix_offset,Cho2017,52,0.580,0.751,0.0501,--
+T0359,variant=mix_offset,Dreyer+Cho,132,0.490,0.505,0.006399,--
+T0361,variant=lora8,PhysionetMI,103,-1.212,-1.713,0.9953,--
+T0362,variant=lora8,Dreyer2023,80,0.433,0.376,0.1645,--
+T0363,variant=lora8,Cho2017,52,1.050,0.548,0.06444,--
+T0364,variant=lora8,Dreyer+Cho,132,0.852,0.444,0.04071,--

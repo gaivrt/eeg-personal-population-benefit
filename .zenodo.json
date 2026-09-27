@@ -1,0 +1,32 @@
+{
+  "title": "Separating personal from population gains when calibrating EEG foundation models for new users: code and saved results",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "description": "Analysis code, fixed configurations, saved subject-level results, reporting scripts and Supplementary Data 1 for the EEG personalization study. Raw EEG and pretrained weights are obtained separately. See the README for reproduction scope and third-party terms.",
+  "creators": [
+    {
+      "name": "Tao, Xilin",
+      "affiliation": "The Hong Kong University of Science and Technology"
+    },
+    {
+      "name": "Chen, Kani",
+      "affiliation": "The Hong Kong University of Science and Technology",
+      "orcid": "0000-0003-0117-8065"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "EEG",
+    "foundation models",
+    "personalization",
+    "brain-computer interface",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/gaivrt/eeg-personal-population-benefit",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

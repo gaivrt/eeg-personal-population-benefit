@@ -1,0 +1,27 @@
+stage: C2
+version: 1
+start_models: stage_c_selected_main_default_z
+variants: [film_offset, mix_offset, lora8]
+learning_rates:
+  film_offset: [0.01, 0.1]
+  mix_offset: [0.01, 0.1]
+  lora8: [0.0001, 0.001]
+steps: [20, 60]
+weight_decays: [0.0, 0.01]
+batch_size: 32
+lora_rank: 8
+swap_draws: 10
+gate:
+  median_upper_bound: 0.02
+  alpha: 0.05
+  test: paired_wilcoxon_greater_approx_zero_dropped
+  multiplicity: holm_across_three_variants
+  rule: any_variant
+diagnostic2:
+  features: [embedding_mean, tangent_mean]
+  block_scaling: inverse_sqrt_dimension
+  distance: euclidean
+  test: paired_wilcoxon_greater_nearest_vs_random
+  multiplicity: holm_across_passing_variants
+  only_if_diagnostic1_passes: true
+stop_after_stage: C2

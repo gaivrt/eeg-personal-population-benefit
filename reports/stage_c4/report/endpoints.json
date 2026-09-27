@@ -1,0 +1,95 @@
+{
+  "rule": "spec Stage C4 v1.13: LoRA n=10, P2>P1 and P2>P0 (one-sided Wilcoxon p<.05)",
+  "primary": {
+    "P2-P1": {
+      "variant": "lora8",
+      "shots": 10,
+      "comparison": "P2-P1",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": -0.0757575758,
+      "mean_pp": -0.16016818446723402,
+      "improved_fraction": 0.4595744680851064,
+      "drop_gt_2pp_fraction": 0.14893617021276595,
+      "p_greater": 0.8927255582582396
+    },
+    "P2-P0": {
+      "variant": "lora8",
+      "shots": 10,
+      "comparison": "P2-P0",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.1515151515,
+      "mean_pp": -0.04030593764340427,
+      "improved_fraction": 0.5191489361702127,
+      "drop_gt_2pp_fraction": 0.16170212765957448,
+      "p_greater": 0.447680493457999
+    }
+  },
+  "passed": false,
+  "conclusion": "无标签任务数据的信息不足以在少样本校准中带来可测收益",
+  "p0_curve_pooled": {
+    "0": 0.767476281409957,
+    "5": 0.7679849962461114,
+    "10": 0.7764340015083961,
+    "20": 0.779825745689869
+  },
+  "p2_at_primary_n_pooled": 0.7760309421319693,
+  "equivalent_p0_labels": 9.761475248319456,
+  "label_saving": -0.23852475168054355,
+  "saving_note": "interpolated",
+  "secondary_P2_vs_P1": [
+    {
+      "variant": "lora8",
+      "shots": 0,
+      "comparison": "P2-P1",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.18,
+      "mean_pp": 0.13657006089914892,
+      "improved_fraction": 0.5574468085106383,
+      "drop_gt_2pp_fraction": 0.09787234042553192,
+      "p_greater": 0.039217718691216354,
+      "p_holm": 0.07843543738243271
+    },
+    {
+      "variant": "lora8",
+      "shots": 5,
+      "comparison": "P2-P1",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.1,
+      "mean_pp": 0.10637123649234043,
+      "improved_fraction": 0.5276595744680851,
+      "drop_gt_2pp_fraction": 0.1276595744680851,
+      "p_greater": 0.29768323628867865,
+      "p_holm": 0.29768323628867865
+    }
+  ],
+  "secondary_P2_vs_P0": [
+    {
+      "variant": "lora8",
+      "shots": 0,
+      "comparison": "P2-P0",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.9090909091,
+      "mean_pp": 0.8984107284268085,
+      "improved_fraction": 0.6425531914893617,
+      "drop_gt_2pp_fraction": 0.08936170212765958,
+      "p_greater": 7.704443823380892e-09
+    },
+    {
+      "variant": "lora8",
+      "shots": 5,
+      "comparison": "P2-P0",
+      "dataset": "pooled",
+      "n": 235,
+      "median_pp": 0.1666666667,
+      "mean_pp": 0.5812538842931915,
+      "improved_fraction": 0.5191489361702127,
+      "drop_gt_2pp_fraction": 0.08936170212765958,
+      "p_greater": 0.0011281715954895
+    }
+  ]
+}

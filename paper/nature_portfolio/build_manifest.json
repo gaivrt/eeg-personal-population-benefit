@@ -1,0 +1,1462 @@
+{
+  "sources": {
+    "reports/stage_c/report/subject_results.csv": "7efcc4b9fb6ebc44964810b59372bf9cde6e6c794d225a68e55d344c3482bc5a",
+    "reports/stage_c/report/run_manifest.json": "889be3a09b13330a099c1904c2f2c01edfa20f47112046e615eb39def1426015",
+    "reports/stage_w/report/run_manifest.json": "ec3c4ce50ce0698fbacc238d5caa8f26d89999bbdc367f16e650d3057dfcd4c2",
+    "reports/stage_m/report/endpoints.json": "d94d303eae493be62898a5f0a3323e0e29185948959d2c121258485ab529a9f5",
+    "reports/stage_w_followup/report/population_strength_subjects.csv": "c355c86dabd1ec5cb866d7f1bbcc51f29f3a453a0914ae691e7ef2588e3a3312",
+    "reports/stage_w/report/population_absolute_subjects.csv": "67ae7cd768d1b6dc923670e4023c6ebe572b2be2b83e217ecbf78d90b4c10bec",
+    "reports/stage_w/report/diagnostic1_subject_results.csv": "5fe0e128bd005ae03894ccaad4296b25384f76b011d331029c17eb499cdba1e2",
+    "reports/stage_w_followup/report/bnci_diagnostic1_subjects.csv": "c87ace2deb31d3026488aef9811ee45c22e3496994a12f565bc50e212ce8ce85",
+    "reports/stage_w/neighbour_audit/pooled_descriptive.csv": "aa4cfb94f64674bda02543df2f11ccd005c5bbcdc87c086b0279b0f21bb23317",
+    "reports/stage_w/lee_result_audit/neighbour_subject_results.csv": "f7e500729e7eb62ad9e2643d14d92cac3595b8bdaa07af53d2353bbbbc075948",
+    "reports/stage_w/report/few_shot_subject_results.csv": "3c0c2b1aaa1fe61a6212ca73b0c31e448aa90bac69d81277364ef9b43af78e45",
+    "reports/stage_w_followup/report/bnci_few_shot_subjects.csv": "78208dfbc92a5c08cf226b999612abf1e77422633aedaf41733c6d5038568fd9",
+    "reports/stage_c3/report/few_shot_subject_results.csv": "38f3d74c7f1f6c1c0de0d99e942784d82b22e8ab4b7ca261d6182cdf19d40731",
+    "reports/stage_m/report/subject_results.csv": "066c3b4175754110b0a61b5f8a02115b434b9f4fc5f5e965d69ddc47be248e42",
+    "reports/stage_w/report/starter_curves.csv": "991a5821edd94f25b109bee427e5e205017198945726f9eb30d88b3022976f27",
+    "reports/stage_w/report/Lee2019_MI_curves.csv": "807941681a064bdf63b390c2c6181a9bdd2cc56a1c8dac6202e75e9a71913b56",
+    "reports/stage_w_followup/report/bnci_training_curves.csv": "785ae807b59de31f536e9036dd42ab23fcad8bfe7e1bf6618bee46eb0e482b34",
+    "reports/stage_a/baselines/data_cards.csv": "992e60cebf3522190fb5dd0623adce587376e67468349f53324d4176ef8bcc2a",
+    "reports/stage_a/baselines/channels.json": "e9548b511740738eec027410f3922d64ea6eeb6c7a3a25f93b87ddc7628c89bc",
+    "configs/splits/stage_b_halves_v1.json": "f7d5d4a89340c25634b82325891da5c385d8aea6135515bcb1c54c758c82a880",
+    "reports/stage_w/lee_data_audit/subjects.csv": "24d40c3870bcfff9e4d50d8174c13cfa2ff65ef8f91d6c030d6f6e1fea4f2aba",
+    "reports/stage_w_followup/preparation/preprocessing.json": "95d55163d56158ef7f104cb6521315ef874c35776b7eecbcf9badeb7d354ba7d",
+    "reports/stage_w_followup/preparation/rest_gdf_audit.json": "d152ddec736ce2a05facae2515f4ef38d28489f36c87531c213ebe6facf59b9d",
+    "configs/splits/stage_a_v1.json": "e7e747feb23c1a4fabbbd92e42b1d918d77c152fc08cc722e06c67f7ba505526",
+    "reports/stage_w/lee_data_audit/splits.json": "92cf91811dc8d41b7b5dd1e535dac0c28062df6cbf91fc32e798ceb9a5e19eef",
+    "reports/stage_w_followup/preparation/splits.json": "817b5e9070f81fcbda5f2d0e993af15f4652a7c974937f183b95e8a1e890937f",
+    "docs/literature_review/papers.csv": "02498b659010c141e392046f30b4dff2527e33452a300c0de09440913c5eba15",
+    "docs/literature_review/references.bib": "5ae0a4a38d3f5eab1af30551e8abaf1d21b6b2a14ed3ad82eab24f5fdbe7b175",
+    "reports/stage_b/report/gate.json": "60bad316f78a9b58b2f19c790b8d2e64a46d5bf0f83fbef4426dcbbb12fa1f56",
+    "reports/stage_b2/report/gate.json": "b479712cc75c4754d74ad1925c551bf67058b66e677be07d37cddf5c9d14a274",
+    "reports/stage_c/report/criteria.json": "196807c91fafadda3cd322faa9eb17c0c16e35b3da7cf92b118a1ca467dc44a8",
+    "reports/stage_c2/report/gate.json": "0ea8d317605d4395818c7e3f1199c18b67169a1de36b2e15b387418105b10c16",
+    "reports/stage_c3/report/gate.json": "f148eef10c5e40a3e15035c9d59886224786cbfcf2b6098bf971c790548c116f",
+    "reports/stage_c4/report/endpoints.json": "498cfbcf4a0a45403222e365cd514bb26fb9f29aac429ef36a51beb49843f44e",
+    "reports/stage_w/report/diagnostic_tests.json": "6f8c5d0202ae729ffca34881cac23b477703eaf76ad0bf02e33cd08730a17999",
+    "reports/stage_w_followup/report/diagnostic_tests.json": "93fa11f3f01e6795e53dea03e2825b6c936e5897d12e0aa76b15816c373bed01",
+    "docs/all_tests.md": "88abd315e970f9d570958bb4cd897f989af74ec4dc3fba0992555ef27df1ae7a",
+    "docs/claims_ledger.md": "7451fba2fc1b28e5d5213aa0b64306cfd3f6ce60ea5499cfbbf104e0d58514e9",
+    "docs/cross_model_summary.md": "8ed2b937cf28bd59e5fca0266e49d984c93d34b04a3a39a25f43ee2976a4896c",
+    "reports/stage_w_followup/test_inventory/source_coverage.json": "de4ba56f954e62b39973ff7a4e34807b3a66157c57babde89915c73fc4c96e7c",
+    "reports/stage_a/baselines/wilcoxon.csv": "e94f729eb1c6c6f3e3ead717809944f075e8f240e2ae34834e50c5ab7e9d428d",
+    "reports/stage_b/report/summary.csv": "0330c6cdbe74761927e7769c7896f6cd683df5f96200a5a62b01e716cd3bfd24",
+    "reports/stage_b/report/film_vs_head.csv": "787d4d37e34aa69f91db42aeb596aeb15fcb99dedda81d0af7340aec8021e435",
+    "reports/stage_b/report/fixed_film_vs_head.csv": "58f77edccd0da4c9f540cb79d21822c662b091954ba9bcfccdd51c629139c901",
+    "reports/stage_b/report/ea_tests.csv": "9c037619e801f8ece1310d6d3fddcc01c2f96853eda2362da5532b9a373f7be4",
+    "reports/stage_b2/report/summary.csv": "c21262d282f9399b8ddf30d0efb0ce7736e6d485369144d844b44f0f1f1f4b66",
+    "reports/stage_b2/report/vs_finetuned_head.csv": "0d91635c910e082fcd632df37e4e887d32c15bdc60a17c8b89e7294c1c005f68",
+    "reports/stage_c/report/criteria_tests.csv": "281b698283f3864bf261fa9406a296e80218f070a8b7a714aa6d1ec8d8dd0821",
+    "reports/stage_c/report/diagnostic_tests.csv": "84c9c21fc8b71b588d0ffcf8da93d3decc6e7d0b91c5e3b1ee913d392454e623",
+    "reports/stage_c/report/summary.csv": "f5aa0e31f2c78f318637cfebdad8dde056c827992c6502db80e7de61c5b640e7",
+    "reports/stage_c2/report/summary.csv": "de87d44bc5a91ff9e4a2621c5f07bea873fc099b20f61b6192e64799de94bb52",
+    "reports/stage_c2/report/diagnostic2_tests.csv": "369efbad04e551f2934a20bfd5e5a666bb43c556994c95c828c96201070104c4",
+    "reports/stage_c3/report/rest_vs_task.csv": "9156c95139ce3b7b4009e4ec1f9c997e40664a90a99cf7449ead353a48a336bb",
+    "reports/stage_c3/report/few_shot_curve.csv": "55acb34f8acd12a4c97ba38e710e47a5021506ae49ff3b9f6958f74f9cb3bcf6",
+    "reports/stage_c4/report/comparisons.csv": "29573362225e45a01db2f44627682e7b5506b310085b6a49270ee8e572250d5d",
+    "reports/stage_m/report/comparisons.csv": "408665087a514855a043ffc466485d194b23b6ba5e7e86a52401d96a3b969f79",
+    "reports/stage_w/report/population_comparisons.csv": "c7b4572c96704e5dd51632652d740a868debe07d310439c307ba8bb9a36b3f68",
+    "reports/stage_w/report/diagnostic1_side_by_side.csv": "cc1c229d7fec068b92523801d112d70befb03b701ebc48d6cdb2950ac22fb216",
+    "reports/stage_w/report/neighbours_side_by_side.csv": "8864b14f5b6b64e9ff6472fbe0751088ddffef02c60762310fd50443c74bac69",
+    "reports/stage_w/report/few_shot_side_by_side.csv": "f68a2e21c3507b8094aaa043e4695cee747f329a013e4bb7b081d7ddbf944157",
+    "reports/stage_w_followup/report/bnci_population_comparisons.csv": "60c8377003911b1ab15a586aebdd678d52a2ecb383519ecc3ed63dc8af2b5b2c",
+    "reports/stage_w_followup/report/population_strength_by_dataset.csv": "c50a2e0ac18eceb3e8cf588f65d2860593817ff68b602eb82372861b547923ca",
+    "reports/stage_w_followup/test_inventory/all_tests_rows.csv": "0843088911d2bf23d3446b597e19ee8108e0a01c24ff14f1d5374b5b19da9e73",
+    "reports/stage_w/report/convergence.csv": "63227e10bc6ade7cf341aa1569a496c4bef54a5a995f3bfe64b29386da448d00",
+    "reports/stage_w_followup/analysis/bnci_convergence.csv": "23b93431062eadde0a40b63ed4b18e0e27e673492e19025071327d2459b54cbc",
+    "configs/stage_a.yaml": "47cbc35dd68020a7f87eab628fd557b8af647a13da2656a46b729fb179607fea",
+    "configs/stage_b.yaml": "6017ba7b454225cec153f914f5bfe0c7e1d206b5b69519ff415234e84ac65628",
+    "configs/stage_b2.yaml": "478874f1fad0015f3317c793c2975c442a15a7454efc2de964c19537dd752bd2",
+    "configs/stage_c.yaml": "3999430e5788338cb1dec3fb78aefb85e1ee2ca3766d6243e14bfe1b1cd3d5d0",
+    "configs/stage_c2.yaml": "7bbeb207f3f132ec4ca6074e93e02d0fabf92083e724d47420c90c6d67448376",
+    "configs/stage_c3.yaml": "b508384d2d736fa098b72b6f6ba861b5f353eadea450560465636f82bca85c8f",
+    "configs/stage_c4.yaml": "619f80b767206a3479f35f225310ac8e39033fa3b0dedfb6ad0e2ee2ac5c3c72",
+    "configs/stage_m.yaml": "244f9d1038d6236c9167f5e7b6a394bf1a6e4b95f74437034c2a3a24838e3d97",
+    "configs/stage_w.yaml": "77a059daa70bab9930770a663fc627dc938c2d64056aab8debbb5844f6df2ea7",
+    "configs/stage_w_followup.yaml": "74a30f5af82c869f2155b9bee725ed2f76bbbb9b0f17757968835051ac0f575d",
+    "configs/cross_model_x.yaml": "ecdf178857e67c8921b541d68fcaba0f27a243b5f3e7ba38e4f921fe8343ef01",
+    "configs/population_budget.yaml": "0f9c56dd2dd10f891bb59813ccbc9ffab26f5793684478411f41c62af9adb923",
+    "reports/stage_a/baselines/report.md": "71e7a4813370fe6b19a19b3dceb66e030fcbed6d4df8f989b5e5fc1193cad958",
+    "reports/stage_w/report/resources.json": "2e5a5d0cfc6200c7f32caf627abcf4298b9d68f4dc5ce1a6b65e8878c4923b11",
+    "reports/stage_w_followup/report/resources.json": "82f9039e32a19e496b32c94085bf3585763348e59c9ab6595bbc39b100d14f73",
+    "reports/stage_m/report/training_resources.csv": "b542d6315b997f203530a5fbfcb943b1713a94b5e0f81e768668a3f46ffba3cd",
+    "scripts/stage_m_run.py": "813dae579128ebb127aca01a8962702aad8d73b2ad8a9f0ac94d57a02dc6d033",
+    "src/subject_context/stage_m.py": "e6b080c5d5711aa2c16d428a0e90442608b99369e2aab6450a12cd391a75b4be",
+    "reports/stage_m/report/run_manifest.json": "666d1b9109df18c2db553f5b6eaf98a6bdb4de948687385730a19b83ab46206a",
+    "reports/stage_w/report/population_absolute_mean_sd.csv": "5e52da44e350822e8154f52581e7cf9a4f1f275febcfc28162be1030e97fb580",
+    "reports/stage_m/report/method_by_shots.csv": "ab698e5aa27cc1cb939f54707cb7279e4e253fbbb0f89d86a1c3b29a46404181",
+    "reports/stage_w_followup/report/bnci_summary.csv": "c7d15d4c222af818f5038a2d097b02ddf2b528ddec5f0b2bd96c378c506ff3e3",
+    "reports/stage_b2/report/gate_tests.csv": "87ea22f47832bbc79089d33171a50c8453ab6ffd858c128c509cc67c3e761fad",
+    "reports/stage_x/three_model_effects.csv": "d87fc39a8ba4b8bde2c5d02d7e4bc79bee1c8b0fa546c495b04c0fd262ccc985",
+    "reports/stage_x/three_model_few_shot.csv": "451f6e356a5298e617844167f0dbe7cc103b1168d5ec9371a1ebd4ce59c32364",
+    "reports/stage_x/three_model_consistency.csv": "f806fad4de3626173571d01820e22fca0468fe5f42da02e6b4524f58bd311d04",
+    "docs/cross_model_protocol.md": "3ee2de7641127d0756498fbaad304281dea1e159d6a90a0e2c54b060604541c8",
+    "docs/cross_model_tests.md": "4fdcae23e2be5e3d5f3dfa733b10fcb6d2f82d809a4a47388603c8ddccd049aa",
+    "docs/population_budget_protocol.md": "4889ed196be263c654c25e4a0179b37fea9f5e6da267e6ba7149414ec1ad60d7",
+    "reports/stage_x/REVE/report/core_summary.csv": "20bccb25ffaf2a207a733ba6aebdb9e280107442593903653b417800f1a254a6",
+    "reports/stage_x/REVE/report/subject_means.csv": "6c48f35c67a4f66d91dd3e6f164f43101925863933b9c58f59c5b5d05fca1474",
+    "reports/stage_x/REVE/report/few_shot_summary.csv": "c9fa5df2b36a259f798dc93d778e3ff8a862fcb1dc148581245f73fc0ca9010a",
+    "reports/stage_x/REVE/report/diagnostic1_gate.json": "dcbf8236a58636445a8c2c70965d49eff50bb405d127ed6f161a5c3c9235fd67",
+    "reports/stage_x/REVE/report/training_selection.csv": "57118a9de267b6a5117df2b41550e6259f741c6fc3ba5159f2963b83b072f304",
+    "reports/stage_x/LaBraM/report/core_summary.csv": "4de2103f5279566623d70fdf5b707324209f4019114acf0b6e07631a2f1fa9a1",
+    "reports/stage_x/LaBraM/report/subject_means.csv": "a21128f57b9ab43d1651a15f598ded78afbc7b114a02de32c64c8e3be06a3f15",
+    "reports/stage_x/LaBraM/report/few_shot_summary.csv": "480a9cd956b719249dda7520a70995a315a2115180c5c5e1dd98398b0d01fdff",
+    "reports/stage_x/LaBraM/report/diagnostic1_gate.json": "7c63790f062fc200519b59816dedeeac534406d763340fdf8c2229e53e1d0390",
+    "reports/stage_x/LaBraM/report/training_selection.csv": "0491ff6d70062fac84c1be9e9d9afb18ed2e3476022bb140f28a15681628accf",
+    "reports/population_budget/retry1/retained/report/curve_summary.csv": "568ab1a8e4f1c3559ec46088512bb3d7eb03ed329af3848131586b189dcccbb7",
+    "reports/population_budget/retry1/retained/report/interpretation.json": "3bd152e0b54adca332e4e2e5536ffe42d89222ed355e5ef76b5a02940b1bdd16",
+    "reports/population_budget/retry1/retained/report/availability.json": "b45f98dc3564aac52be38bf3d46558b7ea6176f20d43b12a83c8b1f436438486",
+    "reports/population_budget/final/integrity-audit-final.json": "b3065e529a800468eb2854020ce29f54bdfdbc809b388c22f6567e7a12f050b9",
+    "reports/population_budget/retry1/final_verification.json": "58b50b2d4e1fd8ddc3691c3b412f3ea2786819b567c147db9137d5a18bcaf59f",
+    "reports/population_budget/retry1/local_verification.json": "d9cf1e70e8c4d9a55eb8ff3335d02542cdf139f5dc7da6c37ea3799395b50263",
+    "docs/population_budget_retry_protocol.md": "ede0a31a44683dc287d54876c765b7d0de9bcbee9331ac6fbc7cb719a6fb1176",
+    "reports/population_budget/retry1/final_decisions.json": "f10c06b01062b70959496f159ba15efa01afe7d7fed0188a36256d6a554c36de",
+    "reports/population_budget/retry1/experiment_freeze.json": "d80b451ace727426f7a20be80adb74a7ae73b739b4b3f973322e13aef0c019b4",
+    "reports/population_budget/final/local_verification.json": "6c88864220fe2f7918811670f8d57b3a31aff6a1f548653ce04cb73d1f0e2062",
+    "reports/population_budget/retry1/retained/report/subject_seed_means.csv": "4814352ec2d6e2352415f4d12b107acaa9d3f0e5329cf22121f3c1dc1f46fce9",
+    "reports/population_budget/final/report/interpretation.json": "a0d2df917c13088cea92278ff323018369862df276002a4381f38e4f759a2565",
+    "reports/population_budget/final/report/curve_summary.csv": "3c3d2696bffb982073695f2051ad461c16bdaaa221f8aa88ac9361173f039d66",
+    "reports/population_budget/retry1/endpoint_validation_final.csv": "56f5db5e3d9848d2227a1cbffbb522134c91027da6f49f28946998b0b97f974a",
+    "reports/population_budget/final/all_model_resources.json": "701929db203f06c944601d312817d31e78b56ec3c31fccef2e2ae0b6a6f429d1",
+    "reports/population_budget/final/report/progress.json": "3046fbc02216274955ac9e276aba0f7445cc61c4e9543fae76c08983fc0d6266",
+    "reports/population_budget/final/report/CBraMod_full_roster_with_missing.csv": "aee9b873137aae3d1d20220350db641b6a0195e724442191177d97b99cfd002b",
+    "reports/population_budget/final/report/CBraMod_per_run_descriptive.csv": "f50d539efabf5ba76c53b6d89b17c7959e52a34f7c8b57fc2c3341a4b66892e1",
+    "reports/population_budget/final/report/endpoint_validation_including_failed_runs.csv": "6b6cca7b78c3ebc96d18da15ff83c62054fbb19ae3af64efad8508a6ae0d9820",
+    "reports/stage_x/REVE/report/few_shot_subject_means.csv": "762dfe7df069475e3096578f7bedd71f7e937588339433db7b0c5455f9b86f5e",
+    "reports/stage_x/LaBraM/report/few_shot_subject_means.csv": "809963568493f46ee9565b1ba83b4c64448680d713467e835dae94d3a9fb9d1a",
+    "reports/stage_w/neighbour_audit/subject_results.csv": "673e4363f440ac384178129c92c7171055664020b3f3fb04aa271855b4f956bc"
+  },
+  "number_records": 37265,
+  "checks": [
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w_followup/report/population_strength_subjects.csv",
+      "keys": [
+        "start",
+        "variant",
+        "dataset",
+        "subject"
+      ],
+      "rows": 1410
+    },
+    {
+      "check": "B3_G_R2_same_subjects_and_paired_arithmetic",
+      "passed": true
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_c/report/subject_results.csv",
+      "keys": [
+        "condition",
+        "dataset",
+        "subject"
+      ],
+      "rows": 4494
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 309
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 309
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 320
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 320
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 208
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 208
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 162
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w_followup/report/bnci_few_shot_subjects.csv",
+      "keys": [
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 27
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_m/report/subject_results.csv",
+      "keys": [
+        "method",
+        "shots",
+        "dataset",
+        "subject"
+      ],
+      "rows": 5360
+    },
+    {
+      "check": "meta_paired_n10_minus_n0_and_mean_decomposition",
+      "passed": true
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/starter_curves.csv",
+      "keys": [
+        "method",
+        "additional_step",
+        "role",
+        "fold",
+        "seed"
+      ],
+      "rows": 1046
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/Lee2019_MI_curves.csv",
+      "keys": [
+        "method",
+        "additional_step",
+        "role",
+        "fold",
+        "seed"
+      ],
+      "rows": 1050
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w_followup/report/bnci_training_curves.csv",
+      "keys": [
+        "method",
+        "additional_step",
+        "role",
+        "fold",
+        "seed"
+      ],
+      "rows": 1054
+    },
+    {
+      "check": "all_original_joint_gates",
+      "rows": 40
+    },
+    {
+      "check": "source_coverage_rows_and_sha256",
+      "tables": 25,
+      "comparison_rows": 904,
+      "passed": true
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/three_model_effects.csv",
+      "keys": [
+        "model",
+        "dataset"
+      ],
+      "rows": 9
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/three_model_few_shot.csv",
+      "keys": [
+        "model",
+        "dataset",
+        "shots"
+      ],
+      "rows": 33
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "X1_summary_against_saved_subject_means_and_core_tables",
+      "combinations": 9,
+      "new_tests": false,
+      "passed": true
+    },
+    {
+      "check": "X1_fixed_descriptive_stability",
+      "passed": true,
+      "source": "reports/stage_x/three_model_consistency.csv"
+    },
+    {
+      "check": "budget_final_three_models_original_cohort_after_registered_retry",
+      "models": [
+        "CBraMod",
+        "REVE",
+        "LaBraM"
+      ],
+      "CBraMod": "24 original trajectories plus one registered precision exception; initial failure retained",
+      "new_tests": false
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/population_budget/retry1/retained/report/subject_seed_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/few_shot_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/REVE/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 52
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 80
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_x/LaBraM/report/few_shot_subject_means.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 103
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/neighbour_audit/subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": null,
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 235
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/diagnostic1_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 54
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/diagnostic1_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 54
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/diagnostic1_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 54
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w/report/diagnostic1_subject_results.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 54
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w_followup/report/bnci_diagnostic1_subjects.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 9
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w_followup/report/bnci_diagnostic1_subjects.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 9
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w_followup/report/bnci_diagnostic1_subjects.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 9
+    },
+    {
+      "check": "unique_keys",
+      "source": "reports/stage_w_followup/report/bnci_diagnostic1_subjects.csv",
+      "keys": [
+        "dataset",
+        "subject"
+      ],
+      "rows": 9
+    },
+    {
+      "check": "subject_bootstrap_saved_scores_only",
+      "resamples": 20000,
+      "seed": 20260927,
+      "contrasts": 121,
+      "no_new_training_or_inference": true,
+      "dependence_adjustment": false
+    }
+  ],
+  "scope": "Existing results only; subject bootstrap of saved seed-averaged scores; no fitting, inference, or new hypothesis tests.",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "matplotlib": "3.11.2",
+    "PyYAML": "6.0.2"
+  }
+}

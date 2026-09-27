@@ -1,0 +1,18 @@
+{
+  "model": "LaBraM",
+  "scope": "pooled_235_original_three_slots",
+  "unrun_slots": [
+    "FiLM",
+    "mixture"
+  ],
+  "N": 235,
+  "mean_pp": 3.9266590511485107,
+  "median_pp": 3.1742424242,
+  "SD_pp": 4.643048038551227,
+  "improved_fraction": 0.8595744680851064,
+  "drop_gt_2pp_fraction": 0.06382978723404255,
+  "p_raw_descriptive": 3.962623803470614e-30,
+  "p_Holm": 1.1887871410411843e-29,
+  "pass": true,
+  "audited_prediction_rows": 1872455
+}

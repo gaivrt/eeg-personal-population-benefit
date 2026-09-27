@@ -1,0 +1,8 @@
+{
+  "rule": "median over subjects of five-seed mean BA difference; FiLM variant chosen on each fold validation only",
+  "subjects": 235,
+  "threshold_pp": 2.0,
+  "observed_median_gain_pp": 1.0,
+  "passed": false,
+  "stage_c_started": false
+}

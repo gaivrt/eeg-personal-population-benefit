@@ -1,0 +1,411 @@
+Stage,Configuration field,Frozen value / grid
+stage_a,/stage,A
+stage_a,/protocol_version,2
+stage_a,/split_seed,20260925
+stage_a,/seeds,"11, 23, 37, 53, 71"
+stage_a,/folds,5
+stage_a,/validation_fraction,0.1
+stage_a,/datasets/PhysionetMI/subjects,109
+stage_a,/datasets/PhysionetMI/exclude,"88, 89, 92, 100, 104, 106"
+stage_a,/datasets/PhysionetMI/runs,"1, 2, 4, 8, 12"
+stage_a,/datasets/PhysionetMI/sfreq,160
+stage_a,/datasets/PhysionetMI/channels,64
+stage_a,/datasets/PhysionetMI/notch_hz,60
+stage_a,/datasets/PhysionetMI/task_seconds,4
+stage_a,/datasets/PhysionetMI/rest_seconds_range,"60, 61"
+stage_a,/datasets/Dreyer2023/subjects,87
+stage_a,/datasets/Dreyer2023/exclude,"4, 9, 17, 29, 41, 78, 79"
+stage_a,/datasets/Dreyer2023/sfreq,512
+stage_a,/datasets/Dreyer2023/channels,27
+stage_a,/datasets/Dreyer2023/notch_hz,50
+stage_a,/datasets/Dreyer2023/task_seconds,4
+stage_a,/datasets/Dreyer2023/rest_seconds_range,"179.99, 180.01"
+stage_a,/datasets/Cho2017/subjects,52
+stage_a,/datasets/Cho2017/exclude,
+stage_a,/datasets/Cho2017/sfreq,512
+stage_a,/datasets/Cho2017/channels,64
+stage_a,/datasets/Cho2017/notch_hz,60
+stage_a,/datasets/Cho2017/task_seconds,3
+stage_a,/datasets/Cho2017/rest_seconds_range,"60, 67"
+stage_a,/preprocessing/sfreq,200
+stage_a,/preprocessing/highpass_hz,0.3
+stage_a,/preprocessing/reference,average
+stage_a,/preprocessing/input_unit,V
+stage_a,/preprocessing/output_unit,uV_div_100
+stage_a,/preprocessing/output_dtype,float16
+stage_a,/preprocessing/rest_segment_seconds,4
+stage_a,/preprocessing/quality_policy,finite_only
+stage_a,/audit/max_failed_subject_fraction,0.1
+stage_a,/audit/min_usable_eyes_open_seconds,30
+stage_a,/audit/alpha_channels,"O1, Oz, O2"
+stage_a,/audit/alpha_band_hz,"8, 13"
+stage_a,/audit/alpha_window_seconds,4
+stage_a,/audit/alpha_welch_seconds,2
+stage_a,/audit/alpha_required_ratio,1.0
+stage_a,/model/cache_prefix_layers,8
+stage_a,/model/total_layers,12
+stage_a,/model/cache_dtype,float16
+stage_a,/training/device_required,NVIDIA GeForce RTX 3090
+stage_a,/training/heads,"linear, mlp"
+stage_a,/training/epochs,50
+stage_a,/training/batch_size,128
+stage_a,/training/learning_rates,"0.001, 0.0003"
+stage_a,/training/weight_decay,0.01
+stage_a,/training/mlp_hidden,128
+stage_a,/training/selection_metric,validation_subject_macro_balanced_accuracy
+stage_a,/training/low_accuracy_diagnostic,0.55
+stage_b,/stage,B
+stage_b,/version,1
+stage_b,/seeds,"11, 23, 37, 53, 71"
+stage_b,/variants,"film2, film4, beta4, head"
+stage_b,/base_head_selection,stage_a_validation_subject_ba
+stage_b,/variant_selection,fold_validation_median_gain_then_mean_gain
+stage_b,/learning_rates,"0.01, 0.1"
+stage_b,/head_learning_rates,"0.0001, 0.001"
+stage_b,/steps,"20, 60"
+stage_b,/weight_decays,"0.0, 0.01"
+stage_b,/batch_size,32
+stage_b,/optimizer,AdamW
+stage_b,/film_bound,0.1
+stage_b,/rough_balance_minority_fraction,0.4
+stage_b,/gate_median_gain,0.02
+stage_b,/gate_seed_aggregation,subject_mean_over_five_seeds
+stage_b,/gate_variant,selected_on_each_fold_validation_only
+stage_b,/stop_after_stage,B
+stage_b2,/stage,B2
+stage_b2,/version,1
+stage_b2,/seeds,"11, 23, 37, 53, 71"
+stage_b2,/variants,"film_first2, film_all, lora4, lora8, scratch_head"
+stage_b2,/gate_variants,"film_first2, film_all, lora4, lora8"
+stage_b2,/learning_rates/film_first2,"0.01, 0.1"
+stage_b2,/learning_rates/film_all,"0.01, 0.1"
+stage_b2,/learning_rates/lora4,"0.0001, 0.001"
+stage_b2,/learning_rates/lora8,"0.0001, 0.001"
+stage_b2,/learning_rates/scratch_head,"0.0001, 0.001"
+stage_b2,/steps,"20, 60"
+stage_b2,/weight_decays,"0.0, 0.01"
+stage_b2,/batch_size,32
+stage_b2,/optimizer,AdamW
+stage_b2,/film_bound,0.1
+stage_b2,/lora_projections,"q, k, v, out"
+stage_b2,/lora_branches,"spatial, temporal"
+stage_b2,/lora_alpha_over_rank,1.0
+stage_b2,/lora_dropout,0.0
+stage_b2,/base_head_selection,reuse_stage_b_selection
+stage_b2,/scratch_head_normalization,frozen_B0_training_fold_statistics
+stage_b2,/gate_median_gain,0.02
+stage_b2,/gate_alpha,0.05
+stage_b2,/gate_test,paired_wilcoxon_greater_than_stage_b_head
+stage_b2,/gate_multiplicity,holm_across_four_pooled_adaptation_variants
+stage_b2,/gate_seed_aggregation,subject_mean_over_five_seeds
+stage_b2,/stop_after_stage,B2
+stage_c,/stage,C
+stage_c,/version,1
+stage_c,/seeds,"11, 23, 37, 53, 71"
+stage_c,/base_head_selection,reuse_stage_b_selection
+stage_c,/context/eye_state,open
+stage_c,/context/segment_seconds,4
+stage_c,/context/min_seconds,30
+stage_c,/context/test_length,all_usable
+stage_c,/context/bands_hz/0,"8, 13"
+stage_c,/context/bands_hz/1,"13, 30"
+stage_c,/context/filter_order,4
+stage_c,/context/tangent_reference,riemann_mean_training_subject_rest_segments
+stage_c,/encoder/projection,64
+stage_c,/encoder/hidden,128
+stage_c,/encoder/z_dim,16
+stage_c,/generator_hidden,128
+stage_c,/film_bound,0.1
+stage_c,/lora/bases,8
+stage_c,/lora/rank,8
+stage_c,/lora/b_init_std,0.01
+stage_c,/lora/projections,"q, k, v, out"
+stage_c,/lora/branches,"spatial, temporal"
+stage_c,/methods,"m_film, m_lora"
+stage_c,/training/optimizer,AdamW
+stage_c,/training/weight_decay,0.01
+stage_c,/training/grad_clip_norm,1.0
+stage_c,/training/query_batch,32
+stage_c,/training/context_dropout,0.2
+stage_c,/training/episodes,"1000, 3000"
+stage_c,/training/learning_rates,"0.0003, 0.001"
+stage_c,/training/lambdas,"0.1, 1.0"
+stage_c,/training/margins,"0.1, 0.5"
+stage_c,/training/ablation_lambda,0.0
+stage_c,/t3a_filter_sizes,"1, 5, 20, all"
+stage_c,/b5/shots,"10, 20, 40, 80"
+stage_c,/b5/learning_rates,"0.01, 0.1"
+stage_c,/b5/steps,"20, 60"
+stage_c,/b5/weight_decays,"0.0, 0.01"
+stage_c,/b5/batch_size,32
+stage_c,/b6_reference/m_film,film_all
+stage_c,/b6_reference/m_lora,lora8
+stage_c,/criteria/alpha,0.05
+stage_c,/criteria/test,paired_wilcoxon_greater_approx_zero_dropped
+stage_c,/criteria/controls,"B4, B0"
+stage_c,/criteria/multiplicity,holm_across_two_methods_two_controls
+stage_c,/criteria/recovery_fraction,0.3
+stage_c,/criteria/max_drop_gt_2pp_fraction,0.1
+stage_c,/criteria/seed_aggregation,subject_mean_over_five_seeds
+stage_c,/stop_after_stage,C
+stage_c2,/stage,C2
+stage_c2,/version,1
+stage_c2,/start_models,stage_c_selected_main_default_z
+stage_c2,/variants,"film_offset, mix_offset, lora8"
+stage_c2,/learning_rates/film_offset,"0.01, 0.1"
+stage_c2,/learning_rates/mix_offset,"0.01, 0.1"
+stage_c2,/learning_rates/lora8,"0.0001, 0.001"
+stage_c2,/steps,"20, 60"
+stage_c2,/weight_decays,"0.0, 0.01"
+stage_c2,/batch_size,32
+stage_c2,/lora_rank,8
+stage_c2,/swap_draws,10
+stage_c2,/gate/median_upper_bound,0.02
+stage_c2,/gate/alpha,0.05
+stage_c2,/gate/test,paired_wilcoxon_greater_approx_zero_dropped
+stage_c2,/gate/multiplicity,holm_across_three_variants
+stage_c2,/gate/rule,any_variant
+stage_c2,/diagnostic2/features,"embedding_mean, tangent_mean"
+stage_c2,/diagnostic2/block_scaling,inverse_sqrt_dimension
+stage_c2,/diagnostic2/distance,euclidean
+stage_c2,/diagnostic2/test,paired_wilcoxon_greater_nearest_vs_random
+stage_c2,/diagnostic2/multiplicity,holm_across_passing_variants
+stage_c2,/stop_after_stage,C2
+stage_c3,/stage,C3
+stage_c3,/version,1
+stage_c3,/variants,"film_offset, lora8"
+stage_c3,/diagnostic3/task_features,first_half_trials_unlabeled
+stage_c3,/diagnostic3/tangent_reference,training_subjects_first_half_trials_unlabeled
+stage_c3,/diagnostic3/block_scaling,inverse_sqrt_dimension
+stage_c3,/diagnostic3/distance,euclidean
+stage_c3,/diagnostic3/primary_k,1
+stage_c3,/diagnostic3/secondary_k,3
+stage_c3,/diagnostic3/lora_average,mean_weight_update_BA
+stage_c3,/diagnostic3/random_draws,10
+stage_c3,/diagnostic3/random_k3,mean_of_three_distinct_others
+stage_c3,/diagnostic3/test,paired_wilcoxon_greater_nearest_vs_random
+stage_c3,/diagnostic3/multiplicity,holm_across_two_variants_primary_k1
+stage_c3,/diagnostic3/alpha,0.05
+stage_c3,/few_shot/shots,"5, 10, 20, 40"
+stage_c3,/few_shot/selection,earliest_first_half_in_time_order
+stage_c3,/few_shot/learning_rates/film_offset,"0.01, 0.1"
+stage_c3,/few_shot/learning_rates/lora8,"0.0001, 0.001"
+stage_c3,/few_shot/steps,"20, 60"
+stage_c3,/few_shot/weight_decays,"0.0, 0.01"
+stage_c3,/few_shot/batch_size,32
+stage_c3,/few_shot/recovery_denominator,full_first_half_gain_over_b3
+stage_c3,/stop_after_stage,C3
+stage_c4,/stage,C4
+stage_c4,/version,1
+stage_c4,/variants/lora8/shots,"0, 5, 10, 20"
+stage_c4,/variants/lora8/learning_rates,"0.0001, 0.001"
+stage_c4,/variants/lora8/mu,"0.0, 0.1, 1.0"
+stage_c4,/variants/film_offset/shots,"0, 10"
+stage_c4,/variants/film_offset/learning_rates,"0.01, 0.1"
+stage_c4,/variants/film_offset/mu,"0.0, 0.01, 0.1"
+stage_c4,/priors,"P0, P1, P2"
+stage_c4,/ks,"3, 5"
+stage_c4,/alphas,"0.25, 0.5, 1.0"
+stage_c4,/random_draws,10
+stage_c4,/validation_random_draws,1
+stage_c4,/selection_k_alpha,leave_one_subject_out_on_pool_at_n0
+stage_c4,/steps,"20, 60"
+stage_c4,/weight_decay,0.0
+stage_c4,/batch_size,32
+stage_c4,/lora_rank,8
+stage_c4,/primary/variant,lora8
+stage_c4,/primary/shots,10
+stage_c4,/primary/comparisons,"P2_vs_P1, P2_vs_P0"
+stage_c4,/primary/test,paired_wilcoxon_greater_approx_zero_dropped
+stage_c4,/primary/alpha,0.05
+stage_c4,/secondary/shots,"0, 5"
+stage_c4,/secondary/comparison,P2_vs_P1
+stage_c4,/secondary/multiplicity,holm_across_two_secondary
+stage_c4,/stop_after_stage,C4
+stage_m,/stage,M
+stage_m,/version,1
+stage_m,/population,b3_lora_bases_and_task_head
+stage_m,/personal_lora_rank,8
+stage_m,/inner/optimizer,sgd_full_batch_support
+stage_m,/inner/ks,"5, 10, 20"
+stage_m,/inner/learning_rates,"0.003, 0.01, 0.03"
+stage_m,/inner/pilot/fold,0
+stage_m,/inner/pilot/seed,11
+stage_m,/inner/pilot/shots,10
+stage_m,/inner/pilot/scan,"0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0"
+stage_m,/inner/pilot/rule,best_validation_median_gain_then_mean_over_ks_plus_both_scan_neighbours
+stage_m,/outer/episode_shots,"5, 10, 20"
+stage_m,/outer/support,earliest_first_half
+stage_m,/outer/query,random_32_of_second_half
+stage_m,/outer/meta_batch_subjects,1
+stage_m,/outer/optimizer,AdamW
+stage_m,/outer/learning_rate,0.0001
+stage_m,/outer/weight_decay,0.01
+stage_m,/outer/grad_clip_norm,1.0
+stage_m,/outer/steps,"1000, 2000"
+stage_m,/outer/m1_inner_lr,r0_validation_best_lr_for_that_k_at_n10
+stage_m,/outer/m2_log_lr_learning_rate,0.001
+stage_m,/variants,"M1, M2"
+stage_m,/controls/R0,B3
+stage_m,/controls/R1,C4_P1_prior_lora8
+stage_m,/controls/R2,B3_continued_original_objective
+stage_m,/shots,"0, 5, 10, 20, 40"
+stage_m,/selection/inner,validation_median_gain_over_b3_then_mean_then_smaller_k_then_smaller_lr
+stage_m,/selection/m,validation_n10_median_gain_over_b3_then_mean_then_smaller_k_then_fewer_steps
+stage_m,/selection/strongest_control,highest_pooled_validation_median_ba_at_n10_then_mean
+stage_m,/selection/final_variant,passed_variant_with_higher_pooled_validation_median_ba_at_n10
+stage_m,/batch_size_scoring,32
+stage_m,/primary/shots,10
+stage_m,/primary/test,paired_wilcoxon_greater_approx_zero_dropped
+stage_m,/primary/multiplicity,holm_across_M1_M2
+stage_m,/primary/alpha,0.05
+stage_m,/primary/min_median_pp,1.0
+stage_m,/primary/max_drop_gt_2pp_fraction,0.1
+stage_m,/secondary_shots,"5, 20"
+stage_m,/confirmatory/dataset,Lee2019_MI_session1
+stage_m,/stop_after_stage,M
+stage_w,/stage,W
+stage_w,/version,1
+stage_w,/seeds,"11, 23, 37, 53, 71"
+stage_w,/population/methods,"m_film, m_lora"
+stage_w,/population/training,unchanged_stage_c_selected_configuration
+stage_w,/population/evaluation,default_z
+stage_w,/population/additional_steps_multiplier,3
+stage_w,/population/check_every_steps,250
+stage_w,/population/early_stop_patience_checks,8
+stage_w,/population/early_stop_min_delta,0.0001
+stage_w,/population/selection,minimum_validation_subject_mean_cross_entropy
+stage_w,/population/validation_trials,second_half
+stage_w,/population/plateau_window_checks,8
+stage_w,/population/plateau_relative_range,0.01
+stage_w,/diagnostic1/variants,"film_offset, lora8"
+stage_w,/diagnostic1/selection,unchanged_validation_grid_and_rule
+stage_w,/diagnostic1/swap_draws,10
+stage_w,/diagnostic3/k,"1, 3"
+stage_w,/few_shot/variants,lora8
+stage_w,/few_shot/shots,"5, 10, 20"
+stage_w,/few_shot/additional_40_datasets,"Dreyer2023, Cho2017"
+stage_w,/external/dataset,Lee2019_MI
+stage_w,/external/session,1
+stage_w,/external/subjects,54
+stage_w,/external/split_seed,20260925
+stage_w,/external/folds,5
+stage_w,/external/validation_fraction,0.1
+stage_w,/external/runs,"train, test"
+stage_w,/external/rest_field,EEG_MI_train.pre_rest
+stage_w,/external/sfreq,1000
+stage_w,/external/channels,62
+stage_w,/external/readout_channels,starter_common_without_FCz
+stage_w,/external/channel_exception,user_approved_26_channel_intersection_2026_09_26
+stage_w,/external/notch_hz,60
+stage_w,/external/task_seconds,4
+stage_w,/external/minimum_free_bytes,100000000000
+stage_w,/external/hyperparameters,corresponding_starter_fold_and_seed_selected_values
+stage_w,/external/shots,"5, 10, 20"
+stage_w,/stop_after_stage,W
+stage_w_followup,/stage,W_followup
+stage_w_followup,/version,1
+stage_w_followup,/primary_population_reference,G
+stage_w_followup,/sensitivity_population_reference,R2
+stage_w_followup,/seeds,"11, 23, 37, 53, 71"
+stage_w_followup,/r2/checkpoint,start-R2.pt
+stage_w_followup,/r2/population_family,m_lora
+stage_w_followup,/r2/variants,"film_offset, lora8"
+stage_w_followup,/r2/diagnostic_config,configs/stage_c2.yaml
+stage_w_followup,/bnci/dataset,BNCI2014_001
+stage_w_followup,/bnci/session,2
+stage_w_followup,/bnci/file_suffix,E
+stage_w_followup,/bnci/subjects,9
+stage_w_followup,/bnci/sfreq,250
+stage_w_followup,/bnci/channels,22
+stage_w_followup,/bnci/notch_hz,50
+stage_w_followup,/bnci/readout_channels,starter_common_intersection_19
+stage_w_followup,/bnci/compatibility_approved,user_2026_09_27
+stage_w_followup,/bnci/split_seed,20260925
+stage_w_followup,/bnci/folds,5
+stage_w_followup,/bnci/validation_fraction,0.1
+stage_w_followup,/bnci/no_donor,unavailable_not_imputed
+stage_w_followup,/bnci/classes,"left_hand, right_hand"
+stage_w_followup,/bnci/trial_seconds_after_trial_start,"2, 6"
+stage_w_followup,/bnci/hyperparameters,corresponding_starter_fold_and_seed_selected_values
+stage_w_followup,/bnci/shots,"5, 10, 20"
+stage_w_followup,/bnci/linear_probe_hyperparameters,corresponding_starter_B0_linear_selection
+stage_w_followup,/bnci/minimum_free_bytes,20000000000
+cross_model_x,/seeds,"11, 23, 37, 53, 71"
+cross_model_x,/preprocessing/sfreq,200
+cross_model_x,/preprocessing/signal_unit,uV_div_100
+cross_model_x,/preprocessing/storage_dtype,float16
+cross_model_x,/preprocessing/filter_dtype,float64
+cross_model_x,/preprocessing/reference,common_average_native_EEG
+cross_model_x,/preprocessing/quality,existing_finite_only_trial_roster
+cross_model_x,/preprocessing/REVE/route,pinned_public_MI_downstream_code
+cross_model_x,/preprocessing/REVE/starter_and_Lee_highpass_hz,0.3
+cross_model_x,/preprocessing/REVE/notch_hz/PhysionetMI,60
+cross_model_x,/preprocessing/REVE/notch_hz/Dreyer2023,50
+cross_model_x,/preprocessing/REVE/notch_hz/Cho2017,60
+cross_model_x,/preprocessing/REVE/notch_hz/Lee2019_MI,60
+cross_model_x,/preprocessing/REVE/patch_tail,official_unfold_no_padding
+cross_model_x,/preprocessing/LaBraM/highpass_hz,0.1
+cross_model_x,/preprocessing/LaBraM/lowpass_hz,75
+cross_model_x,/preprocessing/LaBraM/notch_hz_all_datasets,50
+cross_model_x,/preprocessing/LaBraM/filter,MNE_FIR_zero_phase_version_1.10.2
+cross_model_x,/readout/kind,last_layer_per_channel_time_mean_then_flatten
+cross_model_x,/readout/starter_channels,configs/stage_a_channels.json#readout_common
+cross_model_x,/readout/normalization,B0_training_subject_features_only_frozen_for_G_and_personal
+cross_model_x,/readout/heads,"linear, mlp_128_GELU"
+cross_model_x,/adaptation/rank,8
+cross_model_x,/adaptation/alpha_over_rank,1
+cross_model_x,/adaptation/dropout,0
+cross_model_x,/adaptation/A_init,kaiming_uniform
+cross_model_x,/adaptation/B_init,zero
+cross_model_x,/adaptation/personal_start,zero_increment_on_frozen_corresponding_population_adapter
+cross_model_x,/population/B0/learning_rates,"0.001, 0.0003"
+cross_model_x,/population/B0/batch_size,128
+cross_model_x,/population/B0/max_epochs,50
+cross_model_x,/population/B0/optimizer,AdamW
+cross_model_x,/population/B0/weight_decay,0.01
+cross_model_x,/population/B0/validation_trials,all_trials_as_original_A
+cross_model_x,/population/B0/selection,validation_subject_mean_BA_then_linear_first_lr_in_original_order_earlier_epoch
+cross_model_x,/population/B0/epoch,full_training_trial_pass
+cross_model_x,/population/G/learning_rates,"0.0003, 0.001"
+cross_model_x,/population/G/batch_size,32
+cross_model_x,/population/G/optimizer,AdamW
+cross_model_x,/population/G/weight_decay,0.01
+cross_model_x,/population/G/gradient_clip,1.0
+cross_model_x,/population/G/loss,ordinary_cross_entropy_no_context_generator
+cross_model_x,/population/G/epoch,N_training_subjects_iid_uniform_subject_draws_each_32_random_trials
+cross_model_x,/population/G/initial_max_steps_per_lr,3000
+cross_model_x,/population/G/initial_checkpoint_candidates,"1000, 3000"
+cross_model_x,/population/G/initial_selection,validation_subject_gain_median_then_mean_then_fewer_updates_then_smaller_lr
+cross_model_x,/population/G/continuation_scope,selected_lr_and_selected_checkpoint_only_restore_optimizer_and_rng
+cross_model_x,/population/G/continuation_additional_steps_multiplier,3
+cross_model_x,/population/G/max_steps_in_selected_trajectory,12000
+cross_model_x,/population/G/max_total_steps_all_lr_per_fold_seed,15000
+cross_model_x,/population/G/continuation_checkpoint_selection,minimum_validation_subject_mean_CE_earliest_tie_including_continuation_step0
+cross_model_x,/population/G/start,selected_B0_with_zero_population_adapter
+cross_model_x,/convergence/required_epoch_metrics,"validation_CE, validation_accuracy, validation_BA"
+cross_model_x,/convergence/required_G_check_metrics,"train_all_trials_CE, train_all_trials_accuracy, train_all_trials_BA, validation_CE, validation_accuracy, validation_BA"
+cross_model_x,/convergence/validation,B0_all_validation_trials_G_and_personal_fixed_second_half_as_original
+cross_model_x,/convergence/G_check_every_steps,250
+cross_model_x,/convergence/window_checks,8
+cross_model_x,/convergence/loss_relative_range,0.01
+cross_model_x,/convergence/loss_absolute_range_floor,0.0001
+cross_model_x,/convergence/accuracy_and_BA_absolute_range,0.005
+cross_model_x,/convergence/CE_early_stop_patience_checks,8
+cross_model_x,/convergence/CE_min_delta,0.0001
+cross_model_x,/convergence/plateau_no_running_best_accuracy_or_BA_improvement_checks,8
+cross_model_x,/convergence/accuracy_and_BA_min_delta,0.001
+cross_model_x,/convergence/G_stop,continuation_CE_patience_or_three_times_selected_initial_steps_or_numerical_failure
+cross_model_x,/convergence/continuation_patience_starts_at,selected_initial_checkpoint
+cross_model_x,/convergence/selected_checkpoint_relative_to_plateau_window,report_separately
+cross_model_x,/convergence/fail_to_converge,report_finite_budget_diagnostics_no_test_based_retraining
+cross_model_x,/personal_and_few_shot/optimizer,AdamW
+cross_model_x,/personal_and_few_shot/learning_rates/lora8,"0.0001, 0.001"
+cross_model_x,/personal_and_few_shot/steps,"20, 60"
+cross_model_x,/personal_and_few_shot/weight_decays,"0.0, 0.01"
+cross_model_x,/personal_and_few_shot/batch_size,32
+cross_model_x,/personal_and_few_shot/selection,original_C2_C3_validation_only_median_then_mean_then_steps_lr_wd
+cross_model_x,/personal_and_few_shot/shots,"5, 10, 20"
+cross_model_x,/personal_and_few_shot/additional_40,"Dreyer2023, Cho2017"
+cross_model_x,/personal_and_few_shot/shot_unit,earliest_n_total_trials_not_per_class
+cross_model_x,/personal_and_few_shot/swap,same_fold_same_dataset_other_test_subjects_10_draws_with_replacement

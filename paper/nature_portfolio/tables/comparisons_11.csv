@@ -1,0 +1,16 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0336,variant=film_offset,PhysionetMI,103,4.424,4.299,3.157e-11,1.894e-10
+T0337,variant=film_offset,Dreyer2023,80,5.517,5.906,9.48e-15,8.532e-14
+T0338,variant=film_offset,Cho2017,52,3.220,5.762,4.415e-08,1.766e-07
+T0339,variant=film_offset,Dreyer+Cho,132,4.855,5.849,5.454e-22,6e-21
+T0340,variant=film_offset,pooled,235,4.617,5.170,2.779e-31,4.168e-30
+T0341,variant=mix_offset,PhysionetMI,103,2.833,2.510,1.361e-07,4.082e-07
+T0342,variant=mix_offset,Dreyer2023,80,2.525,2.409,2.189e-12,1.532e-11
+T0343,variant=mix_offset,Cho2017,52,2.240,3.391,6.015e-07,9.545e-07
+T0344,variant=mix_offset,Dreyer+Cho,132,2.475,2.796,3.59e-18,3.59e-17
+T0345,variant=mix_offset,pooled,235,2.580,2.671,1.427e-22,1.855e-21
+T0346,variant=lora8,PhysionetMI,103,2.262,2.237,4.773e-07,9.545e-07
+T0347,variant=lora8,Dreyer2023,80,4.742,5.307,9.844e-15,8.532e-14
+T0348,variant=lora8,Cho2017,52,4.510,6.333,4.538e-09,2.269e-08
+T0349,variant=lora8,Dreyer+Cho,132,4.617,5.711,1.962e-22,2.354e-21
+T0350,variant=lora8,pooled,235,3.470,4.188,5.012e-28,7.017e-27

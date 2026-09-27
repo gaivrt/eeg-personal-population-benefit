@@ -1,0 +1,9 @@
+Work,Bib key,Question,Subject / target setting,Verified control scope
+Identity Trap,lin2026identity,Representation / identity audit,Task- and dataset-dependent,Identity diagnostics; attribution package not established here
+EEG-FM-Compass,liu2026compass,Benchmark and adaptation comparison,LOSO and within-subject few-shot separately,Separate protocols; no joint own/population/swapped gain decomposition
+Stacked LoRA,sarhane2026stacked,Shared and personal low-rank adapters,Subjects seen in pooled trial split,Global adapter comparison; different capacity; mismatch not reported in read text
+Lopes et al. (Scientific Reports),lopes2026published,Personal encoders and alignment,LOSO; target calibration,"Low-rank, shared-adaptation, mismatch, capacity and normalization controls"
+Nguyen et al.,nguyen2026stroke,Frozen-model population LoRA,Held-out subjects,Head versus LoRA; no target personal adapter in evaluated pipeline
+ResTL,an2024restl,Rest-based generative transfer,LOSO; target rest,Noise/rest control; updates decoder; donor-rest swap not reported in read text
+Sharma et al.,sharma2024fast,Transfer learning versus MAML,Held-out subjects; few-shot labels,Ordinary transfer baseline; optimizers differ; total training budget not matched
+This study,,Gain attribution on frozen backbone,Held-out subjects; same-session split,Default/shuffled; own/swapped; outer-update continuation; separate Delta and U

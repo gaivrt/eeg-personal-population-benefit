@@ -1,0 +1,34 @@
+{
+  "verified_at_UTC": "2026-09-27T10:13:09.478375+00:00",
+  "archive_sha256": "46e62cc382fe0b21e822ffa7a352c21fbf108e37c8d3d035119e7506961ad035",
+  "verified_noncheckpoint_files": 3048,
+  "verified_noncheckpoint_bytes": 1094430294,
+  "new_files": 1041,
+  "reused_identical_files": 2007,
+  "all_sha256_passed": true,
+  "historical_1x_comparisons": [
+    {
+      "model": "CBraMod",
+      "runs": 24,
+      "matched_trials": 1312044,
+      "changed_predictions": 1,
+      "max_BA_difference": 0.04166666666666674
+    },
+    {
+      "model": "REVE",
+      "runs": 25,
+      "matched_trials": 1454675,
+      "changed_predictions": 0,
+      "max_BA_difference": 0.0
+    },
+    {
+      "model": "LaBraM",
+      "runs": 25,
+      "matched_trials": 1454675,
+      "changed_predictions": 0,
+      "max_BA_difference": 0.0
+    }
+  ],
+  "retained_home_files": 3720,
+  "retained_home_bytes": 22452826708
+}

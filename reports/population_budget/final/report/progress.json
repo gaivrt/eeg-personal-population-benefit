@@ -1,0 +1,456 @@
+{
+  "runs": [
+    {
+      "model": "REVE",
+      "fold": 0,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 0,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 0,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 0,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 0,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 1,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 1,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 1,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 1,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 1,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 2,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 2,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 2,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 2,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 2,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 3,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 3,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 3,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 3,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 3,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 4,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 4,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 4,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 4,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "REVE",
+      "fold": 4,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 0,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 0,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 0,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 0,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 0,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 1,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 1,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 1,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 1,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 1,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 2,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 2,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 2,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 2,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 2,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 3,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 3,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 3,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 3,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 3,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 4,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 4,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 4,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 4,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "LaBraM",
+      "fold": 4,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 0,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 0,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 0,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 0,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 0,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 1,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 1,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 1,
+      "seed": 37,
+      "status": "failed"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 1,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 1,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 2,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 2,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 2,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 2,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 2,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 3,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 3,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 3,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 3,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 3,
+      "seed": 71,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 4,
+      "seed": 11,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 4,
+      "seed": 23,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 4,
+      "seed": 37,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 4,
+      "seed": 53,
+      "status": "complete"
+    },
+    {
+      "model": "CBraMod",
+      "fold": 4,
+      "seed": 71,
+      "status": "complete"
+    }
+  ],
+  "completed": 74,
+  "audited_prediction_rows": 12911388
+}

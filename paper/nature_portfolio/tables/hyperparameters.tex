@@ -1,0 +1,60 @@
+\begin{longtable}{p{1.15in}p{2.7in}p{2.75in}}
+\caption{Recorded architecture and optimization settings. Semicolons in each value cell follow the setting-column order; commas enumerate a search grid. Forty-label conditions require sufficient earlier support. New-model entries refer to REVE and LaBraM; personal optimization follows the common grid.}\label{tab:grids}\\
+\toprule
+Component & Setting (semicolon order) & Value / grid \\
+\midrule
+\endfirsthead
+\toprule
+Component & Setting (semicolon order) & Value / grid \\
+\midrule
+\endhead
+Partitions & Folds; seed values & 5; 11, 23, 37, 53, 71 \\
+Task head & Learning rates; epochs; batch & 0.001, 0.0003; 50; 128 \\
+Task head & Weight decay; MLP hidden width & 0.01; 128 \\
+CBraMod input & Hz; high-pass Hz; rest segment s & 200; 0.3; 4 \\
+Mains notch & PhysioNet; Dreyer; Cho (Hz) & 60; 50; 60 \\
+Personal diagnostics & Earlier FiLM variants & film2, film4, beta4, head \\
+Personal diagnostics & Extended variants & film\_\allowbreak{}first2, film\_\allowbreak{}all, lora4, lora8, scratch\_\allowbreak{}head \\
+Personal diagnostics & FiLM rate; head/LoRA rate & 0.01, 0.1; 0.0001, 0.001 \\
+Personal diagnostics & Steps; weight decay; batch & 20, 60; 0.0, 0.01; 32 \\
+Context & Minimum duration s; bands Hz & 30; 8-13, 13-30 \\
+Context & Band-filter order & 4 \\
+Context & Feature projection; hidden; latent & 64; 128; 16 \\
+Context & Generator hidden; FiLM bound & 128; 0.1 \\
+Context LoRA & Bases; rank; output-factor init SD & 8; 8; 0.01 \\
+Context training & Learning rates; candidate updates & 0.0003, 0.001; 1000, 3000 \\
+Context training & Margin weights; margins; zero ablation & 0.1, 1.0; 0.1, 0.5; 0.0 \\
+Context training & Batch; context dropout; decay; clip & 32; 0.2; 0.01; 1.0 \\
+Personal fitting & FiLM and mixture-offset rates; LoRA rates & 0.01, 0.1; 0.0001, 0.001 \\
+Personal fitting & Steps; weight decay; batch; rank & 20, 60; 0.0, 0.01; 32; 8 \\
+Exchange & Donor draws & 10 \\
+Few-shot fitting & Total label budgets & 5, 10, 20, 40 \\
+Neighbors & Primary k; secondary k; random draws & 1; 3; 10 \\
+Prior & Neighbors k; shrinkage alpha & 3, 5; 0.25, 0.5, 1.0 \\
+Prior & LoRA labels; penalty mu & 0, 5, 10, 20; 0.0, 0.1, 1.0 \\
+Prior & FiLM labels; penalty mu & 0, 10; 0.0, 0.01, 0.1 \\
+Prior & Steps; weight decay; batch & 20, 60; 0.0; 32 \\
+Prior & Test draws; validation draws & 10; 1 \\
+G continuation & Additional-step multiplier; check period & 3; 250 \\
+G continuation & Patience checks; minimum CE change & 8; 0.0001 \\
+G plateau & Window checks; relative loss range & 8; 0.01 \\
+Meta inner loop & SGD steps; learning rates & 5, 10, 20; 0.003, 0.01, 0.03 \\
+Meta inner pilot & Scanned learning rates; labels & 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0; 10 \\
+Meta outer loop & Episode labels; candidate updates & 5, 10, 20; 1000, 2000 \\
+Meta outer loop & Learning rate; decay; gradient clip & 0.0001; 0.01; 1.0 \\
+Meta outer loop & Subjects per batch; M2 log-rate LR & 1; 0.001 \\
+REVE encoder & Depth; width; patch samples; stride & 22; 512; 200; 180 \\
+LaBraM encoder & Depth; width; patch samples; stride & 12; 200; 200; 200 \\
+LaBraM input & High-pass; low-pass; notch (Hz) & 0.1; 75; 50 \\
+REVE input & High-pass Hz; sampling Hz & 0.3; 200 \\
+New-model LoRA & Rank; scale/rank; dropout & 8; 1; 0 \\
+New-model population & Learning rates; candidate updates & 0.0003, 0.001; 1000, 3000 \\
+New-model population & Batch; decay; gradient clip & 32; 0.01; 1.0 \\
+New-model plateau & Checks; relative CE range; floor & 8; 0.01; 0.0001 \\
+New-model plateau & Accuracy/BA range; best-gain threshold & 0.005; 0.001 \\
+Budget extension & Update multipliers; check period & 1, 2, 4; 250 \\
+Budget extension & Directional-test alpha & 0.05 \\
+BNCI input & Window endpoints after trial start s & 2, 6 \\
+Euclidean alignment & Fixed diagonal shrinkage & 0.001 \\
+\bottomrule
+\end{longtable}

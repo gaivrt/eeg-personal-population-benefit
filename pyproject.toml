@@ -1,0 +1,16 @@
+[project]
+name = "subject-context-adapter"
+version = "0.0.1"
+description = "EEG subject-context adaptation and staged verification"
+requires-python = "==3.12.*"
+dependencies = [
+  "numpy==2.2.6", "scipy==1.15.3", "pandas==2.2.3",
+  "scikit-learn==1.7.2", "PyYAML==6.0.2", "torch==2.7.1",
+  "einops==0.8.1", "mne==1.10.2", "moabb==1.7.1",
+  "h5py==3.14.0", "requests==2.32.5", "pytest==8.4.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"

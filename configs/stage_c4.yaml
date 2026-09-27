@@ -1,0 +1,27 @@
+stage: C4
+version: 1
+source: stage_c2_personal_parameters_and_stage_c3_task_features
+variants:
+  lora8: {shots: [0, 5, 10, 20], learning_rates: [0.0001, 0.001], mu: [0.0, 0.1, 1.0]}
+  film_offset: {shots: [0, 10], learning_rates: [0.01, 0.1], mu: [0.0, 0.01, 0.1]}
+priors: [P0, P1, P2]
+ks: [3, 5]
+alphas: [0.25, 0.5, 1.0]
+random_draws: 10
+validation_random_draws: 1
+selection_k_alpha: leave_one_subject_out_on_pool_at_n0
+steps: [20, 60]
+weight_decay: 0.0
+batch_size: 32
+lora_rank: 8
+primary:
+  variant: lora8
+  shots: 10
+  comparisons: [P2_vs_P1, P2_vs_P0]
+  test: paired_wilcoxon_greater_approx_zero_dropped
+  alpha: 0.05
+secondary:
+  shots: [0, 5]
+  comparison: P2_vs_P1
+  multiplicity: holm_across_two_secondary
+stop_after_stage: C4

@@ -1,0 +1,62 @@
+stage: population_budget
+version: 1
+target_conference: IJCAI_2027
+new_methods: false
+run_experiments: true
+protocol: docs/population_budget_protocol.md
+models: [REVE, LaBraM, CBraMod]
+seeds: [11, 23, 37, 53, 71]
+split_file: configs/splits/stage_a_v1.json
+halves_file: configs/splits/stage_b_halves_v1.json
+baseline: existing_selected_G_actual_cumulative_updates
+multipliers: [1, 2, 4]
+maximum_added_steps_multiplier: 3
+population_hyperparameters: existing_selected_values_no_search
+population_training: preserve_each_model_existing_algorithm
+checkpoint_selection: exact_budget_endpoint_not_validation_best
+optimizer_resume: {REVE: true, LaBraM: true, CBraMod: false}
+CBraMod_optimizer_restart: original_hyperparameters_and_seed_disclose_missing_historical_state
+convergence:
+  source: cross_model_x.yaml#convergence
+  check_every_added_steps: 250
+  only_regular_checks_in_plateau_window: true
+  stop: first_joint_plateau_or_4x_hard_limit
+  CE_patience_stops_training: false
+  missing_endpoints_after_plateau: NA_no_extrapolation_no_carry_forward_for_strong_claims
+personal:
+  variant: lora8
+  rank: 8
+  learning_rates: [0.0001, 0.001]
+  weight_decays: [0.0, 0.01]
+  steps: [20, 60]
+  batch_size: 32
+  microbatch: {CBraMod: 32, REVE: 8, LaBraM: 8}
+  selection: original_validation_subject_median_mean_fewer_steps_smaller_lr_smaller_wd
+  baseline_1x: reuse_selected_personal_parameters_recompute_matched_query_predictions
+  new_checkpoints: independently_refit_from_zero_on_corresponding_frozen_G
+  labels: all_original_first_half
+  few_shot: false
+  swap: original_same_fold_same_dataset_10_draws_reused_across_checkpoints
+statistics:
+  aggregation: five_seed_mean_per_subject_then_pooled_235_median
+  difference_decimals: 12
+  test: wilcoxon_greater_approx_zero_dropped
+  stable_positive_family: 3_models_times_2x_and_4x_Holm_6_slots
+  missing_slot_p_for_correction: 1
+  alpha: 0.05
+  undertraining: M1_ge_M2_ge_M4_at_least_one_decrease_and_M4_lt_0.5pp
+  stable_positive: abs_M4_minus_M2_lt_0.5pp_both_medians_positive_both_Holm_significant
+  precedence: undertraining_then_stable_positive_else_descriptive
+  incomplete_endpoints: undetermined
+  own_minus_swap: separately_report_original_three_variant_diagnostic1_per_model_and_point
+resource_plan:
+  gpus_per_job: 1
+  processes_per_gpu: 1
+  array_items: 75
+  proposed_concurrency: 16
+  approved_concurrency: 16  # User confirmed the stated new-batch resource plan with "ok".
+  expected_card_hours: [93, 115]
+  expected_wall_hours_including_audit_excluding_queue: [8, 10]
+  job_walltime_limit: '08:00:00'
+  confirmation_required_before_submission: true
+stop_after_stage: population_budget

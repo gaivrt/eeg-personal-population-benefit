@@ -1,0 +1,22 @@
+seed: 20260925
+output: reports/data_audit
+physionet:
+  sample_dir: data/samples/PhysionetMI
+  sample_subject: 1
+  base_url: https://physionet.org/files/eegmmidb/1.0.0
+  subjects: [1, 109]
+  runs: [1, 14]
+  target_runs: [4, 8, 12]
+  baseline_runs: {1: eyes_open, 2: eyes_closed}
+  expected_eeg_channels: 64
+  expected_sfreq: 160
+  workers: 6
+  timeout_seconds: 25
+  retries: 3
+  headers_dir: data/metadata/PhysionetMI/headers
+cho:
+  sample: data/samples/Cho2017/s01.mat
+  sequence_dir: docs/data_access_audit_2026-09-25/sources/cho_trial_sequence
+dreyer:
+  sample_root: data/samples/Dreyer2023
+  sample_subject: 1

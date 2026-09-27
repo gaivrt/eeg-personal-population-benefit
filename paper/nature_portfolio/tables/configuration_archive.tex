@@ -1,0 +1,421 @@
+\begin{longtable}{p{.65in}p{2.8in}p{3.2in}}
+\toprule
+Stage & Configuration field & Frozen value / grid \\
+\midrule
+\endfirsthead
+\toprule
+Stage & Configuration field & Frozen value / grid \\
+\midrule
+\endhead
+stage\_\allowbreak{}a & /stage & A \\
+stage\_\allowbreak{}a & /protocol\_\allowbreak{}version & 2 \\
+stage\_\allowbreak{}a & /split\_\allowbreak{}seed & 20260925 \\
+stage\_\allowbreak{}a & /seeds & 11, 23, 37, 53, 71 \\
+stage\_\allowbreak{}a & /folds & 5 \\
+stage\_\allowbreak{}a & /validation\_\allowbreak{}fraction & 0.1 \\
+stage\_\allowbreak{}a & /datasets/PhysionetMI/subjects & 109 \\
+stage\_\allowbreak{}a & /datasets/PhysionetMI/exclude & 88, 89, 92, 100, 104, 106 \\
+stage\_\allowbreak{}a & /datasets/PhysionetMI/runs & 1, 2, 4, 8, 12 \\
+stage\_\allowbreak{}a & /datasets/PhysionetMI/sfreq & 160 \\
+stage\_\allowbreak{}a & /datasets/PhysionetMI/channels & 64 \\
+stage\_\allowbreak{}a & /datasets/PhysionetMI/notch\_\allowbreak{}hz & 60 \\
+stage\_\allowbreak{}a & /datasets/PhysionetMI/task\_\allowbreak{}seconds & 4 \\
+stage\_\allowbreak{}a & /datasets/PhysionetMI/rest\_\allowbreak{}seconds\_\allowbreak{}range & 60, 61 \\
+stage\_\allowbreak{}a & /datasets/Dreyer2023/subjects & 87 \\
+stage\_\allowbreak{}a & /datasets/Dreyer2023/exclude & 4, 9, 17, 29, 41, 78, 79 \\
+stage\_\allowbreak{}a & /datasets/Dreyer2023/sfreq & 512 \\
+stage\_\allowbreak{}a & /datasets/Dreyer2023/channels & 27 \\
+stage\_\allowbreak{}a & /datasets/Dreyer2023/notch\_\allowbreak{}hz & 50 \\
+stage\_\allowbreak{}a & /datasets/Dreyer2023/task\_\allowbreak{}seconds & 4 \\
+stage\_\allowbreak{}a & /datasets/Dreyer2023/rest\_\allowbreak{}seconds\_\allowbreak{}range & 179.99, 180.01 \\
+stage\_\allowbreak{}a & /datasets/Cho2017/subjects & 52 \\
+stage\_\allowbreak{}a & /datasets/Cho2017/exclude &  \\
+stage\_\allowbreak{}a & /datasets/Cho2017/sfreq & 512 \\
+stage\_\allowbreak{}a & /datasets/Cho2017/channels & 64 \\
+stage\_\allowbreak{}a & /datasets/Cho2017/notch\_\allowbreak{}hz & 60 \\
+stage\_\allowbreak{}a & /datasets/Cho2017/task\_\allowbreak{}seconds & 3 \\
+stage\_\allowbreak{}a & /datasets/Cho2017/rest\_\allowbreak{}seconds\_\allowbreak{}range & 60, 67 \\
+stage\_\allowbreak{}a & /preprocessing/sfreq & 200 \\
+stage\_\allowbreak{}a & /preprocessing/highpass\_\allowbreak{}hz & 0.3 \\
+stage\_\allowbreak{}a & /preprocessing/reference & average \\
+stage\_\allowbreak{}a & /preprocessing/input\_\allowbreak{}unit & V \\
+stage\_\allowbreak{}a & /preprocessing/output\_\allowbreak{}unit & uV\_\allowbreak{}div\_\allowbreak{}100 \\
+stage\_\allowbreak{}a & /preprocessing/output\_\allowbreak{}dtype & float16 \\
+stage\_\allowbreak{}a & /preprocessing/rest\_\allowbreak{}segment\_\allowbreak{}seconds & 4 \\
+stage\_\allowbreak{}a & /preprocessing/quality\_\allowbreak{}policy & finite\_\allowbreak{}only \\
+stage\_\allowbreak{}a & /audit/max\_\allowbreak{}failed\_\allowbreak{}subject\_\allowbreak{}fraction & 0.1 \\
+stage\_\allowbreak{}a & /audit/min\_\allowbreak{}usable\_\allowbreak{}eyes\_\allowbreak{}open\_\allowbreak{}seconds & 30 \\
+stage\_\allowbreak{}a & /audit/alpha\_\allowbreak{}channels & O1, Oz, O2 \\
+stage\_\allowbreak{}a & /audit/alpha\_\allowbreak{}band\_\allowbreak{}hz & 8, 13 \\
+stage\_\allowbreak{}a & /audit/alpha\_\allowbreak{}window\_\allowbreak{}seconds & 4 \\
+stage\_\allowbreak{}a & /audit/alpha\_\allowbreak{}welch\_\allowbreak{}seconds & 2 \\
+stage\_\allowbreak{}a & /audit/alpha\_\allowbreak{}required\_\allowbreak{}ratio & 1.0 \\
+stage\_\allowbreak{}a & /model/cache\_\allowbreak{}prefix\_\allowbreak{}layers & 8 \\
+stage\_\allowbreak{}a & /model/total\_\allowbreak{}layers & 12 \\
+stage\_\allowbreak{}a & /model/cache\_\allowbreak{}dtype & float16 \\
+stage\_\allowbreak{}a & /training/device\_\allowbreak{}required & NVIDIA GeForce RTX 3090 \\
+stage\_\allowbreak{}a & /training/heads & linear, mlp \\
+stage\_\allowbreak{}a & /training/epochs & 50 \\
+stage\_\allowbreak{}a & /training/batch\_\allowbreak{}size & 128 \\
+stage\_\allowbreak{}a & /training/learning\_\allowbreak{}rates & 0.001, 0.0003 \\
+stage\_\allowbreak{}a & /training/weight\_\allowbreak{}decay & 0.01 \\
+stage\_\allowbreak{}a & /training/mlp\_\allowbreak{}hidden & 128 \\
+stage\_\allowbreak{}a & /training/selection\_\allowbreak{}metric & validation\_\allowbreak{}subject\_\allowbreak{}macro\_\allowbreak{}balanced\_\allowbreak{}accuracy \\
+stage\_\allowbreak{}a & /training/low\_\allowbreak{}accuracy\_\allowbreak{}diagnostic & 0.55 \\
+stage\_\allowbreak{}b & /stage & B \\
+stage\_\allowbreak{}b & /version & 1 \\
+stage\_\allowbreak{}b & /seeds & 11, 23, 37, 53, 71 \\
+stage\_\allowbreak{}b & /variants & film2, film4, beta4, head \\
+stage\_\allowbreak{}b & /base\_\allowbreak{}head\_\allowbreak{}selection & stage\_\allowbreak{}a\_\allowbreak{}validation\_\allowbreak{}subject\_\allowbreak{}ba \\
+stage\_\allowbreak{}b & /variant\_\allowbreak{}selection & fold\_\allowbreak{}validation\_\allowbreak{}median\_\allowbreak{}gain\_\allowbreak{}then\_\allowbreak{}mean\_\allowbreak{}gain \\
+stage\_\allowbreak{}b & /learning\_\allowbreak{}rates & 0.01, 0.1 \\
+stage\_\allowbreak{}b & /head\_\allowbreak{}learning\_\allowbreak{}rates & 0.0001, 0.001 \\
+stage\_\allowbreak{}b & /steps & 20, 60 \\
+stage\_\allowbreak{}b & /weight\_\allowbreak{}decays & 0.0, 0.01 \\
+stage\_\allowbreak{}b & /batch\_\allowbreak{}size & 32 \\
+stage\_\allowbreak{}b & /optimizer & AdamW \\
+stage\_\allowbreak{}b & /film\_\allowbreak{}bound & 0.1 \\
+stage\_\allowbreak{}b & /rough\_\allowbreak{}balance\_\allowbreak{}minority\_\allowbreak{}fraction & 0.4 \\
+stage\_\allowbreak{}b & /gate\_\allowbreak{}median\_\allowbreak{}gain & 0.02 \\
+stage\_\allowbreak{}b & /gate\_\allowbreak{}seed\_\allowbreak{}aggregation & subject\_\allowbreak{}mean\_\allowbreak{}over\_\allowbreak{}five\_\allowbreak{}seeds \\
+stage\_\allowbreak{}b & /gate\_\allowbreak{}variant & selected\_\allowbreak{}on\_\allowbreak{}each\_\allowbreak{}fold\_\allowbreak{}validation\_\allowbreak{}only \\
+stage\_\allowbreak{}b & /stop\_\allowbreak{}after\_\allowbreak{}stage & B \\
+stage\_\allowbreak{}b2 & /stage & B2 \\
+stage\_\allowbreak{}b2 & /version & 1 \\
+stage\_\allowbreak{}b2 & /seeds & 11, 23, 37, 53, 71 \\
+stage\_\allowbreak{}b2 & /variants & film\_\allowbreak{}first2, film\_\allowbreak{}all, lora4, lora8, scratch\_\allowbreak{}head \\
+stage\_\allowbreak{}b2 & /gate\_\allowbreak{}variants & film\_\allowbreak{}first2, film\_\allowbreak{}all, lora4, lora8 \\
+stage\_\allowbreak{}b2 & /learning\_\allowbreak{}rates/film\_\allowbreak{}first2 & 0.01, 0.1 \\
+stage\_\allowbreak{}b2 & /learning\_\allowbreak{}rates/film\_\allowbreak{}all & 0.01, 0.1 \\
+stage\_\allowbreak{}b2 & /learning\_\allowbreak{}rates/lora4 & 0.0001, 0.001 \\
+stage\_\allowbreak{}b2 & /learning\_\allowbreak{}rates/lora8 & 0.0001, 0.001 \\
+stage\_\allowbreak{}b2 & /learning\_\allowbreak{}rates/scratch\_\allowbreak{}head & 0.0001, 0.001 \\
+stage\_\allowbreak{}b2 & /steps & 20, 60 \\
+stage\_\allowbreak{}b2 & /weight\_\allowbreak{}decays & 0.0, 0.01 \\
+stage\_\allowbreak{}b2 & /batch\_\allowbreak{}size & 32 \\
+stage\_\allowbreak{}b2 & /optimizer & AdamW \\
+stage\_\allowbreak{}b2 & /film\_\allowbreak{}bound & 0.1 \\
+stage\_\allowbreak{}b2 & /lora\_\allowbreak{}projections & q, k, v, out \\
+stage\_\allowbreak{}b2 & /lora\_\allowbreak{}branches & spatial, temporal \\
+stage\_\allowbreak{}b2 & /lora\_\allowbreak{}alpha\_\allowbreak{}over\_\allowbreak{}rank & 1.0 \\
+stage\_\allowbreak{}b2 & /lora\_\allowbreak{}dropout & 0.0 \\
+stage\_\allowbreak{}b2 & /base\_\allowbreak{}head\_\allowbreak{}selection & reuse\_\allowbreak{}stage\_\allowbreak{}b\_\allowbreak{}selection \\
+stage\_\allowbreak{}b2 & /scratch\_\allowbreak{}head\_\allowbreak{}normalization & frozen\_\allowbreak{}B0\_\allowbreak{}training\_\allowbreak{}fold\_\allowbreak{}statistics \\
+stage\_\allowbreak{}b2 & /gate\_\allowbreak{}median\_\allowbreak{}gain & 0.02 \\
+stage\_\allowbreak{}b2 & /gate\_\allowbreak{}alpha & 0.05 \\
+stage\_\allowbreak{}b2 & /gate\_\allowbreak{}test & paired\_\allowbreak{}wilcoxon\_\allowbreak{}greater\_\allowbreak{}than\_\allowbreak{}stage\_\allowbreak{}b\_\allowbreak{}head \\
+stage\_\allowbreak{}b2 & /gate\_\allowbreak{}multiplicity & holm\_\allowbreak{}across\_\allowbreak{}four\_\allowbreak{}pooled\_\allowbreak{}adaptation\_\allowbreak{}variants \\
+stage\_\allowbreak{}b2 & /gate\_\allowbreak{}seed\_\allowbreak{}aggregation & subject\_\allowbreak{}mean\_\allowbreak{}over\_\allowbreak{}five\_\allowbreak{}seeds \\
+stage\_\allowbreak{}b2 & /stop\_\allowbreak{}after\_\allowbreak{}stage & B2 \\
+stage\_\allowbreak{}c & /stage & C \\
+stage\_\allowbreak{}c & /version & 1 \\
+stage\_\allowbreak{}c & /seeds & 11, 23, 37, 53, 71 \\
+stage\_\allowbreak{}c & /base\_\allowbreak{}head\_\allowbreak{}selection & reuse\_\allowbreak{}stage\_\allowbreak{}b\_\allowbreak{}selection \\
+stage\_\allowbreak{}c & /context/eye\_\allowbreak{}state & open \\
+stage\_\allowbreak{}c & /context/segment\_\allowbreak{}seconds & 4 \\
+stage\_\allowbreak{}c & /context/min\_\allowbreak{}seconds & 30 \\
+stage\_\allowbreak{}c & /context/test\_\allowbreak{}length & all\_\allowbreak{}usable \\
+stage\_\allowbreak{}c & /context/bands\_\allowbreak{}hz/0 & 8, 13 \\
+stage\_\allowbreak{}c & /context/bands\_\allowbreak{}hz/1 & 13, 30 \\
+stage\_\allowbreak{}c & /context/filter\_\allowbreak{}order & 4 \\
+stage\_\allowbreak{}c & /context/tangent\_\allowbreak{}reference & riemann\_\allowbreak{}mean\_\allowbreak{}training\_\allowbreak{}subject\_\allowbreak{}rest\_\allowbreak{}segments \\
+stage\_\allowbreak{}c & /encoder/projection & 64 \\
+stage\_\allowbreak{}c & /encoder/hidden & 128 \\
+stage\_\allowbreak{}c & /encoder/z\_\allowbreak{}dim & 16 \\
+stage\_\allowbreak{}c & /generator\_\allowbreak{}hidden & 128 \\
+stage\_\allowbreak{}c & /film\_\allowbreak{}bound & 0.1 \\
+stage\_\allowbreak{}c & /lora/bases & 8 \\
+stage\_\allowbreak{}c & /lora/rank & 8 \\
+stage\_\allowbreak{}c & /lora/b\_\allowbreak{}init\_\allowbreak{}std & 0.01 \\
+stage\_\allowbreak{}c & /lora/projections & q, k, v, out \\
+stage\_\allowbreak{}c & /lora/branches & spatial, temporal \\
+stage\_\allowbreak{}c & /methods & FiLM population, LoRA population \\
+stage\_\allowbreak{}c & /training/optimizer & AdamW \\
+stage\_\allowbreak{}c & /training/weight\_\allowbreak{}decay & 0.01 \\
+stage\_\allowbreak{}c & /training/grad\_\allowbreak{}clip\_\allowbreak{}norm & 1.0 \\
+stage\_\allowbreak{}c & /training/query\_\allowbreak{}batch & 32 \\
+stage\_\allowbreak{}c & /training/context\_\allowbreak{}dropout & 0.2 \\
+stage\_\allowbreak{}c & /training/episodes & 1000, 3000 \\
+stage\_\allowbreak{}c & /training/learning\_\allowbreak{}rates & 0.0003, 0.001 \\
+stage\_\allowbreak{}c & /training/lambdas & 0.1, 1.0 \\
+stage\_\allowbreak{}c & /training/margins & 0.1, 0.5 \\
+stage\_\allowbreak{}c & /training/ablation\_\allowbreak{}lambda & 0.0 \\
+stage\_\allowbreak{}c & /t3a\_\allowbreak{}filter\_\allowbreak{}sizes & 1, 5, 20, all \\
+stage\_\allowbreak{}c & /b5/shots & 10, 20, 40, 80 \\
+stage\_\allowbreak{}c & /b5/learning\_\allowbreak{}rates & 0.01, 0.1 \\
+stage\_\allowbreak{}c & /b5/steps & 20, 60 \\
+stage\_\allowbreak{}c & /b5/weight\_\allowbreak{}decays & 0.0, 0.01 \\
+stage\_\allowbreak{}c & /b5/batch\_\allowbreak{}size & 32 \\
+stage\_\allowbreak{}c & /b6\_\allowbreak{}reference/FiLM population & film\_\allowbreak{}all \\
+stage\_\allowbreak{}c & /b6\_\allowbreak{}reference/LoRA population & lora8 \\
+stage\_\allowbreak{}c & /criteria/alpha & 0.05 \\
+stage\_\allowbreak{}c & /criteria/test & paired\_\allowbreak{}wilcoxon\_\allowbreak{}greater\_\allowbreak{}approx\_\allowbreak{}zero\_\allowbreak{}dropped \\
+stage\_\allowbreak{}c & /criteria/controls & B4, B0 \\
+stage\_\allowbreak{}c & /criteria/multiplicity & holm\_\allowbreak{}across\_\allowbreak{}two\_\allowbreak{}methods\_\allowbreak{}two\_\allowbreak{}controls \\
+stage\_\allowbreak{}c & /criteria/recovery\_\allowbreak{}fraction & 0.3 \\
+stage\_\allowbreak{}c & /criteria/max\_\allowbreak{}drop\_\allowbreak{}gt\_\allowbreak{}2pp\_\allowbreak{}fraction & 0.1 \\
+stage\_\allowbreak{}c & /criteria/seed\_\allowbreak{}aggregation & subject\_\allowbreak{}mean\_\allowbreak{}over\_\allowbreak{}five\_\allowbreak{}seeds \\
+stage\_\allowbreak{}c & /stop\_\allowbreak{}after\_\allowbreak{}stage & C \\
+stage\_\allowbreak{}c2 & /stage & C2 \\
+stage\_\allowbreak{}c2 & /version & 1 \\
+stage\_\allowbreak{}c2 & /start\_\allowbreak{}models & stage\_\allowbreak{}c\_\allowbreak{}selected\_\allowbreak{}main\_\allowbreak{}default\_\allowbreak{}z \\
+stage\_\allowbreak{}c2 & /variants & film\_\allowbreak{}offset, mix\_\allowbreak{}offset, lora8 \\
+stage\_\allowbreak{}c2 & /learning\_\allowbreak{}rates/film\_\allowbreak{}offset & 0.01, 0.1 \\
+stage\_\allowbreak{}c2 & /learning\_\allowbreak{}rates/mix\_\allowbreak{}offset & 0.01, 0.1 \\
+stage\_\allowbreak{}c2 & /learning\_\allowbreak{}rates/lora8 & 0.0001, 0.001 \\
+stage\_\allowbreak{}c2 & /steps & 20, 60 \\
+stage\_\allowbreak{}c2 & /weight\_\allowbreak{}decays & 0.0, 0.01 \\
+stage\_\allowbreak{}c2 & /batch\_\allowbreak{}size & 32 \\
+stage\_\allowbreak{}c2 & /lora\_\allowbreak{}rank & 8 \\
+stage\_\allowbreak{}c2 & /swap\_\allowbreak{}draws & 10 \\
+stage\_\allowbreak{}c2 & /gate/median\_\allowbreak{}upper\_\allowbreak{}bound & 0.02 \\
+stage\_\allowbreak{}c2 & /gate/alpha & 0.05 \\
+stage\_\allowbreak{}c2 & /gate/test & paired\_\allowbreak{}wilcoxon\_\allowbreak{}greater\_\allowbreak{}approx\_\allowbreak{}zero\_\allowbreak{}dropped \\
+stage\_\allowbreak{}c2 & /gate/multiplicity & holm\_\allowbreak{}across\_\allowbreak{}three\_\allowbreak{}variants \\
+stage\_\allowbreak{}c2 & /gate/rule & any\_\allowbreak{}variant \\
+stage\_\allowbreak{}c2 & /diagnostic2/features & embedding\_\allowbreak{}mean, tangent\_\allowbreak{}mean \\
+stage\_\allowbreak{}c2 & /diagnostic2/block\_\allowbreak{}scaling & inverse\_\allowbreak{}sqrt\_\allowbreak{}dimension \\
+stage\_\allowbreak{}c2 & /diagnostic2/distance & euclidean \\
+stage\_\allowbreak{}c2 & /diagnostic2/test & paired\_\allowbreak{}wilcoxon\_\allowbreak{}greater\_\allowbreak{}nearest\_\allowbreak{}vs\_\allowbreak{}random \\
+stage\_\allowbreak{}c2 & /diagnostic2/multiplicity & holm\_\allowbreak{}across\_\allowbreak{}passing\_\allowbreak{}variants \\
+stage\_\allowbreak{}c2 & /stop\_\allowbreak{}after\_\allowbreak{}stage & C2 \\
+stage\_\allowbreak{}c3 & /stage & C3 \\
+stage\_\allowbreak{}c3 & /version & 1 \\
+stage\_\allowbreak{}c3 & /variants & film\_\allowbreak{}offset, lora8 \\
+stage\_\allowbreak{}c3 & /diagnostic3/task\_\allowbreak{}features & first\_\allowbreak{}half\_\allowbreak{}trials\_\allowbreak{}unlabeled \\
+stage\_\allowbreak{}c3 & /diagnostic3/tangent\_\allowbreak{}reference & training\_\allowbreak{}subjects\_\allowbreak{}first\_\allowbreak{}half\_\allowbreak{}trials\_\allowbreak{}unlabeled \\
+stage\_\allowbreak{}c3 & /diagnostic3/block\_\allowbreak{}scaling & inverse\_\allowbreak{}sqrt\_\allowbreak{}dimension \\
+stage\_\allowbreak{}c3 & /diagnostic3/distance & euclidean \\
+stage\_\allowbreak{}c3 & /diagnostic3/primary\_\allowbreak{}k & 1 \\
+stage\_\allowbreak{}c3 & /diagnostic3/secondary\_\allowbreak{}k & 3 \\
+stage\_\allowbreak{}c3 & /diagnostic3/lora\_\allowbreak{}average & mean\_\allowbreak{}weight\_\allowbreak{}update\_\allowbreak{}BA \\
+stage\_\allowbreak{}c3 & /diagnostic3/random\_\allowbreak{}draws & 10 \\
+stage\_\allowbreak{}c3 & /diagnostic3/random\_\allowbreak{}k3 & mean\_\allowbreak{}of\_\allowbreak{}three\_\allowbreak{}distinct\_\allowbreak{}others \\
+stage\_\allowbreak{}c3 & /diagnostic3/test & paired\_\allowbreak{}wilcoxon\_\allowbreak{}greater\_\allowbreak{}nearest\_\allowbreak{}vs\_\allowbreak{}random \\
+stage\_\allowbreak{}c3 & /diagnostic3/multiplicity & holm\_\allowbreak{}across\_\allowbreak{}two\_\allowbreak{}variants\_\allowbreak{}primary\_\allowbreak{}k1 \\
+stage\_\allowbreak{}c3 & /diagnostic3/alpha & 0.05 \\
+stage\_\allowbreak{}c3 & /few\_\allowbreak{}shot/shots & 5, 10, 20, 40 \\
+stage\_\allowbreak{}c3 & /few\_\allowbreak{}shot/selection & earliest\_\allowbreak{}first\_\allowbreak{}half\_\allowbreak{}in\_\allowbreak{}time\_\allowbreak{}order \\
+stage\_\allowbreak{}c3 & /few\_\allowbreak{}shot/learning\_\allowbreak{}rates/film\_\allowbreak{}offset & 0.01, 0.1 \\
+stage\_\allowbreak{}c3 & /few\_\allowbreak{}shot/learning\_\allowbreak{}rates/lora8 & 0.0001, 0.001 \\
+stage\_\allowbreak{}c3 & /few\_\allowbreak{}shot/steps & 20, 60 \\
+stage\_\allowbreak{}c3 & /few\_\allowbreak{}shot/weight\_\allowbreak{}decays & 0.0, 0.01 \\
+stage\_\allowbreak{}c3 & /few\_\allowbreak{}shot/batch\_\allowbreak{}size & 32 \\
+stage\_\allowbreak{}c3 & /few\_\allowbreak{}shot/recovery\_\allowbreak{}denominator & full\_\allowbreak{}first\_\allowbreak{}half\_\allowbreak{}gain\_\allowbreak{}over\_\allowbreak{}b3 \\
+stage\_\allowbreak{}c3 & /stop\_\allowbreak{}after\_\allowbreak{}stage & C3 \\
+stage\_\allowbreak{}c4 & /stage & C4 \\
+stage\_\allowbreak{}c4 & /version & 1 \\
+stage\_\allowbreak{}c4 & /variants/lora8/shots & 0, 5, 10, 20 \\
+stage\_\allowbreak{}c4 & /variants/lora8/learning\_\allowbreak{}rates & 0.0001, 0.001 \\
+stage\_\allowbreak{}c4 & /variants/lora8/mu & 0.0, 0.1, 1.0 \\
+stage\_\allowbreak{}c4 & /variants/film\_\allowbreak{}offset/shots & 0, 10 \\
+stage\_\allowbreak{}c4 & /variants/film\_\allowbreak{}offset/learning\_\allowbreak{}rates & 0.01, 0.1 \\
+stage\_\allowbreak{}c4 & /variants/film\_\allowbreak{}offset/mu & 0.0, 0.01, 0.1 \\
+stage\_\allowbreak{}c4 & /priors & P0, P1, P2 \\
+stage\_\allowbreak{}c4 & /ks & 3, 5 \\
+stage\_\allowbreak{}c4 & /alphas & 0.25, 0.5, 1.0 \\
+stage\_\allowbreak{}c4 & /random\_\allowbreak{}draws & 10 \\
+stage\_\allowbreak{}c4 & /validation\_\allowbreak{}random\_\allowbreak{}draws & 1 \\
+stage\_\allowbreak{}c4 & /selection\_\allowbreak{}k\_\allowbreak{}alpha & leave\_\allowbreak{}one\_\allowbreak{}subject\_\allowbreak{}out\_\allowbreak{}on\_\allowbreak{}pool\_\allowbreak{}at\_\allowbreak{}n0 \\
+stage\_\allowbreak{}c4 & /steps & 20, 60 \\
+stage\_\allowbreak{}c4 & /weight\_\allowbreak{}decay & 0.0 \\
+stage\_\allowbreak{}c4 & /batch\_\allowbreak{}size & 32 \\
+stage\_\allowbreak{}c4 & /lora\_\allowbreak{}rank & 8 \\
+stage\_\allowbreak{}c4 & /primary/variant & lora8 \\
+stage\_\allowbreak{}c4 & /primary/shots & 10 \\
+stage\_\allowbreak{}c4 & /primary/comparisons & P2\_\allowbreak{}vs\_\allowbreak{}P1, P2\_\allowbreak{}vs\_\allowbreak{}P0 \\
+stage\_\allowbreak{}c4 & /primary/test & paired\_\allowbreak{}wilcoxon\_\allowbreak{}greater\_\allowbreak{}approx\_\allowbreak{}zero\_\allowbreak{}dropped \\
+stage\_\allowbreak{}c4 & /primary/alpha & 0.05 \\
+stage\_\allowbreak{}c4 & /secondary/shots & 0, 5 \\
+stage\_\allowbreak{}c4 & /secondary/comparison & P2\_\allowbreak{}vs\_\allowbreak{}P1 \\
+stage\_\allowbreak{}c4 & /secondary/multiplicity & holm\_\allowbreak{}across\_\allowbreak{}two\_\allowbreak{}secondary \\
+stage\_\allowbreak{}c4 & /stop\_\allowbreak{}after\_\allowbreak{}stage & C4 \\
+stage\_\allowbreak{}m & /stage & M \\
+stage\_\allowbreak{}m & /version & 1 \\
+stage\_\allowbreak{}m & /population & b3\_\allowbreak{}lora\_\allowbreak{}bases\_\allowbreak{}and\_\allowbreak{}task\_\allowbreak{}head \\
+stage\_\allowbreak{}m & /personal\_\allowbreak{}lora\_\allowbreak{}rank & 8 \\
+stage\_\allowbreak{}m & /inner/optimizer & sgd\_\allowbreak{}full\_\allowbreak{}batch\_\allowbreak{}support \\
+stage\_\allowbreak{}m & /inner/ks & 5, 10, 20 \\
+stage\_\allowbreak{}m & /inner/learning\_\allowbreak{}rates & 0.003, 0.01, 0.03 \\
+stage\_\allowbreak{}m & /inner/pilot/fold & 0 \\
+stage\_\allowbreak{}m & /inner/pilot/seed & 11 \\
+stage\_\allowbreak{}m & /inner/pilot/shots & 10 \\
+stage\_\allowbreak{}m & /inner/pilot/scan & 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0 \\
+stage\_\allowbreak{}m & /inner/pilot/rule & best\_\allowbreak{}validation\_\allowbreak{}median\_\allowbreak{}gain\_\allowbreak{}then\_\allowbreak{}mean\_\allowbreak{}over\_\allowbreak{}ks\_\allowbreak{}plus\_\allowbreak{}both\_\allowbreak{}scan\_\allowbreak{}neighbours \\
+stage\_\allowbreak{}m & /outer/episode\_\allowbreak{}shots & 5, 10, 20 \\
+stage\_\allowbreak{}m & /outer/support & earliest\_\allowbreak{}first\_\allowbreak{}half \\
+stage\_\allowbreak{}m & /outer/query & random\_\allowbreak{}32\_\allowbreak{}of\_\allowbreak{}second\_\allowbreak{}half \\
+stage\_\allowbreak{}m & /outer/meta\_\allowbreak{}batch\_\allowbreak{}subjects & 1 \\
+stage\_\allowbreak{}m & /outer/optimizer & AdamW \\
+stage\_\allowbreak{}m & /outer/learning\_\allowbreak{}rate & 0.0001 \\
+stage\_\allowbreak{}m & /outer/weight\_\allowbreak{}decay & 0.01 \\
+stage\_\allowbreak{}m & /outer/grad\_\allowbreak{}clip\_\allowbreak{}norm & 1.0 \\
+stage\_\allowbreak{}m & /outer/steps & 1000, 2000 \\
+stage\_\allowbreak{}m & /outer/m1\_\allowbreak{}inner\_\allowbreak{}lr & r0\_\allowbreak{}validation\_\allowbreak{}best\_\allowbreak{}lr\_\allowbreak{}for\_\allowbreak{}that\_\allowbreak{}k\_\allowbreak{}at\_\allowbreak{}n10 \\
+stage\_\allowbreak{}m & /outer/m2\_\allowbreak{}log\_\allowbreak{}lr\_\allowbreak{}learning\_\allowbreak{}rate & 0.001 \\
+stage\_\allowbreak{}m & /variants & M1, M2 \\
+stage\_\allowbreak{}m & /controls/R0 & B3 \\
+stage\_\allowbreak{}m & /controls/R1 & C4\_\allowbreak{}P1\_\allowbreak{}prior\_\allowbreak{}lora8 \\
+stage\_\allowbreak{}m & /controls/R2 & B3\_\allowbreak{}continued\_\allowbreak{}original\_\allowbreak{}objective \\
+stage\_\allowbreak{}m & /shots & 0, 5, 10, 20, 40 \\
+stage\_\allowbreak{}m & /selection/inner & validation\_\allowbreak{}median\_\allowbreak{}gain\_\allowbreak{}over\_\allowbreak{}b3\_\allowbreak{}then\_\allowbreak{}mean\_\allowbreak{}then\_\allowbreak{}smaller\_\allowbreak{}k\_\allowbreak{}then\_\allowbreak{}smaller\_\allowbreak{}lr \\
+stage\_\allowbreak{}m & /selection/m & validation\_\allowbreak{}n10\_\allowbreak{}median\_\allowbreak{}gain\_\allowbreak{}over\_\allowbreak{}b3\_\allowbreak{}then\_\allowbreak{}mean\_\allowbreak{}then\_\allowbreak{}smaller\_\allowbreak{}k\_\allowbreak{}then\_\allowbreak{}fewer\_\allowbreak{}steps \\
+stage\_\allowbreak{}m & /selection/strongest\_\allowbreak{}control & highest\_\allowbreak{}pooled\_\allowbreak{}validation\_\allowbreak{}median\_\allowbreak{}ba\_\allowbreak{}at\_\allowbreak{}n10\_\allowbreak{}then\_\allowbreak{}mean \\
+stage\_\allowbreak{}m & /selection/final\_\allowbreak{}variant & passed\_\allowbreak{}variant\_\allowbreak{}with\_\allowbreak{}higher\_\allowbreak{}pooled\_\allowbreak{}validation\_\allowbreak{}median\_\allowbreak{}ba\_\allowbreak{}at\_\allowbreak{}n10 \\
+stage\_\allowbreak{}m & /batch\_\allowbreak{}size\_\allowbreak{}scoring & 32 \\
+stage\_\allowbreak{}m & /primary/shots & 10 \\
+stage\_\allowbreak{}m & /primary/test & paired\_\allowbreak{}wilcoxon\_\allowbreak{}greater\_\allowbreak{}approx\_\allowbreak{}zero\_\allowbreak{}dropped \\
+stage\_\allowbreak{}m & /primary/multiplicity & holm\_\allowbreak{}across\_\allowbreak{}M1\_\allowbreak{}M2 \\
+stage\_\allowbreak{}m & /primary/alpha & 0.05 \\
+stage\_\allowbreak{}m & /primary/min\_\allowbreak{}median\_\allowbreak{}pp & 1.0 \\
+stage\_\allowbreak{}m & /primary/max\_\allowbreak{}drop\_\allowbreak{}gt\_\allowbreak{}2pp\_\allowbreak{}fraction & 0.1 \\
+stage\_\allowbreak{}m & /secondary\_\allowbreak{}shots & 5, 20 \\
+stage\_\allowbreak{}m & /confirmatory/dataset & Lee2019\_\allowbreak{}MI\_\allowbreak{}session1 \\
+stage\_\allowbreak{}m & /stop\_\allowbreak{}after\_\allowbreak{}stage & M \\
+stage\_\allowbreak{}w & /stage & W \\
+stage\_\allowbreak{}w & /version & 1 \\
+stage\_\allowbreak{}w & /seeds & 11, 23, 37, 53, 71 \\
+stage\_\allowbreak{}w & /population/methods & FiLM population, LoRA population \\
+stage\_\allowbreak{}w & /population/training & unchanged\_\allowbreak{}stage\_\allowbreak{}c\_\allowbreak{}selected\_\allowbreak{}configuration \\
+stage\_\allowbreak{}w & /population/evaluation & default\_\allowbreak{}z \\
+stage\_\allowbreak{}w & /population/additional\_\allowbreak{}steps\_\allowbreak{}multiplier & 3 \\
+stage\_\allowbreak{}w & /population/check\_\allowbreak{}every\_\allowbreak{}steps & 250 \\
+stage\_\allowbreak{}w & /population/early\_\allowbreak{}stop\_\allowbreak{}patience\_\allowbreak{}checks & 8 \\
+stage\_\allowbreak{}w & /population/early\_\allowbreak{}stop\_\allowbreak{}min\_\allowbreak{}delta & 0.0001 \\
+stage\_\allowbreak{}w & /population/selection & minimum\_\allowbreak{}validation\_\allowbreak{}subject\_\allowbreak{}mean\_\allowbreak{}cross\_\allowbreak{}entropy \\
+stage\_\allowbreak{}w & /population/validation\_\allowbreak{}trials & second\_\allowbreak{}half \\
+stage\_\allowbreak{}w & /population/plateau\_\allowbreak{}window\_\allowbreak{}checks & 8 \\
+stage\_\allowbreak{}w & /population/plateau\_\allowbreak{}relative\_\allowbreak{}range & 0.01 \\
+stage\_\allowbreak{}w & /diagnostic1/variants & film\_\allowbreak{}offset, lora8 \\
+stage\_\allowbreak{}w & /diagnostic1/selection & unchanged\_\allowbreak{}validation\_\allowbreak{}grid\_\allowbreak{}and\_\allowbreak{}rule \\
+stage\_\allowbreak{}w & /diagnostic1/swap\_\allowbreak{}draws & 10 \\
+stage\_\allowbreak{}w & /diagnostic3/k & 1, 3 \\
+stage\_\allowbreak{}w & /few\_\allowbreak{}shot/variants & lora8 \\
+stage\_\allowbreak{}w & /few\_\allowbreak{}shot/shots & 5, 10, 20 \\
+stage\_\allowbreak{}w & /few\_\allowbreak{}shot/additional\_\allowbreak{}40\_\allowbreak{}datasets & Dreyer2023, Cho2017 \\
+stage\_\allowbreak{}w & /external/dataset & Lee2019\_\allowbreak{}MI \\
+stage\_\allowbreak{}w & /external/session & 1 \\
+stage\_\allowbreak{}w & /external/subjects & 54 \\
+stage\_\allowbreak{}w & /external/split\_\allowbreak{}seed & 20260925 \\
+stage\_\allowbreak{}w & /external/folds & 5 \\
+stage\_\allowbreak{}w & /external/validation\_\allowbreak{}fraction & 0.1 \\
+stage\_\allowbreak{}w & /external/runs & train, test \\
+stage\_\allowbreak{}w & /external/rest\_\allowbreak{}field & EEG\_\allowbreak{}MI\_\allowbreak{}train.pre\_\allowbreak{}rest \\
+stage\_\allowbreak{}w & /external/sfreq & 1000 \\
+stage\_\allowbreak{}w & /external/channels & 62 \\
+stage\_\allowbreak{}w & /external/readout\_\allowbreak{}channels & Core cohort\_\allowbreak{}common\_\allowbreak{}without\_\allowbreak{}FCz \\
+stage\_\allowbreak{}w & /external/channel\_\allowbreak{}exception & user\_\allowbreak{}approved\_\allowbreak{}26\_\allowbreak{}channel\_\allowbreak{}intersection\_\allowbreak{}2026\_\allowbreak{}09\_\allowbreak{}26 \\
+stage\_\allowbreak{}w & /external/notch\_\allowbreak{}hz & 60 \\
+stage\_\allowbreak{}w & /external/task\_\allowbreak{}seconds & 4 \\
+stage\_\allowbreak{}w & /external/minimum\_\allowbreak{}free\_\allowbreak{}bytes & 100000000000 \\
+stage\_\allowbreak{}w & /external/hyperparameters & corresponding\_\allowbreak{}Core cohort\_\allowbreak{}fold\_\allowbreak{}and\_\allowbreak{}seed\_\allowbreak{}selected\_\allowbreak{}values \\
+stage\_\allowbreak{}w & /external/shots & 5, 10, 20 \\
+stage\_\allowbreak{}w & /stop\_\allowbreak{}after\_\allowbreak{}stage & W \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /stage & W\_\allowbreak{}followup \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /version & 1 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /primary\_\allowbreak{}population\_\allowbreak{}reference & G \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /sensitivity\_\allowbreak{}population\_\allowbreak{}reference & R2 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /seeds & 11, 23, 37, 53, 71 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /r2/checkpoint & start-R2.pt \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /r2/population\_\allowbreak{}family & LoRA population \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /r2/variants & film\_\allowbreak{}offset, lora8 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /r2/diagnostic\_\allowbreak{}config & configs/stage\_\allowbreak{}c2.yaml \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/dataset & BNCI2014\_\allowbreak{}001 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/session & 2 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/file\_\allowbreak{}suffix & E \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/subjects & 9 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/sfreq & 250 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/channels & 22 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/notch\_\allowbreak{}hz & 50 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/readout\_\allowbreak{}channels & Core cohort\_\allowbreak{}common\_\allowbreak{}intersection\_\allowbreak{}19 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/compatibility\_\allowbreak{}approved & user\_\allowbreak{}2026\_\allowbreak{}09\_\allowbreak{}27 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/split\_\allowbreak{}seed & 20260925 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/folds & 5 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/validation\_\allowbreak{}fraction & 0.1 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/no\_\allowbreak{}donor & unavailable\_\allowbreak{}not\_\allowbreak{}imputed \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/classes & left\_\allowbreak{}hand, right\_\allowbreak{}hand \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/trial\_\allowbreak{}seconds\_\allowbreak{}after\_\allowbreak{}trial\_\allowbreak{}start & 2, 6 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/hyperparameters & corresponding\_\allowbreak{}Core cohort\_\allowbreak{}fold\_\allowbreak{}and\_\allowbreak{}seed\_\allowbreak{}selected\_\allowbreak{}values \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/shots & 5, 10, 20 \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/linear\_\allowbreak{}probe\_\allowbreak{}hyperparameters & corresponding\_\allowbreak{}Core cohort\_\allowbreak{}B0\_\allowbreak{}linear\_\allowbreak{}selection \\
+stage\_\allowbreak{}w\_\allowbreak{}followup & /bnci/minimum\_\allowbreak{}free\_\allowbreak{}bytes & 20000000000 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /seeds & 11, 23, 37, 53, 71 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/sfreq & 200 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/signal\_\allowbreak{}unit & uV\_\allowbreak{}div\_\allowbreak{}100 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/storage\_\allowbreak{}dtype & float16 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/filter\_\allowbreak{}dtype & float64 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/reference & common\_\allowbreak{}average\_\allowbreak{}native\_\allowbreak{}EEG \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/quality & existing\_\allowbreak{}finite\_\allowbreak{}only\_\allowbreak{}trial\_\allowbreak{}roster \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/REVE/route & pinned\_\allowbreak{}public\_\allowbreak{}MI\_\allowbreak{}downstream\_\allowbreak{}code \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/REVE/Core cohort\_\allowbreak{}and\_\allowbreak{}Lee\_\allowbreak{}highpass\_\allowbreak{}hz & 0.3 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/REVE/notch\_\allowbreak{}hz/PhysionetMI & 60 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/REVE/notch\_\allowbreak{}hz/Dreyer2023 & 50 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/REVE/notch\_\allowbreak{}hz/Cho2017 & 60 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/REVE/notch\_\allowbreak{}hz/Lee2019\_\allowbreak{}MI & 60 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/REVE/patch\_\allowbreak{}tail & official\_\allowbreak{}unfold\_\allowbreak{}no\_\allowbreak{}padding \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/LaBraM/highpass\_\allowbreak{}hz & 0.1 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/LaBraM/lowpass\_\allowbreak{}hz & 75 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/LaBraM/notch\_\allowbreak{}hz\_\allowbreak{}all\_\allowbreak{}datasets & 50 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /preprocessing/LaBraM/filter & MNE\_\allowbreak{}FIR\_\allowbreak{}zero\_\allowbreak{}phase\_\allowbreak{}version\_\allowbreak{}1.10.2 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /readout/kind & last\_\allowbreak{}layer\_\allowbreak{}per\_\allowbreak{}channel\_\allowbreak{}time\_\allowbreak{}mean\_\allowbreak{}then\_\allowbreak{}flatten \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /readout/Core cohort\_\allowbreak{}channels & configs/stage\_\allowbreak{}a\_\allowbreak{}channels.json\#readout\_\allowbreak{}common \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /readout/normalization & B0\_\allowbreak{}training\_\allowbreak{}subject\_\allowbreak{}features\_\allowbreak{}only\_\allowbreak{}frozen\_\allowbreak{}for\_\allowbreak{}G\_\allowbreak{}and\_\allowbreak{}personal \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /readout/heads & linear, mlp\_\allowbreak{}128\_\allowbreak{}GELU \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /adaptation/rank & 8 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /adaptation/alpha\_\allowbreak{}over\_\allowbreak{}rank & 1 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /adaptation/dropout & 0 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /adaptation/A\_\allowbreak{}init & kaiming\_\allowbreak{}uniform \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /adaptation/B\_\allowbreak{}init & zero \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /adaptation/personal\_\allowbreak{}start & zero\_\allowbreak{}increment\_\allowbreak{}on\_\allowbreak{}frozen\_\allowbreak{}corresponding\_\allowbreak{}population\_\allowbreak{}adapter \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/B0/learning\_\allowbreak{}rates & 0.001, 0.0003 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/B0/batch\_\allowbreak{}size & 128 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/B0/max\_\allowbreak{}epochs & 50 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/B0/optimizer & AdamW \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/B0/weight\_\allowbreak{}decay & 0.01 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/B0/validation\_\allowbreak{}trials & all\_\allowbreak{}trials\_\allowbreak{}as\_\allowbreak{}original\_\allowbreak{}A \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/B0/selection & validation\_\allowbreak{}subject\_\allowbreak{}mean\_\allowbreak{}BA\_\allowbreak{}then\_\allowbreak{}linear\_\allowbreak{}first\_\allowbreak{}lr\_\allowbreak{}in\_\allowbreak{}original\_\allowbreak{}order\_\allowbreak{}earlier\_\allowbreak{}epoch \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/B0/epoch & full\_\allowbreak{}training\_\allowbreak{}trial\_\allowbreak{}pass \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/learning\_\allowbreak{}rates & 0.0003, 0.001 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/batch\_\allowbreak{}size & 32 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/optimizer & AdamW \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/weight\_\allowbreak{}decay & 0.01 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/gradient\_\allowbreak{}clip & 1.0 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/loss & ordinary\_\allowbreak{}cross\_\allowbreak{}entropy\_\allowbreak{}no\_\allowbreak{}context\_\allowbreak{}generator \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/epoch & N\_\allowbreak{}training\_\allowbreak{}subjects\_\allowbreak{}iid\_\allowbreak{}uniform\_\allowbreak{}subject\_\allowbreak{}draws\_\allowbreak{}each\_\allowbreak{}32\_\allowbreak{}random\_\allowbreak{}trials \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/initial\_\allowbreak{}max\_\allowbreak{}steps\_\allowbreak{}per\_\allowbreak{}lr & 3000 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/initial\_\allowbreak{}checkpoint\_\allowbreak{}candidates & 1000, 3000 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/initial\_\allowbreak{}selection & validation\_\allowbreak{}subject\_\allowbreak{}gain\_\allowbreak{}median\_\allowbreak{}then\_\allowbreak{}mean\_\allowbreak{}then\_\allowbreak{}fewer\_\allowbreak{}updates\_\allowbreak{}then\_\allowbreak{}smaller\_\allowbreak{}lr \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/continuation\_\allowbreak{}scope & selected\_\allowbreak{}lr\_\allowbreak{}and\_\allowbreak{}selected\_\allowbreak{}checkpoint\_\allowbreak{}only\_\allowbreak{}restore\_\allowbreak{}optimizer\_\allowbreak{}and\_\allowbreak{}rng \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/continuation\_\allowbreak{}additional\_\allowbreak{}steps\_\allowbreak{}multiplier & 3 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/max\_\allowbreak{}steps\_\allowbreak{}in\_\allowbreak{}selected\_\allowbreak{}trajectory & 12000 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/max\_\allowbreak{}total\_\allowbreak{}steps\_\allowbreak{}all\_\allowbreak{}lr\_\allowbreak{}per\_\allowbreak{}fold\_\allowbreak{}seed & 15000 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/continuation\_\allowbreak{}checkpoint\_\allowbreak{}selection & minimum\_\allowbreak{}validation\_\allowbreak{}subject\_\allowbreak{}mean\_\allowbreak{}CE\_\allowbreak{}earliest\_\allowbreak{}tie\_\allowbreak{}including\_\allowbreak{}continuation\_\allowbreak{}step0 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /population/G/start & selected\_\allowbreak{}B0\_\allowbreak{}with\_\allowbreak{}zero\_\allowbreak{}population\_\allowbreak{}adapter \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/required\_\allowbreak{}epoch\_\allowbreak{}metrics & validation\_\allowbreak{}CE, validation\_\allowbreak{}accuracy, validation\_\allowbreak{}BA \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/required\_\allowbreak{}G\_\allowbreak{}check\_\allowbreak{}metrics & train\_\allowbreak{}all\_\allowbreak{}trials\_\allowbreak{}CE, train\_\allowbreak{}all\_\allowbreak{}trials\_\allowbreak{}accuracy, train\_\allowbreak{}all\_\allowbreak{}trials\_\allowbreak{}BA, validation\_\allowbreak{}CE, validation\_\allowbreak{}accuracy, validation\_\allowbreak{}BA \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/validation & B0\_\allowbreak{}all\_\allowbreak{}validation\_\allowbreak{}trials\_\allowbreak{}G\_\allowbreak{}and\_\allowbreak{}personal\_\allowbreak{}fixed\_\allowbreak{}second\_\allowbreak{}half\_\allowbreak{}as\_\allowbreak{}original \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/G\_\allowbreak{}check\_\allowbreak{}every\_\allowbreak{}steps & 250 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/window\_\allowbreak{}checks & 8 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/loss\_\allowbreak{}relative\_\allowbreak{}range & 0.01 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/loss\_\allowbreak{}absolute\_\allowbreak{}range\_\allowbreak{}floor & 0.0001 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/accuracy\_\allowbreak{}and\_\allowbreak{}BA\_\allowbreak{}absolute\_\allowbreak{}range & 0.005 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/CE\_\allowbreak{}early\_\allowbreak{}stop\_\allowbreak{}patience\_\allowbreak{}checks & 8 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/CE\_\allowbreak{}min\_\allowbreak{}delta & 0.0001 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/plateau\_\allowbreak{}no\_\allowbreak{}running\_\allowbreak{}best\_\allowbreak{}accuracy\_\allowbreak{}or\_\allowbreak{}BA\_\allowbreak{}improvement\_\allowbreak{}checks & 8 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/accuracy\_\allowbreak{}and\_\allowbreak{}BA\_\allowbreak{}min\_\allowbreak{}delta & 0.001 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/G\_\allowbreak{}stop & continuation\_\allowbreak{}Loss patience\_\allowbreak{}or\_\allowbreak{}three\_\allowbreak{}times\_\allowbreak{}selected\_\allowbreak{}initial\_\allowbreak{}steps\_\allowbreak{}or\_\allowbreak{}numerical\_\allowbreak{}failure \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/continuation\_\allowbreak{}patience\_\allowbreak{}starts\_\allowbreak{}at & selected\_\allowbreak{}initial\_\allowbreak{}checkpoint \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/selected\_\allowbreak{}checkpoint\_\allowbreak{}relative\_\allowbreak{}to\_\allowbreak{}plateau\_\allowbreak{}window & report\_\allowbreak{}separately \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /convergence/fail\_\allowbreak{}to\_\allowbreak{}converge & report\_\allowbreak{}finite\_\allowbreak{}budget\_\allowbreak{}diagnostics\_\allowbreak{}no\_\allowbreak{}test\_\allowbreak{}based\_\allowbreak{}retraining \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/optimizer & AdamW \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/learning\_\allowbreak{}rates/lora8 & 0.0001, 0.001 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/steps & 20, 60 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/weight\_\allowbreak{}decays & 0.0, 0.01 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/batch\_\allowbreak{}size & 32 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/selection & original\_\allowbreak{}C2\_\allowbreak{}C3\_\allowbreak{}validation\_\allowbreak{}only\_\allowbreak{}median\_\allowbreak{}then\_\allowbreak{}mean\_\allowbreak{}then\_\allowbreak{}steps\_\allowbreak{}lr\_\allowbreak{}wd \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/shots & 5, 10, 20 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/additional\_\allowbreak{}40 & Dreyer2023, Cho2017 \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/shot\_\allowbreak{}unit & earliest\_\allowbreak{}n\_\allowbreak{}total\_\allowbreak{}trials\_\allowbreak{}not\_\allowbreak{}per\_\allowbreak{}class \\
+cross\_\allowbreak{}model\_\allowbreak{}x & /personal\_\allowbreak{}and\_\allowbreak{}few\_\allowbreak{}shot/swap & same\_\allowbreak{}fold\_\allowbreak{}same\_\allowbreak{}dataset\_\allowbreak{}other\_\allowbreak{}test\_\allowbreak{}subjects\_\allowbreak{}10\_\allowbreak{}draws\_\allowbreak{}with\_\allowbreak{}replacement \\
+\bottomrule
+\end{longtable}

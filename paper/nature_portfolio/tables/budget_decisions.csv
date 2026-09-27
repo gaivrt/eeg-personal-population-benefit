@@ -1,0 +1,7 @@
+Model,Budget,Six-slot Holm p,Curve interpretation
+REVE,2x,3.02e-21,Descriptive only
+REVE,4x,6.57e-13,Descriptive only
+LaBraM,2x,5.62e-20,Descriptive only
+LaBraM,4x,1.62e-20,Descriptive only
+CBraMod,2x,5.69e-12,Operational criterion met
+CBraMod,4x,6.57e-13,Operational criterion met

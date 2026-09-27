@@ -1,0 +1,64 @@
+Category,Code,Meaning
+Quantities,BA; accuracy,Balanced accuracy; unbalanced classification accuracy. BA is the mean class recall. Absolute scores are percentages; score contrasts use percentage points (pp).
+Quantities,Delta; U,"Own-minus-population benefit; own-minus-exchanged personal specificity, respectively, defined in Methods 4.1."
+Quantities,s; d(s); S_s; Q_s; c_s,Target subject; assigned donor; earlier labeled support; later query set; eligible unlabeled context.
+Quantities,P; P_b; b,"Named population reference; reference at population-training budget b; original, doubled or quadrupled update budget."
+Quantities,f_theta; phi; a_s; a_d(s),Frozen backbone; population parameters; target personal parameters; donor personal parameters.
+Quantities,N; n; SD; CI; CE,Subject count; count or label budget as specified; between-subject standard deviation; confidence interval; cross-entropy loss.
+Quantities,p; p_H; pH; p_raw; p_adjusted,Raw p-value; saved Holm-adjusted p-value (p_H and pH); raw and adjusted data columns. Missing adjusted values are not zero.
+Quantities,own; swapped; exchanged,Target adapter on its owner; adapters fitted to other subjects and evaluated on that target. Swapped and exchanged are synonyms.
+Quantities,own_gain; upper_bound,Saved names for own-minus-population and own-minus-swapped contrasts. The latter name does not imply a mathematical upper bound.
+Quantities,nearest_gain; random_gain; difference,Nearest-donor minus population; random-donor minus population; nearest minus random.
+Quantities,ba; adapt_gain,In a comparison measure field: final balanced accuracy; improvement from zero labels to the specified label budget.
+Quantities,NA; n.a.; blank; --,Unavailable or inapplicable result. None is an observed zero or a negative test.
+Conditions,B0; B0_linear; B0_mlp,Task head on frozen features; the suffix selects a linear or multilayer-perceptron head.
+Conditions,B1; B1a,B1 is the superseded initial alignment reference. B1a uses all available task/rest data for source-training covariance and eyes-open rest for validation/test covariance.
+Conditions,B1b,Euclidean alignment using all unlabeled target task trials for test covariance; transductive because query inputs are included.
+Conditions,B1c,"Euclidean alignment using only each subject's eyes-open rest for training, validation and test covariance."
+Conditions,B2; B2_T3A; T3A,"As a condition, B2 denotes the rest-supported test-time classifier adjustment (B2_T3A). As a stage identifier, B2 instead denotes the full-forward personal-adapter experiment below."
+Conditions,B3; B3_film; B3_lora,Default-context prediction by the trained contextual model; same learned capacity without target-specific context. Suffix specifies the parameter family.
+Conditions,B4; B4_film; B4_lora,Shuffled-context control of the corresponding contextual model; a same-dataset donor supplies context.
+Conditions,B5; B5_n10; B5_n20; B5_n40; B5_n80,Personal all-layer FiLM fitted to the earliest n labeled support trials. The n suffix is the total target-label count.
+Conditions,B6; B6_film_all; B6_film_first2; B6_lora4; B6_lora8,Full-earlier-half supervised personal-adapter references imported from the full-forward experiment; suffix gives the adapter variant.
+Conditions,G; G_film_offset; G_lora8,Continued population reference; suffixed names identify the corresponding FiLM or LoRA population family.
+Conditions,R0; R1; R2; R2*,Initial population LoRA; random-prior control with test-query-informed validation selection; ordinary cross-entropy continuation. R2* flags use of the LoRA population reference for FiLM sensitivity.
+Conditions,M1; M2,First-order MAML initialization; meta-learned initialization with learned layer-specific inner rates.
+Conditions,P0; P1; P2,Population reference; random-donor parameter prior; feature-selected donor prior. These prior diagnostics can use other donors' query labels.
+Parameters,m_film; m_lora,Lowercase model-family identifiers: context-generated FiLM and a context-weighted mixture of shared LoRA bases. They do not denote meta-learning methods.
+Parameters,M_film; M_lora,Uppercase prediction-condition identifiers: the FiLM or LoRA contextual model using the target's real context. M alone is the meta-learning stage.
+Parameters,M_film_lambda0; M_lora_lambda0,Corresponding real-context model trained with zero weight on the context-mismatch objective.
+Parameters,film_offset,An additive personal FiLM offset on the selected default-context population model. The ordinary-continuation sensitivity can place FiLM on a LoRA population model.
+Parameters,mix_offset,Personal additive offsets to the mixture weights of shared LoRA bases. Unexecuted slots in later correction families remain unavailable.
+Parameters,film2; film4; beta4,"FiLM on the last two or last four encoder layers; shift-only adaptation on the last four layers, in the cached-feature experiment."
+Parameters,film_first2; film_all,FiLM on the first two or all encoder layers in the full-forward personal-adapter experiment.
+Parameters,lora4; lora8,Personal attention LoRA with rank four or eight. Model-family and starting-reference fields distinguish the source experiment.
+Parameters,head; linear; mlp; scratch_head,Head-only tuning; linear classifier; multilayer perceptron; randomly reinitialized head fitted with personal support labels.
+Parameters,selected_film,FiLM variant selected on validation subjects from the candidates of that source experiment.
+Parameters,film; FILM; lora; LORA,Display aliases for FiLM and LoRA parameter families.
+Stages,A; B; B2,Frozen-feature/alignment baselines; cached-feature personal adaptation; full-forward personal adaptation. Stage B2 is distinct from condition B2_T3A.
+Stages,C; C-all,"Contextual-generator comparisons on later query trials; compatibility summaries on all trials, respectively."
+Stages,C2; C3; C3-few; C4,Personal-parameter exchange and rest-neighbor diagnostics; rest/task neighbor comparison; few-label adaptation from default context; fixed donor-prior calibration.
+Stages,M; W; X; X1,Meta-learning comparisons; population-continuation and personal-specificity comparisons; REVE/LaBraM extension. X1 denotes its core original-budget comparisons.
+Stages,W-pooled; WF; WF-BNCI,Pooled neighbor summaries; follow-up population-reference/BNCI analyses; BNCI population controls.
+Stages,WF-R2-own_minus_population; WF-R2-own_minus_swap,Ordinary-continuation reference sensitivity: own-minus-population or own-minus-swapped contrast.
+Stages,WF-few; WF-own,BNCI few-label and full-support own-minus-population summaries.
+Identifiers,T0001--T0904,Stable comparison-row identifiers in Supplementary Data 1; each appears once. Rows from overlapping cohorts are not independent replications.
+Identifiers,H01--H12; none,Documentation keys for the original Holm correction families in Supplementary Data 1. The Families sheet lists their members; none means no adjusted value is supplied in that row.
+Identifiers,E01--E13; N01--N14,"Engineering/data checks; unexecuted, unavailable or superseded items. Each item is described in the corresponding titled table in S4."
+Identifiers,D1; D2; D3; diagnostic1; diagnostic2; diagnostic2_3,Owner-versus-exchanged specificity; rest-neighbor selection; task-neighbor selection; corresponding source diagnostic names.
+Identifiers,B-G; B2-*; C-*; C2-D1-*; C2-D2-*; C3-D3-*; C4-main; C4-secondary-*; M-main-*; M-secondary-*; W-*,"Composite decision identifiers: stage, endpoint, parameter family and optional dataset/budget. A suffix retains the definitions in this table; each complete decision row states its rule."
+Identifiers,R2_sensitivity_diagnostic1; BNCI_diagnostic1_available_subset,Owner/exchanged sensitivity against ordinary continuation; BNCI specificity among subjects with an available donor.
+Fields,variant; method; condition; control; versus,Personal parameterization; model/method identifier; scored condition; named comparator. The hypothesis defines subtraction order.
+Fields,start; population_family; source; k; shots; comparison; measure,Starting reference; population parameter family; rest/task donor-selection context (inside condition strings); number of donors; total labeled support trials; ordered contrast; score or calibration-increment measure.
+Fields,rest; task; P1-P0; P2-P0; P2-P1; M1-R0; M1-R1; M1-R2; M2-R0; M2-R1; M2-R2; M2-M1,"Resting or unlabeled support-task context; hyphenated comparison expressions mean left minus right, using the conditions defined above."
+Execution,fold; seed; selected; run; initial; extra,Cross-validation fold; repeated initialization; selected checkpoint updates; executed updates; starting-fit updates; additional continuation updates. These counts do not increase the number of subjects.
+Execution,CE_patience; step_budget; plateau,Early stop after the validation cross-entropy patience interval; update cap; joint training/validation plateau condition.
+Execution,B3_continued_original_objective,"Saved configuration name for ordinary cross-entropy continuation with default mixture weights, not the context-mismatch objective used for population continuation."
+Execution,P0/P1/P2; 1x/2x/4x,Slashes list separate prior conditions; x denotes the multiplier of the original population-update budget.
+Datasets,PhysioNet; PhysionetMI; Dreyer; Dreyer2023; Cho; Cho2017; Cho2017MI,Display and saved identifiers for the three core motor-imagery datasets.
+Datasets,Lee; Lee2019_MI; BNCI; BNCI2014_001; BNCI2014.001,Display and saved identifiers for the two external datasets.
+Datasets,pooled; starter; Dreyer+Cho,All available subjects in the stated core comparison; alias for the initial core cohort; pooled Dreyer and Cho subset. Row-specific N defines the denominator.
+Abbreviations,EEG; BCI; MI; EA; LOSO,Electroencephalography; brain-computer interface; motor imagery; Euclidean alignment; leave-one-subject-out evaluation.
+Abbreviations,FiLM; LoRA; MAML; MLP; SGD; GPU,Feature-wise linear modulation; low-rank adaptation; model-agnostic meta-learning; multilayer perceptron; stochastic gradient descent; graphics processing unit.
+Abbreviations,CBraMod; REVE; LaBraM,The three pretrained EEG backbones evaluated; original model references are provided in the main manuscript.
+Abbreviations,q/k/v/o; Q/K/V/O; Hz; s; pp,Query/key/value/output attention projections; hertz; seconds when used as a time unit; percentage points.

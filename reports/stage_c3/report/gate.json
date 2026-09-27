@@ -1,0 +1,37 @@
+{
+  "rule": "spec Stage C3 v1.9: task features, k=1, one-sided Wilcoxon, Holm over two variants",
+  "variants": [
+    {
+      "variant": "film_offset",
+      "source": "task",
+      "k": 1,
+      "dataset": "pooled",
+      "n": 235,
+      "nearest_mean": 0.7212573081113066,
+      "random_mean": 0.7146217854143899,
+      "median_pp": 0.9166666666666601,
+      "mean_pp": 0.6635522696916676,
+      "improved_fraction": 0.5914893617021276,
+      "p_raw_greater": 0.00025849466488340935,
+      "p_holm": 0.0005169893297668187,
+      "passed": true
+    },
+    {
+      "variant": "lora8",
+      "source": "task",
+      "k": 1,
+      "dataset": "pooled",
+      "n": 235,
+      "nearest_mean": 0.7572283551127278,
+      "random_mean": 0.7562963428745381,
+      "median_pp": 0.18939393939392998,
+      "mean_pp": 0.09320122381897816,
+      "improved_fraction": 0.5234042553191489,
+      "p_raw_greater": 0.17997256129640454,
+      "p_holm": 0.17997256129640454,
+      "passed": false
+    }
+  ],
+  "unlabeled_task_informative": true,
+  "conclusion": "无标签任务数据含有可用信息"
+}

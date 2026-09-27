@@ -1,0 +1,6 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0032,(selected variant),PhysionetMI,103,-0.227,0.094,0.8448,1
+T0033,(selected variant),Dreyer2023,80,-0.250,0.003,0.8311,1
+T0034,(selected variant),Cho2017,52,-0.400,-0.561,0.1193,0.5967
+T0035,(selected variant),Dreyer+Cho,132,-0.250,-0.219,0.2533,1
+T0036,(selected variant),pooled,235,-0.227,-0.082,0.5909,1

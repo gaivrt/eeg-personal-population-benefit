@@ -1,0 +1,32 @@
+stage: B2
+version: 1
+split_file: configs/splits/stage_a_v1.json
+halves_file: configs/splits/stage_b_halves_v1.json
+seeds: [11, 23, 37, 53, 71]
+variants: [film_first2, film_all, lora4, lora8, scratch_head]
+gate_variants: [film_first2, film_all, lora4, lora8]
+learning_rates:
+  film_first2: [0.01, 0.1]
+  film_all: [0.01, 0.1]
+  lora4: [0.0001, 0.001]
+  lora8: [0.0001, 0.001]
+  scratch_head: [0.0001, 0.001]
+steps: [20, 60]
+weight_decays: [0.0, 0.01]
+batch_size: 32
+optimizer: AdamW
+film_bound: 0.1
+lora_projections: [q, k, v, out]
+lora_branches: [spatial, temporal]
+lora_alpha_over_rank: 1.0
+lora_dropout: 0.0
+activation_cache: false
+layer8_roundtrip_float16: true
+base_head_selection: reuse_stage_b_selection
+scratch_head_normalization: frozen_B0_training_fold_statistics
+gate_median_gain: 0.02
+gate_alpha: 0.05
+gate_test: paired_wilcoxon_greater_than_stage_b_head
+gate_multiplicity: holm_across_four_pooled_adaptation_variants
+gate_seed_aggregation: subject_mean_over_five_seeds
+stop_after_stage: B2

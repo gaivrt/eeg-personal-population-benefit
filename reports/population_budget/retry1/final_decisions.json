@@ -1,0 +1,150 @@
+{
+  "decisions": {
+    "REVE": {
+      "model": "REVE",
+      "median_own_minus_G_pp": {
+        "1x": 2.4242424242,
+        "2x": 1.8333333333,
+        "4x": 1.0
+      },
+      "six_slot_Holm": {
+        "2x": 3.0209054261613294e-21,
+        "4x": 6.573842232760003e-13
+      },
+      "curve_interpretation": "descriptive_only",
+      "personal_matching_diagnostic_pass": {
+        "1x": true,
+        "2x": true,
+        "4x": true
+      }
+    },
+    "LaBraM": {
+      "model": "LaBraM",
+      "median_own_minus_G_pp": {
+        "1x": 2.4242424242,
+        "2x": 2.5757575758,
+        "4x": 1.9696969697000002
+      },
+      "six_slot_Holm": {
+        "2x": 5.619709227107989e-20,
+        "4x": 1.6196080775123253e-20
+      },
+      "curve_interpretation": "descriptive_only",
+      "personal_matching_diagnostic_pass": {
+        "1x": true,
+        "2x": true,
+        "4x": true
+      }
+    },
+    "CBraMod": {
+      "model": "CBraMod",
+      "median_own_minus_G_pp": {
+        "1x": 2.6,
+        "2x": 1.6,
+        "4x": 2.0
+      },
+      "six_slot_Holm": {
+        "2x": 5.69079534567087e-12,
+        "4x": 6.573842232760003e-13
+      },
+      "curve_interpretation": "stable_positive_after_continuation",
+      "personal_matching_diagnostic_pass": {
+        "1x": true,
+        "2x": true,
+        "4x": true
+      }
+    }
+  },
+  "main_rows": [
+    [
+      "CBraMod",
+      "77.058 \u2192 77.983 \u2192 78.254",
+      "2.600 \u2192 1.600 \u2192 2.000",
+      "3.533 \u2192 3.400 \u2192 3.233",
+      "\u5728\u7fa4\u4f53\u6a21\u578b\u6301\u7eed\u8bad\u7ec3\u540e\uff0c\u4e2a\u4eba\u6536\u76ca\u7a33\u5b9a\u4e3a\u6b63"
+    ],
+    [
+      "REVE",
+      "81.132 \u2192 81.804 \u2192 79.808",
+      "2.424 \u2192 1.833 \u2192 1.000",
+      "3.500 \u2192 3.100 \u2192 2.240",
+      "\u5982\u5b9e\u63cf\u8ff0\uff0c\u4e0d\u4f5c\u5f3a\u7ed3\u8bba"
+    ],
+    [
+      "LaBraM",
+      "77.815 \u2192 78.456 \u2192 78.690",
+      "2.424 \u2192 2.576 \u2192 1.970",
+      "3.174 \u2192 2.867 \u2192 2.939",
+      "\u5982\u5b9e\u63cf\u8ff0\uff0c\u4e0d\u4f5c\u5f3a\u7ed3\u8bba"
+    ]
+  ],
+  "availability": [
+    {
+      "model": "REVE",
+      "point": "1x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    },
+    {
+      "model": "REVE",
+      "point": "2x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    },
+    {
+      "model": "REVE",
+      "point": "4x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    },
+    {
+      "model": "LaBraM",
+      "point": "1x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    },
+    {
+      "model": "LaBraM",
+      "point": "2x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    },
+    {
+      "model": "LaBraM",
+      "point": "4x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    },
+    {
+      "model": "CBraMod",
+      "point": "1x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    },
+    {
+      "model": "CBraMod",
+      "point": "2x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    },
+    {
+      "model": "CBraMod",
+      "point": "4x",
+      "rows": 1175,
+      "complete_235_times_5": true
+    }
+  ],
+  "retry_status": "complete",
+  "precision_comparison": {
+    "matched_trials": 56706,
+    "changed_predictions": 3,
+    "old_report_preserved": true,
+    "maximum_absolute_BA_difference": {
+      "G_BA": 0.0,
+      "own_ba": 0.0,
+      "swap_ba": 0.0030000000000000027
+    }
+  },
+  "classification_consistency": "\u4e0d\u4e00\u81f4\uff1aCBraMod\u4e0eREVE/LaBraM\u5206\u7c7b\u4e0d\u540c",
+  "matching_consistency": "\u4e00\u81f4\uff1a\u4e09\u4e2a\u6a21\u578b\u4e09\u70b9\u5747\u901a\u8fc7"
+}

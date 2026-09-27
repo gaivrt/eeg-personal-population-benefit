@@ -1,0 +1,28 @@
+stage: C3
+version: 1
+source: stage_c2_personal_parameters
+variants: [film_offset, lora8]
+diagnostic3:
+  task_features: first_half_trials_unlabeled
+  tangent_reference: training_subjects_first_half_trials_unlabeled
+  block_scaling: inverse_sqrt_dimension
+  distance: euclidean
+  primary_k: 1
+  secondary_k: 3
+  lora_average: mean_weight_update_BA
+  random_draws: 10
+  random_k3: mean_of_three_distinct_others
+  test: paired_wilcoxon_greater_nearest_vs_random
+  multiplicity: holm_across_two_variants_primary_k1
+  alpha: 0.05
+few_shot:
+  shots: [5, 10, 20, 40]
+  selection: earliest_first_half_in_time_order
+  learning_rates:
+    film_offset: [0.01, 0.1]
+    lora8: [0.0001, 0.001]
+  steps: [20, 60]
+  weight_decays: [0.0, 0.01]
+  batch_size: 32
+  recovery_denominator: full_first_half_gain_over_b3
+stop_after_stage: C3

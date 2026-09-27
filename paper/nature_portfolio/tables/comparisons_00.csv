@@ -1,0 +1,7 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0001,head=linear,PhysionetMI,103,-10.476,--,5.949e-13,2.975e-12
+T0002,head=linear,Dreyer2023,80,-1.208,--,0.119,0.4761
+T0003,head=linear,Cho2017,52,0.608,--,0.5879,0.6415
+T0004,head=mlp,PhysionetMI,103,-12.976,--,6.651e-16,3.991e-15
+T0005,head=mlp,Dreyer2023,80,-1.125,--,0.3208,0.6415
+T0006,head=mlp,Cho2017,52,-1.450,--,0.2023,0.6069

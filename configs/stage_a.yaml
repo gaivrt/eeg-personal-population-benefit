@@ -1,0 +1,69 @@
+stage: A
+protocol_version: 2
+split_seed: 20260925
+seeds: [11, 23, 37, 53, 71]
+folds: 5
+validation_fraction: 0.10
+datasets:
+  PhysionetMI:
+    subjects: 109
+    exclude: [88, 89, 92, 100, 104, 106]
+    runs: [1, 2, 4, 8, 12]
+    sfreq: 160
+    channels: 64
+    notch_hz: 60
+    task_seconds: 4
+    rest_seconds_range: [60, 61]
+  Dreyer2023:
+    subjects: 87
+    exclude: [4, 9, 17, 29, 41, 78, 79]
+    sfreq: 512
+    channels: 27
+    notch_hz: 50
+    task_seconds: 4
+    rest_seconds_range: [179.99, 180.01]
+  Cho2017:
+    subjects: 52
+    exclude: []
+    sfreq: 512
+    channels: 64
+    notch_hz: 60
+    task_seconds: 3
+    rest_seconds_range: [60, 67]
+preprocessing:
+  source_commit: b9e961003214326972c567eff390e75b0287e32a
+  sfreq: 200
+  highpass_hz: 0.3
+  lowpass_hz: null
+  reference: average
+  input_unit: V
+  output_unit: uV_div_100
+  output_dtype: float16
+  rest_segment_seconds: 4
+  quality_policy: finite_only
+audit:
+  max_failed_subject_fraction: 0.10
+  min_usable_eyes_open_seconds: 30
+  alpha_channels: [O1, Oz, O2]
+  alpha_band_hz: [8, 13]
+  alpha_window_seconds: 4
+  alpha_welch_seconds: 2
+  alpha_required_ratio: 1.0
+  # Diagnostic only after the user requested the simple pipeline.
+  alpha_failure_counts_toward_stop: false
+model:
+  weights: weights/cbramod.pth
+  weights_sha256: 0792cb808c14e6b7a2bb2ce1dff379bc47bc54c49a779825bdfeb33bf8157178
+  cache_prefix_layers: 8
+  total_layers: 12
+  cache_dtype: float16
+training:
+  device_required: NVIDIA GeForce RTX 3090
+  heads: [linear, mlp]
+  epochs: 50
+  batch_size: 128
+  learning_rates: [0.001, 0.0003]
+  weight_decay: 0.01
+  mlp_hidden: 128
+  selection_metric: validation_subject_macro_balanced_accuracy
+  low_accuracy_diagnostic: 0.55

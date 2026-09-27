@@ -1,0 +1,209 @@
+{
+  "retrieved_utc": "2026-09-26T18:25:36.8424721Z",
+  "scope": "Official source and metadata only; no weights, EEG data or experiments",
+  "files": [
+    {
+      "file": "sources/reve_README.md",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/README.md",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 5985,
+      "sha256": "627d2ed9b85d33a4a406439935f8e7b313c7da70067538a5d8473011be188ce3"
+    },
+    {
+      "file": "sources/reve_preprocessing__README.md",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/preprocessing/README.md",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 5944,
+      "sha256": "75d977acba8f5584b2b0c3a8642622b495ddacbfd2c3233050252d1ad1e2842e"
+    },
+    {
+      "file": "sources/reve_preprocessing__preprocessing_physio.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/preprocessing/preprocessing_physio.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 4606,
+      "sha256": "c031edea76d75c503b8943182772f0888274e7a5d1b4d70dca4762e5918ad4c9"
+    },
+    {
+      "file": "sources/reve_preprocessing__preprocessing_bciciv2a.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/preprocessing/preprocessing_bciciv2a.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 3858,
+      "sha256": "db87bb2e2daba716ebd2bd5261584e0e4c5f8e9d974a9cf22408d84435d087f2"
+    },
+    {
+      "file": "sources/reve_src__models__encoder.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/models/encoder.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 10043,
+      "sha256": "933684a3306e16c16926cead0fc8c8c0a9ae99ad9dfaf54dee860c5b335d1b6c"
+    },
+    {
+      "file": "sources/reve_src__models__backbone.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/models/backbone.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 7845,
+      "sha256": "632ecd10ddb5efcc6f50a7207b0aa3934e7304438eb3f1db1edfefc3fab3371f"
+    },
+    {
+      "file": "sources/reve_src__models__classifier.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/models/classifier.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 5055,
+      "sha256": "cf71d0f455df0e9a263363213d75fbf493ffc5d587cd3c1f80cdc90ab961f90f"
+    },
+    {
+      "file": "sources/reve_src__configs__encoder__base.yaml",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/configs/encoder/base.yaml",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 171,
+      "sha256": "ad162dd129c93a466b7e8ada2be1e00e0c1272e95789a9bcb943786680dedb31"
+    },
+    {
+      "file": "sources/reve_src__configs__preprocessing__default.yaml",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/configs/preprocessing/default.yaml",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 208,
+      "sha256": "0c75676f53d5209e4df13c1b2c07918bf17d23b5b84cf01230f85cae046843a1"
+    },
+    {
+      "file": "sources/reve_src__configs__task__physio.yaml",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/configs/task/physio.yaml",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 1132,
+      "sha256": "eec8e80137e125c8bea6a28fd4b26bdd690464ac1d192c20c5aeb94d47a48c14"
+    },
+    {
+      "file": "sources/reve_src__configs__task__bciciv2a.yaml",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/configs/task/bciciv2a.yaml",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 838,
+      "sha256": "8b27f2f27e95597e67babc8ef2c2ade9185364375a71ee68e8ac8804970bcf37"
+    },
+    {
+      "file": "sources/reve_src__downstream_tasks__dataloaders.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/downstream_tasks/dataloaders.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 5586,
+      "sha256": "9f5b92a77ce0c21190ce493e50b0cc15a6a833f726c9df8975fab37f418f6348"
+    },
+    {
+      "file": "sources/reve_src__downstream_tasks__dataloader_moabb.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/downstream_tasks/dataloader_moabb.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 2905,
+      "sha256": "ece0a550619d05f73f6a0953a4394246ad7d83fa05282f182ebbd802ce40b81d"
+    },
+    {
+      "file": "sources/reve_src__downstream_tasks__utils.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/downstream_tasks/utils.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 2707,
+      "sha256": "b989ec421d710e44e7e735a949025b01aa8e7a1976917ad3199cf433ffbc552b"
+    },
+    {
+      "file": "sources/reve_src__downstream_tasks__train_core.py",
+      "url": "https://raw.githubusercontent.com/elouayas/reve_eeg/06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7/src/downstream_tasks/train_core.py",
+      "revision": "06a7059a07c3dabd80aee60c3dbc1eca4bdbe1c7",
+      "bytes": 6207,
+      "sha256": "8366fc468dfff811f1401777b6a92427d4a1c489f8fbb7056c1116f722408d62"
+    },
+    {
+      "file": "sources/reve_hf_README.md",
+      "url": "https://huggingface.co/brain-bzh/reve-base/resolve/dc2a075c287bb2f6c04ee5875bd79535a0f7dba6/README.md",
+      "revision": "dc2a075c287bb2f6c04ee5875bd79535a0f7dba6",
+      "bytes": 6424,
+      "sha256": "45398279f723f2f1cfb4347cfb757fa30a497c8ca5826e389f7846003bed10ee"
+    },
+    {
+      "file": "sources/reve_hf_config.json",
+      "url": "https://huggingface.co/brain-bzh/reve-base/resolve/dc2a075c287bb2f6c04ee5875bd79535a0f7dba6/config.json",
+      "revision": "dc2a075c287bb2f6c04ee5875bd79535a0f7dba6",
+      "bytes": 428,
+      "sha256": "5b74a19202d1aaa5d1814b26b720e4184cd0047f28a672834d390318eed05945"
+    },
+    {
+      "file": "sources/reve_hf_configuration_reve.py",
+      "url": "https://huggingface.co/brain-bzh/reve-base/resolve/dc2a075c287bb2f6c04ee5875bd79535a0f7dba6/configuration_reve.py",
+      "revision": "dc2a075c287bb2f6c04ee5875bd79535a0f7dba6",
+      "bytes": 769,
+      "sha256": "8abbf691a2de914dccb692aa42b987d20815b52dc0642b0db1fd216df4ccbbfb"
+    },
+    {
+      "file": "sources/reve_hf_modeling_reve.py",
+      "url": "https://huggingface.co/brain-bzh/reve-base/resolve/dc2a075c287bb2f6c04ee5875bd79535a0f7dba6/modeling_reve.py",
+      "revision": "dc2a075c287bb2f6c04ee5875bd79535a0f7dba6",
+      "bytes": 16085,
+      "sha256": "207a9c51218d806ab317eabf4eb6d3234eabe887f48e541ef5580c4b9b45359f"
+    },
+    {
+      "file": "sources/reve_hf_LICENSE",
+      "url": "https://huggingface.co/brain-bzh/reve-base/resolve/dc2a075c287bb2f6c04ee5875bd79535a0f7dba6/LICENSE",
+      "revision": "dc2a075c287bb2f6c04ee5875bd79535a0f7dba6",
+      "bytes": 17760,
+      "sha256": "cda77c38a1fcf002009678642608748f221458f83bc5ee3944f1e0c83939cd96"
+    },
+    {
+      "file": "sources/reve_positions_positions.json",
+      "url": "https://huggingface.co/brain-bzh/reve-positions/resolve/befa5b57a455b77cf302daf610c2e9ed8140bace/positions.json",
+      "revision": "befa5b57a455b77cf302daf610c2e9ed8140bace",
+      "bytes": 59729,
+      "sha256": "f62ca8d7dd4b88e1422ea17348440a41ed0b73b9ff7d12c3b1229492c9b448a5"
+    },
+    {
+      "file": "sources/reve_positions_position_bank.py",
+      "url": "https://huggingface.co/brain-bzh/reve-positions/resolve/befa5b57a455b77cf302daf610c2e9ed8140bace/position_bank.py",
+      "revision": "befa5b57a455b77cf302daf610c2e9ed8140bace",
+      "bytes": 973,
+      "sha256": "26ad5d55fb667da7c80bcc8e8512eb35bca33054a3b3e2bcafe4775543aa1cd0"
+    },
+    {
+      "file": "sources/reve_positions_config.json",
+      "url": "https://huggingface.co/brain-bzh/reve-positions/resolve/befa5b57a455b77cf302daf610c2e9ed8140bace/config.json",
+      "revision": "befa5b57a455b77cf302daf610c2e9ed8140bace",
+      "bytes": 7719,
+      "sha256": "8e89acf4d27cf1d24815add8df771e6cf138b68846e60796db57e36f1ec8d6f8"
+    },
+    {
+      "file": "sources/labram_README.md",
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/README.md",
+      "revision": "c431221e6cfd23dbfa9950e0180682fb322b0548",
+      "bytes": 6024,
+      "sha256": "e5f410f36a9f97601dfef910958ed7a605f35b4ad1cae3d1d93793e61a17ba40"
+    },
+    {
+      "file": "sources/labram_modeling_finetune.py",
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/modeling_finetune.py",
+      "revision": "c431221e6cfd23dbfa9950e0180682fb322b0548",
+      "bytes": 21273,
+      "sha256": "7b3514c9a661ebd417a2dd9834a9f2fab0a2e518c8212c73ebebaaa165c29d88"
+    },
+    {
+      "file": "sources/labram_engine_for_finetuning.py",
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/engine_for_finetuning.py",
+      "revision": "c431221e6cfd23dbfa9950e0180682fb322b0548",
+      "bytes": 8664,
+      "sha256": "7e0e8dad3f208645ac3c966ef356433b84def3f371852daf2858778562726f92"
+    },
+    {
+      "file": "sources/labram_utils.py",
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/utils.py",
+      "revision": "c431221e6cfd23dbfa9950e0180682fb322b0548",
+      "bytes": 29167,
+      "sha256": "c5ad729bd57ab31e04572f426d94f7fb164ef0fbfd1f7076da6bf8dfbd833e32"
+    },
+    {
+      "file": "sources/labram_dataset_maker__make_h5dataset_for_pretrain.py",
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/dataset_maker/make_h5dataset_for_pretrain.py",
+      "revision": "c431221e6cfd23dbfa9950e0180682fb322b0548",
+      "bytes": 953,
+      "sha256": "c7f222b02650189636302d16b9e1e5c88e9270473ad57dd3d7b1acf7ba716d77"
+    },
+    {
+      "file": "sources/labram_dataset_maker__make_TUAB.py",
+      "url": "https://raw.githubusercontent.com/935963004/LaBraM/c431221e6cfd23dbfa9950e0180682fb322b0548/dataset_maker/make_TUAB.py",
+      "revision": "c431221e6cfd23dbfa9950e0180682fb322b0548",
+      "bytes": 6385,
+      "sha256": "fb94103aff4a43dcc4ad323019f55317eb32c981e4d7b88a77abb3e57ec7fa96"
+    }
+  ]
+}

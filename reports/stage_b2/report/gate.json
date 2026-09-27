@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "threshold_pp": 2.0,
+  "alpha": 0.05,
+  "rule": "five-seed mean per subject; median gain >=2pp AND one-sided paired Wilcoxon vs Stage B head, Holm across four variants p<.05",
+  "variants": [
+    {
+      "variant": "film_first2",
+      "median_gain_vs_b0_pp": 1.8333333333,
+      "vs_head_n": 235,
+      "vs_head_median_gain_pp": 0.303030303,
+      "vs_head_mean_gain_pp": 0.709258679691915,
+      "vs_head_sd_gain_pp": 4.544375967931931,
+      "vs_head_improved_fraction": 0.5319148936170213,
+      "vs_head_drop_gt_2pp_fraction": 0.2425531914893617,
+      "vs_head_statistic": 14666.0,
+      "vs_head_p_raw": 0.030712586131659888,
+      "vs_head_p_holm": 0.030712586131659888,
+      "passed": false
+    },
+    {
+      "variant": "film_all",
+      "median_gain_vs_b0_pp": 2.8333333333,
+      "vs_head_n": 235,
+      "vs_head_median_gain_pp": 1.2878787879,
+      "vs_head_mean_gain_pp": 2.10331674439617,
+      "vs_head_sd_gain_pp": 5.255372986867753,
+      "vs_head_improved_fraction": 0.6382978723404256,
+      "vs_head_drop_gt_2pp_fraction": 0.1702127659574468,
+      "vs_head_statistic": 19200.0,
+      "vs_head_p_raw": 5.775060480552049e-09,
+      "vs_head_p_holm": 1.1550120961104098e-08,
+      "passed": true
+    },
+    {
+      "variant": "lora4",
+      "median_gain_vs_b0_pp": 2.8000000000000003,
+      "vs_head_n": 235,
+      "vs_head_median_gain_pp": 2.4,
+      "vs_head_mean_gain_pp": 2.5743527834348936,
+      "vs_head_sd_gain_pp": 4.600531341797144,
+      "vs_head_improved_fraction": 0.6978723404255319,
+      "vs_head_drop_gt_2pp_fraction": 0.1148936170212766,
+      "vs_head_statistic": 20909.5,
+      "vs_head_p_raw": 4.2549738917161695e-16,
+      "vs_head_p_holm": 1.2764921675148509e-15,
+      "passed": true
+    },
+    {
+      "variant": "lora8",
+      "median_gain_vs_b0_pp": 3.4090909091,
+      "vs_head_n": 235,
+      "vs_head_median_gain_pp": 2.0454545455,
+      "vs_head_mean_gain_pp": 2.9853190805263834,
+      "vs_head_sd_gain_pp": 5.101604989042147,
+      "vs_head_improved_fraction": 0.7404255319148936,
+      "vs_head_drop_gt_2pp_fraction": 0.09787234042553192,
+      "vs_head_statistic": 22164.5,
+      "vs_head_p_raw": 3.2954427635869818e-18,
+      "vs_head_p_holm": 1.3181771054347927e-17,
+      "passed": true
+    }
+  ],
+  "stage_c_started": false
+}

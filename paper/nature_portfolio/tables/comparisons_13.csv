@@ -1,0 +1,4 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0355,variant=film_offset,pooled,235,0.561,0.329,0.03375,0.1012
+T0360,variant=mix_offset,pooled,235,0.367,0.355,0.04534,0.1012
+T0365,variant=lora8,pooled,235,0.017,-0.502,0.7312,0.7312

@@ -1,0 +1,41 @@
+Gate ID,Cohort,Prespecified rule,Observed,Decision
+B-G,pooled,Median vs B0 >= 2 pp,median 1.000,Fail
+B2-film_first2,pooled,Median vs B0 >= 2 pp; one-sided Holm(4) vs tuned head < .05,median 1.833; pH 0.030713,Fail
+B2-film_all,pooled,Median vs B0 >= 2 pp; one-sided Holm(4) vs tuned head < .05,median 2.833; pH 1.155e-08,Pass
+B2-lora4,pooled,Median vs B0 >= 2 pp; one-sided Holm(4) vs tuned head < .05,median 2.800; pH 1.2765e-15,Pass
+B2-lora8,pooled,Median vs B0 >= 2 pp; one-sided Holm(4) vs tuned head < .05,median 3.409; pH 1.3182e-17,Pass
+C-M_film,pooled,One-sided Holm(4) vs B4 and B0 < .05; recovery >= .30; drop > 2 pp <= .10,both p pass False; recovery 0.981; drop 0.230,Fail
+C-M_lora,pooled,One-sided Holm(4) vs B4 and B0 < .05; recovery >= .30; drop > 2 pp <= .10,both p pass False; recovery 1.561; drop 0.128,Fail
+C2-D1-film_offset,pooled,U median >= 2 pp; Holm(3) < .05,median 4.617; pH 4.1681e-31,Pass
+C2-D1-mix_offset,pooled,U median >= 2 pp; Holm(3) < .05,median 2.580; pH 7.1335e-23,Pass
+C2-D1-lora8,pooled,U median >= 2 pp; Holm(3) < .05,median 3.470; pH 5.0123e-28,Pass
+C2-D2-film_offset,pooled,After D1: nearest > random; Holm(3) < .05,median 0.561; pH 0.10124,Fail
+C2-D2-mix_offset,pooled,After D1: nearest > random; Holm(3) < .05,median 0.367; pH 0.10124,Fail
+C2-D2-lora8,pooled,After D1: nearest > random; Holm(3) < .05,median 0.017; pH 0.73119,Fail
+C3-D3-film_offset,pooled,Task nearest > random; k=1; Holm(2) < .05,median 0.917; pH 0.00051699,Pass
+C3-D3-lora8,pooled,Task nearest > random; k=1; Holm(2) < .05,median 0.189; pH 0.17997,Fail
+C4-main,pooled,LoRA n=10; P2 > P1 and P0; both one-sided raw p < .05,P2-P1: p 0.89273; P2-P0: p 0.44768,Fail
+C4-secondary-n0,pooled,P2 > P1; Holm(2) across label budgets < .05,median 0.180; pH 0.078435,Fail
+C4-secondary-n5,pooled,P2 > P1; Holm(2) across label budgets < .05,median 0.100; pH 0.29768,Fail
+M-main-M1,pooled,vs R1; Holm(2) < .05; median >= 1 pp; drop > 2 pp <= .10,median 0.517; pH 6.7044e-05; drop 0.123,Fail
+M-main-M2,pooled,vs R1; Holm(2) < .05; median >= 1 pp; drop > 2 pp <= .10,median 0.576; pH 6.7044e-05; drop 0.132,Fail
+M-secondary-n5-M1,pooled,vs R1; Holm(2) < .05; median >= 1 pp; drop > 2 pp <= .10,median 0.483; pH 0.0036885; drop 0.153,Fail
+M-secondary-n5-M2,pooled,vs R1; Holm(2) < .05; median >= 1 pp; drop > 2 pp <= .10,median 0.500; pH 0.00033439; drop 0.128,Fail
+M-secondary-n20-M1,pooled,vs R1; Holm(2) < .05; median >= 1 pp; drop > 2 pp <= .10,median 0.467; pH 0.0010864; drop 0.140,Fail
+M-secondary-n20-M2,pooled,vs R1; Holm(2) < .05; median >= 1 pp; drop > 2 pp <= .10,median 0.333; pH 0.0010864; drop 0.094,Fail
+M-adapt-M1,pooled,Adaptation increment vs R1; Holm(2) < .05,mean 0.316; pH 0.041048,Pass
+M-adapt-M2,pooled,Adaptation increment vs R1; Holm(2) < .05,mean 0.235; pH 0.06045,Fail
+W-diagnostic1-film_offset-,pooled,U median >= 2 pp; Holm(3) < .05,median 4.689; pH 9.1247e-32,Pass
+W-diagnostic1-lora8-,pooled,U median >= 2 pp; Holm(3) < .05,median 3.533; pH 3.1524e-28,Pass
+W-diagnostic2_3-film_offset-rest,pooled,"Nearest > random; k=1; rest Holm(3), task Holm(2) < .05",median 0.440; pH 0.10461,Fail
+W-diagnostic2_3-lora8-rest,pooled,"Nearest > random; k=1; rest Holm(3), task Holm(2) < .05",median 0.000; pH 1,Fail
+W-diagnostic2_3-film_offset-task,pooled,"Nearest > random; k=1; rest Holm(3), task Holm(2) < .05",median 0.767; pH 0.0042664,Pass
+W-diagnostic2_3-lora8-task,pooled,"Nearest > random; k=1; rest Holm(3), task Holm(2) < .05",median 0.567; pH 0.053663,Fail
+W-Lee_diagnostic1-film_offset-,Lee,U median >= 2 pp; Holm(3) < .05,median 2.500; pH 0.00015151,Pass
+W-Lee_diagnostic1-lora8-,Lee,U median >= 2 pp; Holm(3) < .05,median 2.580; pH 2.2285e-06,Pass
+W-Lee_diagnostic2-film_offset-,Lee,"Nearest > random; k=1; rest Holm(3), task Holm(2) < .05",median 0.500; pH 0.62662,Fail
+W-Lee_diagnostic2-lora8-,Lee,"Nearest > random; k=1; rest Holm(3), task Holm(2) < .05",median 1.190; pH 0.016588,Pass
+WF-R2_sensitivity_diagnostic1-film_offset-,pooled,U median >= 2 pp; Holm(3) < .05,median 4.008; pH 4.4201e-29,Pass
+WF-R2_sensitivity_diagnostic1-lora8-,pooled,U median >= 2 pp; Holm(3) < .05,median 3.447; pH 4.3558e-26,Pass
+WF-BNCI_diagnostic1_available_subset-film_offset-,BNCI; swap subset,U median >= 2 pp; Holm(3) < .05,median 6.944; pH 0.04995,Pass
+WF-BNCI_diagnostic1_available_subset-lora8-,BNCI; swap subset,U median >= 2 pp; Holm(3) < .05,median 12.083; pH 0.037593,Pass

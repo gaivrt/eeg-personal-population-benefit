@@ -1,0 +1,5 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0114,method=M_film; control=B4,pooled,235,0.000,-0.006,0.5666,0.5666
+T0115,method=M_film; control=B0,pooled,235,3.333,3.267,9.076e-10,2.723e-09
+T0116,method=M_lora; control=B4,pooled,235,0.000,0.007,0.0937,0.1874
+T0117,method=M_lora; control=B0,pooled,235,6.288,6.577,7.394e-25,2.957e-24

@@ -1,0 +1,13 @@
+Budget,Dataset,N,Seeds,Planned pairs,Observed pairs,Complete N,Incomplete N
+1x,PhysioNet,103,5,515,494,82,21
+1x,Dreyer,80,5,400,384,64,16
+1x,Cho,52,5,260,249,41,11
+1x,Pooled,235,5,1175,1127,187,48
+2x,PhysioNet,103,5,515,494,82,21
+2x,Dreyer,80,5,400,384,64,16
+2x,Cho,52,5,260,249,41,11
+2x,Pooled,235,5,1175,1127,187,48
+4x,PhysioNet,103,5,515,494,82,21
+4x,Dreyer,80,5,400,384,64,16
+4x,Cho,52,5,260,249,41,11
+4x,Pooled,235,5,1175,1127,187,48

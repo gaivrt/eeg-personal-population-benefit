@@ -1,0 +1,69 @@
+{
+  "R2_sensitivity_diagnostic1": [
+    {
+      "variant": "film_offset",
+      "own_subjects": 235,
+      "swap_subjects": 235,
+      "subjects": 235,
+      "median_pp": 4.0075757576,
+      "mean_pp": 4.540726581808936,
+      "sd_pp": 5.330391310939198,
+      "improved_fraction": 0.8595744680851064,
+      "drop_gt_2pp_fraction": 0.07659574468085106,
+      "p_one_sided_raw": 1.4733598102631668e-29,
+      "p_holm": 4.4200794307895006e-29,
+      "passed": true,
+      "family_size": 3
+    },
+    {
+      "variant": "lora8",
+      "own_subjects": 235,
+      "swap_subjects": 235,
+      "subjects": 235,
+      "median_pp": 3.4469696969999997,
+      "mean_pp": 3.9035371463953195,
+      "sd_pp": 5.551681669090676,
+      "improved_fraction": 0.8595744680851064,
+      "drop_gt_2pp_fraction": 0.08936170212765958,
+      "p_one_sided_raw": 2.1778969288650656e-26,
+      "p_holm": 4.355793857730131e-26,
+      "passed": true,
+      "family_size": 3
+    }
+  ],
+  "BNCI_diagnostic1_available_subset": [
+    {
+      "variant": "film_offset",
+      "own_subjects": 9,
+      "swap_subjects": 8,
+      "subjects": 8,
+      "median_pp": 6.94444444445,
+      "mean_pp": 7.847222222212499,
+      "sd_pp": 8.32506203269365,
+      "improved_fraction": 0.75,
+      "drop_gt_2pp_fraction": 0.125,
+      "p_one_sided_raw": 0.0249749882273732,
+      "p_holm": 0.0499499764547464,
+      "passed": true,
+      "family_size": 3
+    },
+    {
+      "variant": "lora8",
+      "own_subjects": 9,
+      "swap_subjects": 8,
+      "subjects": 8,
+      "median_pp": 12.08333333335,
+      "mean_pp": 9.75694444445,
+      "sd_pp": 6.673999769809521,
+      "improved_fraction": 0.875,
+      "drop_gt_2pp_fraction": 0.0,
+      "p_one_sided_raw": 0.01253092217194181,
+      "p_holm": 0.03759276651582543,
+      "passed": true,
+      "family_size": 3
+    }
+  ],
+  "BNCI_rest": "not_identifiable: singleton has no donor; every other test fold has exactly one donor per target",
+  "primary_population_reference": "G",
+  "R2_changes_primary_reference": false
+}

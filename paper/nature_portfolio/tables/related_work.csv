@@ -1,0 +1,6 @@
+Work,Evaluation target,Control / comparison
+Identity Trap,Representation and identity shortcuts,Identity diagnostics
+Compass,LOSO; separate within-subject few-shot,Adaptation benchmarks
+Stacked LoRA,Personal branches; subjects seen during training,Global adapter
+Lopes et al.,Held-out-subject encoders and alignment,Shared-adaptation and representation controls
+This study,Unseen-subject classification gains,"Population, mismatch, continuation"

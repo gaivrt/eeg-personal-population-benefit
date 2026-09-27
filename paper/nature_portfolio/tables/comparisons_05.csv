@@ -1,0 +1,26 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0064,variant=film_first2,PhysionetMI,103,1.818,1.258,0.01936,0.05809
+T0065,variant=film_first2,Dreyer2023,80,2.000,2.138,1.983e-07,1.983e-06
+T0066,variant=film_first2,Cho2017,52,1.800,2.972,0.003439,0.01376
+T0067,variant=film_first2,Dreyer+Cho,132,2.000,2.466,4.556e-09,5.467e-08
+T0068,variant=film_first2,pooled,235,1.833,1.937,8.932e-09,9.825e-08
+T0069,variant=film_all,PhysionetMI,103,2.576,2.714,0.001761,0.008803
+T0070,variant=film_all,Dreyer2023,80,3.750,4.217,2.29e-11,3.434e-10
+T0071,variant=film_all,Cho2017,52,0.700,3.191,0.02792,0.05809
+T0072,variant=film_all,Dreyer+Cho,132,3.000,3.813,4.018e-12,7.233e-11
+T0073,variant=film_all,pooled,235,2.833,3.331,1.175e-12,2.35e-11
+T0074,variant=lora4,PhysionetMI,103,2.879,3.413,8.873e-06,7.098e-05
+T0075,variant=lora4,Dreyer2023,80,3.167,3.729,3.456e-12,6.567e-11
+T0076,variant=lora4,Cho2017,52,2.200,4.685,2.058e-05,0.0001441
+T0077,variant=lora4,Dreyer+Cho,132,2.800,4.106,6.853e-16,1.508e-14
+T0078,variant=lora4,pooled,235,2.800,3.802,1.374e-18,3.298e-17
+T0079,variant=lora8,PhysionetMI,103,4.015,4.000,4.845e-06,4.36e-05
+T0080,variant=lora8,Dreyer2023,80,3.333,3.911,7.636e-12,1.298e-10
+T0081,variant=lora8,Cho2017,52,2.400,5.099,7.817e-05,0.000469
+T0082,variant=lora8,Dreyer+Cho,132,3.083,4.379,3.233e-15,6.79e-14
+T0083,variant=lora8,pooled,235,3.409,4.213,4.652e-18,1.07e-16
+T0084,variant=scratch_head,PhysionetMI,103,-9.167,-8.807,8.332e-11,1.166e-09
+T0085,variant=scratch_head,Dreyer2023,80,-7.750,-7.115,1.213e-11,1.94e-10
+T0086,variant=scratch_head,Cho2017,52,0.000,-0.049,0.2926,0.2926
+T0087,variant=scratch_head,Dreyer+Cho,132,-4.800,-4.331,9.702e-11,1.261e-09
+T0088,variant=scratch_head,pooled,235,-6.212,-6.293,8.126e-20,2.031e-18

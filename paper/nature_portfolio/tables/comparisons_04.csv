@@ -1,0 +1,13 @@
+ID,Condition / contrast,Dataset,$N$,Median,Mean,$p$,$p_H$
+T0052,condition=B1b; head=linear,PhysionetMI,103,-7.885,-8.518,6.753e-12,6.078e-11
+T0053,condition=B1b; head=linear,Dreyer2023,80,0.583,0.495,0.4135,1
+T0054,condition=B1b; head=linear,Cho2017,52,2.000,-1.520,0.8586,1
+T0055,condition=B1b; head=mlp,PhysionetMI,103,-10.179,-9.892,6.493e-14,7.142e-13
+T0056,condition=B1b; head=mlp,Dreyer2023,80,0.958,1.433,0.002987,0.0239
+T0057,condition=B1b; head=mlp,Cho2017,52,0.650,-2.926,0.6293,1
+T0058,condition=B1c; head=linear,PhysionetMI,103,-10.316,-9.621,1.139e-13,1.139e-12
+T0059,condition=B1c; head=linear,Dreyer2023,80,-0.083,-0.367,0.6111,1
+T0060,condition=B1c; head=linear,Cho2017,52,1.800,-0.407,0.339,1
+T0061,condition=B1c; head=mlp,PhysionetMI,103,-11.976,-12.372,1.445e-16,1.733e-15
+T0062,condition=B1c; head=mlp,Dreyer2023,80,-0.083,-0.154,0.7937,1
+T0063,condition=B1c; head=mlp,Cho2017,52,-0.600,-2.000,0.2024,1

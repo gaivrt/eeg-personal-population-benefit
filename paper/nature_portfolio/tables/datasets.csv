@@ -1,0 +1,6 @@
+Dataset,$N$,Session,EEG / readout,Fit / query trials,Rest
+PhysioNet,103,single,64 / 27,22 / 23,EO
+Dreyer,80,single,27 / 27,80--120 / 80--120,EO
+Cho,52,single,64 / 27,100--120 / 100--120,EO
+Lee,54,1,62 / 26,100 / 100,EO
+BNCI,9,2,22 / 19,72 / 72,EO

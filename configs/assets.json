@@ -1,0 +1,105 @@
+[
+  {
+    "dataset": "CBraMod",
+    "revision": "500543c7e30bda1b22bfd51a49301b238dee21fd",
+    "url": "https://huggingface.co/weighting666/CBraMod/resolve/500543c7e30bda1b22bfd51a49301b238dee21fd/pretrained_weights.pth",
+    "path": "weights/cbramod.pth",
+    "bytes": 19775842,
+    "sha256": "0792cb808c14e6b7a2bb2ce1dff379bc47bc54c49a779825bdfeb33bf8157178"
+  },
+  {
+    "dataset": "PhysionetMI",
+    "subject": 1,
+    "session": 1,
+    "url": "https://physionet.org/files/eegmmidb/1.0.0/S001/S001R01.edf",
+    "path": "data/samples/PhysionetMI/S001R01.edf",
+    "bytes": 1275936,
+    "sha256": "4743b736131a7e147c150e8b37711029b6cda5e356c4b3e8261a03cdcaaf8b0c"
+  },
+  {
+    "dataset": "PhysionetMI",
+    "subject": 1,
+    "session": 1,
+    "url": "https://physionet.org/files/eegmmidb/1.0.0/S001/S001R02.edf",
+    "path": "data/samples/PhysionetMI/S001R02.edf",
+    "bytes": 1275936,
+    "sha256": "31a95e0a880e6c3d89960d9d62c144f24cc4e9f5d7e93c7f864ef61cd49e847e"
+  },
+  {
+    "dataset": "PhysionetMI",
+    "subject": 1,
+    "session": 1,
+    "url": "https://physionet.org/files/eegmmidb/1.0.0/S001/S001R04.edf",
+    "path": "data/samples/PhysionetMI/S001R04.edf",
+    "bytes": 2596896,
+    "sha256": "3d161f88e1c00632585287d2ce584c2bc0f08862438eb255ea8723e00fac693d"
+  },
+  {
+    "dataset": "PhysionetMI",
+    "subject": 1,
+    "session": 1,
+    "url": "https://physionet.org/files/eegmmidb/1.0.0/S001/S001R08.edf",
+    "path": "data/samples/PhysionetMI/S001R08.edf",
+    "bytes": 2596896,
+    "sha256": "358fb5189220725141968ae285fbe9e3f36210b834ffba71d940af308e3aca68"
+  },
+  {
+    "dataset": "PhysionetMI",
+    "subject": 1,
+    "session": 1,
+    "url": "https://physionet.org/files/eegmmidb/1.0.0/S001/S001R12.edf",
+    "path": "data/samples/PhysionetMI/S001R12.edf",
+    "bytes": 2596896,
+    "sha256": "2b281c9b687b4c4176e83251d74743721f2d6ebd76656a972a3b9c44d9d88cd5"
+  },
+  {
+    "dataset": "Stieger2021",
+    "subject": 1,
+    "session": 1,
+    "url": "https://ndownloader.figshare.com/files/25265249",
+    "bytes": 599832496,
+    "path": "data/samples/Stieger2021/S1_Session_1.mat",
+    "sha256": "aa82fb74a5b3b7becd56920c0e58b06c5880d57d59ad230c636f028284e4bbe5"
+  },
+  {
+    "dataset": "Stieger2021",
+    "subject": 1,
+    "session": 2,
+    "url": "https://ndownloader.figshare.com/files/25265252",
+    "bytes": 594653325,
+    "path": "data/samples/Stieger2021/S1_Session_2.mat",
+    "sha256": "a0df9f7d2b4314082f8b487a919e9e08dde26dd09c7e3e60cdd1c7b04512e379"
+  },
+  {
+    "dataset": "Lee2019_MI",
+    "subject": 1,
+    "url": "https://s3.ap-northeast-1.wasabisys.com/gigadb-datasets/live/pub/10.5524/100001_101000/100542/session1/s1/sess01_subj01_EEG_MI.mat",
+    "bytes": 609007751,
+    "path": "data/samples/Lee2019_MI/sess01_subj01_EEG_MI.mat",
+    "sha256": "da1e4ce677f95bf2feed9ba0bc5edaef9daa4fb5ef2102d90fdcece69cc48b5c"
+  },
+  {
+    "dataset": "Lee2019_MI",
+    "subject": 1,
+    "url": "https://s3.ap-northeast-1.wasabisys.com/gigadb-datasets/live/pub/10.5524/100001_101000/100542/session2/s1/sess02_subj01_EEG_MI.mat",
+    "bytes": 610856419,
+    "path": "data/samples/Lee2019_MI/sess02_subj01_EEG_MI.mat",
+    "sha256": "5b8f0664dae03306328927e1fb43242f00d0335aad21aacb09db355f7301bb58"
+  },
+  {
+    "dataset": "Cho2017",
+    "subject": 1,
+    "url": "https://s3.ap-northeast-1.wasabisys.com/gigadb-datasets/live/pub/10.5524/100001_101000/100295/mat_data/s01.mat",
+    "bytes": 203446256,
+    "path": "data/samples/Cho2017/s01.mat",
+    "sha256": "57f2f10056b3c240adc78324872597d9b06b282df537a7763e98467275efe6db"
+  },
+  {
+    "dataset": "Dreyer2023",
+    "subject": 1,
+    "url": "https://osf.io/download/67c9aaa76e4ba1d657fd7556/",
+    "path": "data/samples/Dreyer2023/sub-01.zip",
+    "bytes": 72551204,
+    "sha256": "7c9b290700381e9f06025eb3248d8118eae57d6ae36c393f4d265596c63a82c1"
+  }
+]

@@ -1,0 +1,51 @@
+stage: M
+version: 1
+source: stage_c_m_lora_main_default_z_as_B3
+population: b3_lora_bases_and_task_head  # mixture weights fixed at default z; encoder/generator/backbone frozen
+personal_lora_rank: 8
+inner:
+  optimizer: sgd_full_batch_support
+  ks: [5, 10, 20]
+  learning_rates: [0.003, 0.01, 0.03]  # fixed by the fold-0/seed-11 validation pilot (job 1909228), rule below
+  pilot:
+    fold: 0
+    seed: 11
+    shots: 10
+    scan: [0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0]
+    rule: best_validation_median_gain_then_mean_over_ks_plus_both_scan_neighbours
+outer:
+  episode_shots: [5, 10, 20]
+  support: earliest_first_half
+  query: random_32_of_second_half
+  meta_batch_subjects: 1
+  optimizer: AdamW
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  grad_clip_norm: 1.0
+  steps: [1000, 2000]
+  m1_inner_lr: r0_validation_best_lr_for_that_k_at_n10
+  m2_log_lr_learning_rate: 0.001  # AdamW, weight decay 0, per encoder layer (12), first-order gradient
+variants: [M1, M2]
+controls:
+  R0: B3
+  R1: C4_P1_prior_lora8  # C4 leave-one-out k/alpha; test donors from C4 k_alpha.csv, 10 draws
+  R2: B3_continued_original_objective  # CE on 32 random trials of a random training subject, 2000 steps
+shots: [0, 5, 10, 20, 40]  # 40 only for Dreyer2023 and Cho2017; n never exceeds the first half
+selection:
+  inner: validation_median_gain_over_b3_then_mean_then_smaller_k_then_smaller_lr
+  m: validation_n10_median_gain_over_b3_then_mean_then_smaller_k_then_fewer_steps
+  strongest_control: highest_pooled_validation_median_ba_at_n10_then_mean
+  final_variant: passed_variant_with_higher_pooled_validation_median_ba_at_n10
+batch_size_scoring: 32
+primary:
+  shots: 10
+  test: paired_wilcoxon_greater_approx_zero_dropped
+  multiplicity: holm_across_M1_M2
+  alpha: 0.05
+  min_median_pp: 1.0
+  max_drop_gt_2pp_fraction: 0.10
+secondary_shots: [5, 20]
+confirmatory:
+  dataset: Lee2019_MI_session1
+  run_only_if_primary_passed: true
+stop_after_stage: M
