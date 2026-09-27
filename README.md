@@ -35,6 +35,6 @@ Seeds are averaged within subject before the subject-bootstrap comparisons. Inte
 
 ## License and citation
 
-Original analysis software is provided under the MIT license. Authors' derived tables and documentation are provided under CC BY 4.0; upstream data, model code and weights retain their own terms (see `THIRD_PARTY_NOTICES.md`). Cite this version using `CITATION.cff`. The Zenodo DOI will be recorded after a public archive is successfully created; no DOI is claimed by this initial release.
+Original analysis software is provided under the MIT license. Authors' derived tables and documentation are provided under CC BY 4.0; upstream data, model code and weights retain their own terms (see `THIRD_PARTY_NOTICES.md`). Cite this version using `CITATION.cff`. Version 1.0.0 is archived at [doi:10.5281/zenodo.22999685](https://doi.org/10.5281/zenodo.22999685). The archived ZIP and Git tag `v1.0.0` remain fixed at commit `06fc75f7c64f96b81140f1531b2ab44fb75b7740`; subsequent citation-metadata updates on the main branch do not change the archived analysis files.
 
 Repository: https://github.com/gaivrt/eeg-personal-population-benefit

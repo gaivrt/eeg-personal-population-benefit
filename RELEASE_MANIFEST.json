@@ -17,7 +17,7 @@
     ".gitignore": "9275dee2b0c7cf82bc629d58279b853d2eaf41e657cb8325a9a61a0965d49fd3",
     ".python-version": "f50159fad3f4319868eb38717b91d55843c41e9803014c8de05e116a6d0bcfdc",
     ".zenodo.json": "3bb5791e4bbb83b184b790b43c043a56afe8b4411161562b347fa230fb7b017b",
-    "CITATION.cff": "8376f764c5d7572fbb65f08ebb6d6113647fea93ac463268bde7050f95c7209d",
+    "CITATION.cff": "9c1402e0a6c14c9dd9fbdb6df1ad55d084ccabf8aa695e4e8a91a2a52cfc0519",
     "configs/assets.json": "3420c44e41769617dfd71ffd39252c45ebfcbd8f847078c46245a5f494306781",
     "configs/cross_model_x.yaml": "ecdf178857e67c8921b541d68fcaba0f27a243b5f3e7ba38e4f921fe8343ef01",
     "configs/data_audit.yaml": "331823a487b43893a34c074efa6a278e735378b798a1e8f05e6d98cc88d07e5d",
@@ -220,7 +220,7 @@
     "paper/nature_portfolio/tables/splits.tex": "712b42c006cb84c3585c347a654081c7fc795ef4124777fcb012a4ff5c459c36",
     "paper/nature_portfolio/verify_revision_statistics.py": "0b13a22e72cce6c13e9d3796637179a164d0ddaa6bffcfc8ed90a9430bc0a263",
     "pyproject.toml": "02df7938da2ee4024daf626de79ef9b889978b4e517b2c62384d798d4ecda80b",
-    "README.md": "699b51bb79c49370b750d1c5a3cab030a8130ad73f2a49c13937d17cfae3b62b",
+    "README.md": "421186d1ed074230d85bd25df0a21ba8c1c08ed3298bb2ab7c23456c81aafc82",
     "reports/population_budget/final/all_model_resources.json": "701929db203f06c944601d312817d31e78b56ec3c31fccef2e2ae0b6a6f429d1",
     "reports/population_budget/final/integrity-audit-final.json": "b3065e529a800468eb2854020ce29f54bdfdbc809b388c22f6567e7a12f050b9",
     "reports/population_budget/final/local_verification.json": "6c88864220fe2f7918811670f8d57b3a31aff6a1f548653ce04cb73d1f0e2062",
@@ -447,5 +447,7 @@
     "tests/test_stage_w_lee.py": "545eddc08f894922b0bf2b74eca069b302a634e3dda5ab6cb9bd48a22b238d4d",
     "THIRD_PARTY_NOTICES.md": "475ba500bbeea8a97cfc58babce8d70032c2a8a0e6efe7f187d8f0b65d9a2e3d",
     "verify_release.py": "aa16f8d7ba3d8a589d03f5fbe615fb3ddd7e8967d799a005782a137201d38d39"
-  }
+  },
+  "archived_version_doi": "10.5281/zenodo.22999685",
+  "archived_git_commit": "06fc75f7c64f96b81140f1531b2ab44fb75b7740"
 }
